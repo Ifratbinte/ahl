@@ -56,9 +56,14 @@
   }
   function startTimer() {
     stopTimer();
-    timer = setInterval(function () {
+    var activeSlide = slides[index];
+    var duration = Number(activeSlide.getAttribute("data-duration")) || SLIDE_MS;
+    timer = setTimeout(function () {
       show((index + 1) % total);
-    }, SLIDE_MS);
+      if (playing) {
+        startTimer();
+      }
+    }, duration);
   }
 
   function go(i) {
