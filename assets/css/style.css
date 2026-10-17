@@ -1498,3 +1498,1907 @@ h3 {
     transform: none;
   }
 }
+
+
+/* ---------- extracted inline styles ---------- */
+/* Extracted inline CSS: inline-style-001. */
+.inline-style-001 {
+  width: 100%;
+  background: #f6f8fa;
+  overflow-x: clip;
+}
+
+/* Extracted inline CSS: inline-style-002. */
+.inline-style-002 {
+  background: #07101e;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Extracted inline CSS: inline-style-003. */
+.inline-style-003 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 6;
+}
+
+/* Extracted inline CSS: inline-style-004. */
+.inline-style-004 {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 20px 24px;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+/* Extracted inline CSS: inline-style-005. */
+.inline-style-005 {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 8px 14px;
+}
+
+/* Extracted inline CSS: inline-style-006. */
+.inline-style-006 {
+  height: 38px;
+  width: auto;
+  display: block;
+}
+
+/* Extracted inline CSS: inline-style-007. */
+.inline-style-007 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 24px;
+}
+
+/* Extracted inline CSS: inline-style-008. */
+.inline-style-008 {
+  background: #ffffff;
+  color: #0a2540;
+  border-radius: 8px;
+  padding: 10px 18px;
+}
+
+/* Extracted inline CSS: inline-style-009. */
+.inline-style-009 {
+  position: relative;
+}
+
+/* Extracted inline CSS: inline-style-010. */
+.inline-style-010 {
+  display: grid;
+}
+
+/* Extracted inline CSS: inline-style-011. */
+.inline-style-011 {
+  grid-area: 1 / 1;
+  position: relative;
+  overflow: hidden;
+  min-height: 800px;
+  box-sizing: border-box;
+  padding: 130px clamp(72px, 9vw, 150px) 70px;
+  display: flex;
+  align-items: center;
+}
+
+/* Extracted inline CSS: inline-style-012. */
+.inline-style-012 {
+  position: absolute;
+  left: -3%;
+  top: -3%;
+  right: -3%;
+  bottom: -3%;
+  background-image: linear-gradient(135deg, #081a42, #2358c4);
+}
+
+/* Extracted inline CSS: inline-style-013. */
+.inline-style-013 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.4;
+  background-image: url(../images/photos/askml.jpg);
+  background-position: 50% 38%;
+}
+
+/* Extracted inline CSS: inline-style-014. */
+.inline-style-014 {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: min(56%, 860px);
+  min-width: 420px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.92;
+  -webkit-mask-image: linear-gradient( 90deg, transparent 0%, #000 38% );
+  mask-image: linear-gradient( 90deg, transparent 0%, #000 38% );
+  background-image: url(../images/photos/askml.jpg);
+  background-position: 50% 38%;
+}
+
+/* Extracted inline CSS: inline-style-015. */
+.inline-style-015 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient( 90deg, rgba(5, 12, 26, 0.86) 0%, rgba(5, 12, 26, 0.55) 38%, rgba(5, 12, 26, 0.08) 72%, rgba(5, 12, 26, 0) 100% );
+}
+
+/* Extracted inline CSS: inline-style-016. */
+.inline-style-016 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 150px;
+  background-image: linear-gradient( 180deg, rgba(5, 12, 26, 0.55), rgba(5, 12, 26, 0) );
+}
+
+/* Extracted inline CSS: inline-style-017. */
+.inline-style-017 {
+  position: relative;
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 36px 48px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Extracted inline CSS: inline-style-018. */
+.inline-style-018 {
+  flex: 1 1 480px;
+  min-width: 0;
+  max-width: 700px;
+}
+
+/* Extracted inline CSS: inline-style-019. */
+.inline-style-019 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+}
+
+/* Extracted inline CSS: inline-style-020. */
+.inline-style-020 {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1.5px solid #6c9bff;
+  border-radius: 99px;
+  padding: 6px 14px;
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+/* Extracted inline CSS: inline-style-021. */
+.inline-style-021 {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #6c9bff;
+  display: inline-block;
+}
+
+/* Extracted inline CSS: inline-style-022. */
+.inline-style-022 {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  color: #c9d6e6;
+}
+
+/* Extracted inline CSS: inline-style-023. */
+.inline-style-023 {
+  margin: 22px 0 0;
+  font-size: clamp(26px, 3.4vw, 46px);
+  line-height: 1.1;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+/* Extracted inline CSS: inline-style-024. */
+.inline-style-024 {
+  margin-top: 6px;
+  font-family: "Sora", sans-serif;
+  font-weight: 700;
+  font-size: clamp(52px, 9vw, 124px);
+  line-height: 1;
+  letter-spacing: 2px;
+  color: transparent;
+  -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.75);
+}
+
+/* Extracted inline CSS: inline-style-025. */
+.inline-style-025 {
+  margin: 22px 0 0;
+  font-size: 20px;
+  line-height: 1.45;
+  color: #ffffff;
+  font-weight: 600;
+  max-width: 600px;
+}
+
+/* Extracted inline CSS: inline-style-026. */
+.inline-style-026 {
+  margin: 10px 0 0;
+  font-size: 16px;
+  line-height: 1.65;
+  color: #c9d6e6;
+  max-width: 560px;
+}
+
+/* Extracted inline CSS: inline-style-027. */
+.inline-style-027 {
+  margin: 22px 0 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Extracted inline CSS: inline-style-028. */
+.inline-style-028 {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 99px;
+  padding: 8px 14px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+/* Extracted inline CSS: inline-style-029. */
+.inline-style-029 {
+  flex: none;
+}
+
+/* Extracted inline CSS: inline-style-030. */
+.inline-style-030 {
+  margin-top: 30px;
+}
+
+/* Extracted inline CSS: inline-style-031. */
+.inline-style-031 {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+}
+
+/* Extracted inline CSS: inline-style-032. */
+.inline-style-032 {
+  position: relative;
+  display: inline-block;
+  width: 70px;
+  height: 52px;
+}
+
+/* Extracted inline CSS: inline-style-033. */
+.inline-style-033 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #6c9bff;
+  opacity: 0.55;
+}
+
+/* Extracted inline CSS: inline-style-034. */
+.inline-style-034 {
+  position: absolute;
+  left: 18px;
+  top: 0;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Extracted inline CSS: inline-style-035. */
+.inline-style-035 {
+  flex: 0 1 310px;
+  min-width: 240px;
+  box-sizing: border-box;
+  background: rgba(7, 16, 30, 0.5);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 22px;
+  padding: 28px 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+/* Extracted inline CSS: inline-style-036. */
+.inline-style-036 {
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  color: #c9d6e6;
+}
+
+/* Extracted inline CSS: inline-style-037. */
+.inline-style-037 {
+  margin-top: 14px;
+  font-family: "Sora", sans-serif;
+  font-weight: 700;
+  font-size: clamp(34px, 3.6vw, 46px);
+  line-height: 1;
+  color: #ffffff;
+}
+
+/* Extracted inline CSS: inline-style-038. */
+.inline-style-038 {
+  margin-top: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #6c9bff;
+  line-height: 1.4;
+}
+
+/* Extracted inline CSS: inline-style-039. */
+.inline-style-039 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px 24px;
+}
+
+/* Extracted inline CSS: inline-style-040. */
+.inline-style-040 {
+  flex: 1 1 90px;
+  min-width: 0;
+}
+
+/* Extracted inline CSS: inline-style-041. */
+.inline-style-041 {
+  font-family: "Sora", sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 1.1;
+  color: #ffffff;
+}
+
+/* Extracted inline CSS: inline-style-042. */
+.inline-style-042 {
+  margin-top: 6px;
+  font-size: 13px;
+  line-height: 1.4;
+  color: #c9d6e6;
+}
+
+/* Extracted inline CSS: inline-style-043. */
+.inline-style-043 {
+  position: absolute;
+  left: -3%;
+  top: -3%;
+  right: -3%;
+  bottom: -3%;
+  background-image: linear-gradient(135deg, #180c38, #6a3fb5);
+}
+
+/* Extracted inline CSS: inline-style-044. */
+.inline-style-044 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.4;
+  background-image: url(../images/photos/mbl.jpg);
+  background-position: 50% 60%;
+}
+
+/* Extracted inline CSS: inline-style-045. */
+.inline-style-045 {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: min(56%, 860px);
+  min-width: 420px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.92;
+  -webkit-mask-image: linear-gradient( 90deg, transparent 0%, #000 38% );
+  mask-image: linear-gradient( 90deg, transparent 0%, #000 38% );
+  background-image: url(../images/photos/mbl.jpg);
+  background-position: 50% 60%;
+}
+
+/* Extracted inline CSS: inline-style-046. */
+.inline-style-046 {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1.5px solid #a98bff;
+  border-radius: 99px;
+  padding: 6px 14px;
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+/* Extracted inline CSS: inline-style-047. */
+.inline-style-047 {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #a98bff;
+  display: inline-block;
+}
+
+/* Extracted inline CSS: inline-style-048. */
+.inline-style-048 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #a98bff;
+  opacity: 0.55;
+}
+
+/* Extracted inline CSS: inline-style-049. */
+.inline-style-049 {
+  margin-top: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #a98bff;
+  line-height: 1.4;
+}
+
+/* Extracted inline CSS: inline-style-050. */
+.inline-style-050 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.4;
+  background-image: url(../images/photos/all.jpg);
+  background-position: 50% 28%;
+}
+
+/* Extracted inline CSS: inline-style-051. */
+.inline-style-051 {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: min(56%, 860px);
+  min-width: 420px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.92;
+  -webkit-mask-image: linear-gradient( 90deg, transparent 0%, #000 38% );
+  mask-image: linear-gradient( 90deg, transparent 0%, #000 38% );
+  background-image: url(../images/photos/all.jpg);
+  background-position: 50% 28%;
+}
+
+/* Extracted inline CSS: inline-style-052. */
+.inline-style-052 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.4;
+  background-image: url(../images/photos/aydl.jpg);
+  background-position: 50% 52%;
+}
+
+/* Extracted inline CSS: inline-style-053. */
+.inline-style-053 {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: min(56%, 860px);
+  min-width: 420px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.92;
+  -webkit-mask-image: linear-gradient( 90deg, transparent 0%, #000 38% );
+  mask-image: linear-gradient( 90deg, transparent 0%, #000 38% );
+  background-image: url(../images/photos/aydl.jpg);
+  background-position: 50% 52%;
+}
+
+/* Extracted inline CSS: inline-style-054. */
+.inline-style-054 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.4;
+  background-image: url(../images/photos/atpml.jpg);
+  background-position: 50% 55%;
+}
+
+/* Extracted inline CSS: inline-style-055. */
+.inline-style-055 {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: min(56%, 860px);
+  min-width: 420px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.92;
+  -webkit-mask-image: linear-gradient( 90deg, transparent 0%, #000 38% );
+  mask-image: linear-gradient( 90deg, transparent 0%, #000 38% );
+  background-image: url(../images/photos/atpml.jpg);
+  background-position: 50% 55%;
+}
+
+/* Extracted inline CSS: inline-style-056. */
+.inline-style-056 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.4;
+  background-image: url(../images/photos/afwl.jpg);
+  background-position: 50% 50%;
+}
+
+/* Extracted inline CSS: inline-style-057. */
+.inline-style-057 {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: min(56%, 860px);
+  min-width: 420px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.92;
+  -webkit-mask-image: linear-gradient( 90deg, transparent 0%, #000 38% );
+  mask-image: linear-gradient( 90deg, transparent 0%, #000 38% );
+  background-image: url(../images/photos/afwl.jpg);
+  background-position: 50% 50%;
+}
+
+/* Extracted inline CSS: inline-style-058. */
+.inline-style-058 {
+  position: absolute;
+  left: -3%;
+  top: -3%;
+  right: -3%;
+  bottom: -3%;
+  background-image: linear-gradient(135deg, #08261a, #1f7f46);
+}
+
+/* Extracted inline CSS: inline-style-059. */
+.inline-style-059 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.4;
+  background-image: url(../images/photos/aal.jpg);
+  background-position: 50% 52%;
+}
+
+/* Extracted inline CSS: inline-style-060. */
+.inline-style-060 {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: min(56%, 860px);
+  min-width: 420px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.92;
+  -webkit-mask-image: linear-gradient( 90deg, transparent 0%, #000 38% );
+  mask-image: linear-gradient( 90deg, transparent 0%, #000 38% );
+  background-image: url(../images/photos/aal.jpg);
+  background-position: 50% 52%;
+}
+
+/* Extracted inline CSS: inline-style-061. */
+.inline-style-061 {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1.5px solid #4cc38a;
+  border-radius: 99px;
+  padding: 6px 14px;
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+/* Extracted inline CSS: inline-style-062. */
+.inline-style-062 {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #4cc38a;
+  display: inline-block;
+}
+
+/* Extracted inline CSS: inline-style-063. */
+.inline-style-063 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #4cc38a;
+  opacity: 0.55;
+}
+
+/* Extracted inline CSS: inline-style-064. */
+.inline-style-064 {
+  margin-top: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #4cc38a;
+  line-height: 1.4;
+}
+
+/* Extracted inline CSS: inline-style-065. */
+.inline-style-065 {
+  position: absolute;
+  left: -3%;
+  top: -3%;
+  right: -3%;
+  bottom: -3%;
+  background-image: linear-gradient(135deg, #2e1206, #b3461a);
+}
+
+/* Extracted inline CSS: inline-style-066. */
+.inline-style-066 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.4;
+  background-image: url(../images/photos/acfl.jpg);
+  background-position: 50% 48%;
+}
+
+/* Extracted inline CSS: inline-style-067. */
+.inline-style-067 {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: min(56%, 860px);
+  min-width: 420px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.92;
+  -webkit-mask-image: linear-gradient( 90deg, transparent 0%, #000 38% );
+  mask-image: linear-gradient( 90deg, transparent 0%, #000 38% );
+  background-image: url(../images/photos/acfl.jpg);
+  background-position: 50% 48%;
+}
+
+/* Extracted inline CSS: inline-style-068. */
+.inline-style-068 {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1.5px solid #f08a5d;
+  border-radius: 99px;
+  padding: 6px 14px;
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+/* Extracted inline CSS: inline-style-069. */
+.inline-style-069 {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #f08a5d;
+  display: inline-block;
+}
+
+/* Extracted inline CSS: inline-style-070. */
+.inline-style-070 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #f08a5d;
+  opacity: 0.55;
+}
+
+/* Extracted inline CSS: inline-style-071. */
+.inline-style-071 {
+  margin-top: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #f08a5d;
+  line-height: 1.4;
+}
+
+/* Extracted inline CSS: inline-style-072. */
+.inline-style-072 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.4;
+  background-image: url(../images/photos/abbl.jpg);
+  background-position: 50% 66%;
+}
+
+/* Extracted inline CSS: inline-style-073. */
+.inline-style-073 {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: min(56%, 860px);
+  min-width: 420px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.92;
+  -webkit-mask-image: linear-gradient( 90deg, transparent 0%, #000 38% );
+  mask-image: linear-gradient( 90deg, transparent 0%, #000 38% );
+  background-image: url(../images/photos/abbl.jpg);
+  background-position: 50% 66%;
+}
+
+/* Extracted inline CSS: inline-style-074. */
+.inline-style-074 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.4;
+  background-image: url(../images/photos/afl.jpg);
+  background-position: 50% 42%;
+}
+
+/* Extracted inline CSS: inline-style-075. */
+.inline-style-075 {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: min(56%, 860px);
+  min-width: 420px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.92;
+  -webkit-mask-image: linear-gradient( 90deg, transparent 0%, #000 38% );
+  mask-image: linear-gradient( 90deg, transparent 0%, #000 38% );
+  background-image: url(../images/photos/afl.jpg);
+  background-position: 50% 42%;
+}
+
+/* Extracted inline CSS: inline-style-076. */
+.inline-style-076 {
+  position: absolute;
+  left: clamp(14px, 2.2vw, 32px);
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Extracted inline CSS: inline-style-077. */
+.inline-style-077 {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+/* Extracted inline CSS: inline-style-078. */
+.inline-style-078 {
+  position: absolute;
+  right: clamp(14px, 2.2vw, 36px);
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Extracted inline CSS: inline-style-079. */
+.inline-style-079 {
+  margin-bottom: 14px;
+  color: #ffffff;
+  font-family: "Sora", sans-serif;
+  white-space: nowrap;
+}
+
+/* Extracted inline CSS: inline-style-080. */
+.inline-style-080 {
+  font-size: 34px;
+  font-weight: 600;
+}
+
+/* Extracted inline CSS: inline-style-081. */
+.inline-style-081 {
+  font-size: 15px;
+  color: #c9d6e6;
+}
+
+/* Extracted inline CSS: inline-style-082. */
+.inline-style-082 {
+  padding: 0 0 130px;
+  background: #07101e;
+}
+
+/* Extracted inline CSS: inline-style-083. */
+.inline-style-083 {
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.05);
+  -webkit-mask-image: linear-gradient( 90deg, transparent, #000 8%, #000 92%, transparent );
+  mask-image: linear-gradient( 90deg, transparent, #000 8%, #000 92%, transparent );
+}
+
+/* Extracted inline CSS: inline-style-084. */
+.inline-style-084 {
+  display: flex;
+  width: max-content;
+  align-items: center;
+}
+
+/* Extracted inline CSS: inline-style-085. */
+.inline-style-085 {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 17px 0;
+  white-space: nowrap;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  color: #e6eef8;
+}
+
+/* Extracted inline CSS: inline-style-086. */
+.inline-style-086 {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #f08a5d;
+  display: inline-block;
+}
+
+/* Extracted inline CSS: inline-style-087. */
+.inline-style-087 {
+  height: 20px;
+  width: auto;
+  margin: 0 30px 0 18px;
+  opacity: 0.5;
+  filter: brightness(0) invert(1);
+}
+
+/* Extracted inline CSS: inline-style-088. */
+.inline-style-088 {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #6c9bff;
+  display: inline-block;
+}
+
+/* Extracted inline CSS: inline-style-089. */
+.inline-style-089 {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #4cc38a;
+  display: inline-block;
+}
+
+/* Extracted inline CSS: inline-style-090. */
+.inline-style-090 {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #a98bff;
+  display: inline-block;
+}
+
+/* Extracted inline CSS: inline-style-091. */
+.inline-style-091 {
+  max-width: 1400px;
+  margin: -92px auto 32px;
+  padding: 0 24px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* Extracted inline CSS: inline-style-092. */
+.inline-style-092 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Extracted inline CSS: inline-style-093. */
+.inline-style-093 {
+  flex: 1 1 220px;
+  min-width: 0;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 28px 26px;
+  box-sizing: border-box;
+  box-shadow: 0 10px 30px rgba(10, 37, 64, 0.12);
+  border-top: 4px solid #0e7c73;
+}
+
+/* Extracted inline CSS: inline-style-094. */
+.inline-style-094 {
+  font-family: "Sora", sans-serif;
+  font-weight: 700;
+  font-size: 46px;
+  line-height: 1;
+  color: #0a2540;
+}
+
+/* Extracted inline CSS: inline-style-095. */
+.inline-style-095 {
+  color: #0e7c73;
+}
+
+/* Extracted inline CSS: inline-style-096. */
+.inline-style-096 {
+  margin-top: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  color: #4a5b70;
+}
+
+/* Extracted inline CSS: inline-style-097. */
+.inline-style-097 {
+  flex: 1 1 220px;
+  min-width: 0;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 28px 26px;
+  box-sizing: border-box;
+  box-shadow: 0 10px 30px rgba(10, 37, 64, 0.12);
+  border-top: 4px solid #2358c4;
+}
+
+/* Extracted inline CSS: inline-style-098. */
+.inline-style-098 {
+  color: #2358c4;
+}
+
+/* Extracted inline CSS: inline-style-099. */
+.inline-style-099 {
+  flex: 1 1 220px;
+  min-width: 0;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 28px 26px;
+  box-sizing: border-box;
+  box-shadow: 0 10px 30px rgba(10, 37, 64, 0.12);
+  border-top: 4px solid #b3461a;
+}
+
+/* Extracted inline CSS: inline-style-100. */
+.inline-style-100 {
+  color: #b3461a;
+}
+
+/* Extracted inline CSS: inline-style-101. */
+.inline-style-101 {
+  flex: 1 1 220px;
+  min-width: 0;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 28px 26px;
+  box-sizing: border-box;
+  box-shadow: 0 10px 30px rgba(10, 37, 64, 0.12);
+  border-top: 4px solid #6a3fb5;
+}
+
+/* Extracted inline CSS: inline-style-102. */
+.inline-style-102 {
+  color: #6a3fb5;
+}
+
+/* Extracted inline CSS: inline-style-103. */
+.inline-style-103 {
+  position: relative;
+  isolation: isolate;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 120px 24px 40px;
+  box-sizing: border-box;
+}
+
+/* Extracted inline CSS: inline-style-104. */
+.inline-style-104 {
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 50px;
+  width: 350px;
+  height: 350px;
+}
+
+/* Extracted inline CSS: inline-style-105. */
+.inline-style-105 {
+  position: absolute;
+  z-index: -1;
+  right: -70px;
+  top: 240px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: #4cc38a;
+  opacity: 0.16;
+}
+
+/* Extracted inline CSS: inline-style-106. */
+.inline-style-106 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+/* Extracted inline CSS: inline-style-107. */
+.inline-style-107 {
+  flex: 1 1 380px;
+  min-width: 0;
+  padding-left: 20px;
+}
+
+/* Extracted inline CSS: inline-style-108. */
+.inline-style-108 {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+}
+
+/* Extracted inline CSS: inline-style-109. */
+.inline-style-109 {
+  margin: 12px 0 0;
+  font-size: clamp(28px, 3.6vw, 40px);
+  line-height: 1.15;
+  font-weight: 700;
+}
+
+/* Extracted inline CSS: inline-style-110. */
+.inline-style-110 {
+  flex: 1 1 480px;
+  min-width: 0;
+  padding-bottom: 40px;
+}
+
+/* Extracted inline CSS: inline-style-111. */
+.inline-style-111 {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #33475e;
+}
+
+/* Extracted inline CSS: inline-style-112. */
+.inline-style-112 {
+  margin: 16px 0 0;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #4a5b70;
+}
+
+/* Extracted inline CSS: inline-style-113. */
+.inline-style-113 {
+  display: inline-block;
+  margin-top: 20px;
+}
+
+/* Extracted inline CSS: inline-style-114. */
+.inline-style-114 {
+  --c: #b3461a;
+  --t: #fbede6;
+  --i: 0;
+}
+
+/* Extracted inline CSS: inline-style-115. */
+.inline-style-115 {
+  --c: #0e7c73;
+  --t: #e2f4f2;
+  --i: 1;
+}
+
+/* Extracted inline CSS: inline-style-116. */
+.inline-style-116 {
+  --c: #6a3fb5;
+  --t: #ece4f8;
+  --i: 2;
+}
+
+/* Extracted inline CSS: inline-style-117. */
+.inline-style-117 {
+  --c: #0e7c73;
+  --t: #e2f4f2;
+  --i: 3;
+}
+
+/* Extracted inline CSS: inline-style-118. */
+.inline-style-118 {
+  --c: #2358c4;
+  --t: #e1eafb;
+  --i: 4;
+}
+
+/* Extracted inline CSS: inline-style-119. */
+.inline-style-119 {
+  --c: #2358c4;
+  --t: #e1eafb;
+  --i: 5;
+}
+
+/* Extracted inline CSS: inline-style-120. */
+.inline-style-120 {
+  --c: #1f7f46;
+  --t: #ddf2e6;
+  --i: 6;
+}
+
+/* Extracted inline CSS: inline-style-121. */
+.inline-style-121 {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: #eaf0f6;
+  margin-top: 56px;
+  padding: 88px 0;
+}
+
+/* Extracted inline CSS: inline-style-122. */
+.inline-style-122 {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+
+/* Extracted inline CSS: inline-style-123. */
+.inline-style-123 {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  color: #0e7c73;
+}
+
+/* Extracted inline CSS: inline-style-124. */
+.inline-style-124 {
+  margin-top: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* Extracted inline CSS: inline-style-125. */
+.inline-style-125 {
+  --c: #b3461a;
+}
+
+/* Extracted inline CSS: inline-style-126. */
+.inline-style-126 {
+  opacity: 0.85;
+  font-weight: 600;
+}
+
+/* Extracted inline CSS: inline-style-127. */
+.inline-style-127 {
+  --c: #2358c4;
+}
+
+/* Extracted inline CSS: inline-style-128. */
+.inline-style-128 {
+  --c: #1f7f46;
+}
+
+/* Extracted inline CSS: inline-style-129. */
+.inline-style-129 {
+  --c: #6a3fb5;
+}
+
+/* Extracted inline CSS: inline-style-130. */
+.inline-style-130 {
+  margin-top: 28px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+  align-items: flex-start;
+}
+
+/* Extracted inline CSS: inline-style-131. */
+.inline-style-131 {
+  flex: 1 1 560px;
+  min-width: 0;
+}
+
+/* Extracted inline CSS: inline-style-132. */
+.inline-style-132 {
+  font-family: "Sora", sans-serif;
+  font-weight: 600;
+  font-size: 22px;
+  color: #b3461a;
+}
+
+/* Extracted inline CSS: inline-style-133. */
+.inline-style-133 {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Extracted inline CSS: inline-style-134. */
+.inline-style-134 {
+  position: relative;
+  overflow: hidden;
+  flex: 1 1 260px;
+  min-width: 0;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 26px;
+  box-sizing: border-box;
+  border-top: 4px solid #b3461a;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Extracted inline CSS: inline-style-135. */
+.inline-style-135 {
+  position: absolute;
+  right: 16px;
+  top: 10px;
+  font-family: "Sora", sans-serif;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 1;
+  color: #b3461a;
+  opacity: 0.1;
+}
+
+/* Extracted inline CSS: inline-style-136. */
+.inline-style-136 {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: #b3461a;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Sora", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+/* Extracted inline CSS: inline-style-137. */
+.inline-style-137 {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.3;
+  font-weight: 600;
+}
+
+/* Extracted inline CSS: inline-style-138. */
+.inline-style-138 {
+  margin: 0;
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: #4a5b70;
+  flex: 1;
+}
+
+/* Extracted inline CSS: inline-style-139. */
+.inline-style-139 {
+  align-self: flex-start;
+}
+
+/* Extracted inline CSS: inline-style-140. */
+.inline-style-140 {
+  font-family: "Sora", sans-serif;
+  font-weight: 600;
+  font-size: 22px;
+  color: #2358c4;
+}
+
+/* Extracted inline CSS: inline-style-141. */
+.inline-style-141 {
+  position: relative;
+  overflow: hidden;
+  flex: 1 1 260px;
+  min-width: 0;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 26px;
+  box-sizing: border-box;
+  border-top: 4px solid #2358c4;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Extracted inline CSS: inline-style-142. */
+.inline-style-142 {
+  position: absolute;
+  right: 16px;
+  top: 10px;
+  font-family: "Sora", sans-serif;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 1;
+  color: #2358c4;
+  opacity: 0.1;
+}
+
+/* Extracted inline CSS: inline-style-143. */
+.inline-style-143 {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: #2358c4;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Sora", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+/* Extracted inline CSS: inline-style-144. */
+.inline-style-144 {
+  font-family: "Sora", sans-serif;
+  font-weight: 600;
+  font-size: 22px;
+  color: #1f7f46;
+}
+
+/* Extracted inline CSS: inline-style-145. */
+.inline-style-145 {
+  position: relative;
+  overflow: hidden;
+  flex: 1 1 260px;
+  min-width: 0;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 26px;
+  box-sizing: border-box;
+  border-top: 4px solid #1f7f46;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Extracted inline CSS: inline-style-146. */
+.inline-style-146 {
+  position: absolute;
+  right: 16px;
+  top: 10px;
+  font-family: "Sora", sans-serif;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 1;
+  color: #1f7f46;
+  opacity: 0.1;
+}
+
+/* Extracted inline CSS: inline-style-147. */
+.inline-style-147 {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: #1f7f46;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Sora", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+/* Extracted inline CSS: inline-style-148. */
+.inline-style-148 {
+  font-family: "Sora", sans-serif;
+  font-weight: 600;
+  font-size: 22px;
+  color: #6a3fb5;
+}
+
+/* Extracted inline CSS: inline-style-149. */
+.inline-style-149 {
+  position: relative;
+  overflow: hidden;
+  flex: 1 1 260px;
+  min-width: 0;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 26px;
+  box-sizing: border-box;
+  border-top: 4px solid #6a3fb5;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Extracted inline CSS: inline-style-150. */
+.inline-style-150 {
+  position: absolute;
+  right: 16px;
+  top: 10px;
+  font-family: "Sora", sans-serif;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 1;
+  color: #6a3fb5;
+  opacity: 0.1;
+}
+
+/* Extracted inline CSS: inline-style-151. */
+.inline-style-151 {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: #6a3fb5;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Sora", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+/* Extracted inline CSS: inline-style-152. */
+.inline-style-152 {
+  flex: 2;
+  --c: #b3461a;
+}
+
+/* Extracted inline CSS: inline-style-153. */
+.inline-style-153 {
+  flex: 5;
+  --c: #2358c4;
+}
+
+/* Extracted inline CSS: inline-style-154. */
+.inline-style-154 {
+  flex: 3;
+  --c: #1f7f46;
+}
+
+/* Extracted inline CSS: inline-style-155. */
+.inline-style-155 {
+  flex: 2;
+  --c: #6a3fb5;
+}
+
+/* Extracted inline CSS: inline-style-156. */
+.inline-style-156 {
+  position: relative;
+  isolation: isolate;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 96px 24px 40px;
+  box-sizing: border-box;
+}
+
+/* Extracted inline CSS: inline-style-157. */
+.inline-style-157 {
+  position: absolute;
+  z-index: -1;
+  right: -100px;
+  top: 40px;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background: #4cc38a;
+  opacity: 0.16;
+}
+
+/* Extracted inline CSS: inline-style-158. */
+.inline-style-158 {
+  position: absolute;
+  z-index: -1;
+  left: -80px;
+  top: 380px;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: #6c9bff;
+  opacity: 0.13;
+}
+
+/* Extracted inline CSS: inline-style-159. */
+.inline-style-159 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+/* Extracted inline CSS: inline-style-160. */
+.inline-style-160 {
+  flex: 1 1 420px;
+  min-width: 0;
+}
+
+/* Extracted inline CSS: inline-style-161. */
+.inline-style-161 {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  color: #1f7f46;
+}
+
+/* Extracted inline CSS: inline-style-162. */
+.inline-style-162 {
+  flex: 1 1 380px;
+  min-width: 0;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #4a5b70;
+}
+
+/* Extracted inline CSS: inline-style-163. */
+.inline-style-163 {
+  margin-top: 36px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Extracted inline CSS: inline-style-164. */
+.inline-style-164 {
+  --c1: #0e5a31;
+  --c2: #1f7f46;
+}
+
+/* Extracted inline CSS: inline-style-165. */
+.inline-style-165 {
+  height: 46%;
+}
+
+/* Extracted inline CSS: inline-style-166. */
+.inline-style-166 {
+  height: 68%;
+}
+
+/* Extracted inline CSS: inline-style-167. */
+.inline-style-167 {
+  height: 38%;
+}
+
+/* Extracted inline CSS: inline-style-168. */
+.inline-style-168 {
+  height: 84%;
+}
+
+/* Extracted inline CSS: inline-style-169. */
+.inline-style-169 {
+  height: 58%;
+}
+
+/* Extracted inline CSS: inline-style-170. */
+.inline-style-170 {
+  height: 76%;
+}
+
+/* Extracted inline CSS: inline-style-171. */
+.inline-style-171 {
+  --c: #1f7f46;
+  --t: #ddf2e6;
+}
+
+/* Extracted inline CSS: inline-style-172. */
+.inline-style-172 {
+  --c1: #173f8c;
+  --c2: #2358c4;
+}
+
+/* Extracted inline CSS: inline-style-173. */
+.inline-style-173 {
+  height: 62%;
+}
+
+/* Extracted inline CSS: inline-style-174. */
+.inline-style-174 {
+  height: 40%;
+}
+
+/* Extracted inline CSS: inline-style-175. */
+.inline-style-175 {
+  height: 78%;
+}
+
+/* Extracted inline CSS: inline-style-176. */
+.inline-style-176 {
+  height: 52%;
+}
+
+/* Extracted inline CSS: inline-style-177. */
+.inline-style-177 {
+  height: 88%;
+}
+
+/* Extracted inline CSS: inline-style-178. */
+.inline-style-178 {
+  height: 64%;
+}
+
+/* Extracted inline CSS: inline-style-179. */
+.inline-style-179 {
+  --c: #2358c4;
+  --t: #e1eafb;
+}
+
+/* Extracted inline CSS: inline-style-180. */
+.inline-style-180 {
+  --c1: #43268a;
+  --c2: #6a3fb5;
+}
+
+/* Extracted inline CSS: inline-style-181. */
+.inline-style-181 {
+  height: 54%;
+}
+
+/* Extracted inline CSS: inline-style-182. */
+.inline-style-182 {
+  height: 80%;
+}
+
+/* Extracted inline CSS: inline-style-183. */
+.inline-style-183 {
+  height: 70%;
+}
+
+/* Extracted inline CSS: inline-style-184. */
+.inline-style-184 {
+  height: 36%;
+}
+
+/* Extracted inline CSS: inline-style-185. */
+.inline-style-185 {
+  height: 82%;
+}
+
+/* Extracted inline CSS: inline-style-186. */
+.inline-style-186 {
+  --c: #6a3fb5;
+  --t: #ece4f8;
+}
+
+/* Extracted inline CSS: inline-style-187. */
+.inline-style-187 {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  margin-top: 20px;
+  background: #0a2540;
+  border-radius: 18px;
+  padding: 28px;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 32px;
+  align-items: center;
+}
+
+/* Extracted inline CSS: inline-style-188. */
+.inline-style-188 {
+  position: absolute;
+  z-index: -1;
+  right: -70px;
+  top: -90px;
+  opacity: 0.4;
+}
+
+/* Extracted inline CSS: inline-style-189. */
+.inline-style-189 {
+  flex: 1 1 260px;
+  min-width: 0;
+}
+
+/* Extracted inline CSS: inline-style-190. */
+.inline-style-190 {
+  font-family: "Sora", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  color: #ffffff;
+}
+
+/* Extracted inline CSS: inline-style-191. */
+.inline-style-191 {
+  margin-top: 6px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #c9d6e6;
+}
+
+/* Extracted inline CSS: inline-style-192. */
+.inline-style-192 {
+  flex: 2 1 400px;
+  min-width: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Extracted inline CSS: inline-style-193. */
+.inline-style-193 {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  background: #13345a;
+  color: #ffffff;
+  border: 1px solid #2f5c8c;
+  border-radius: 99px;
+  padding: 9px 16px;
+  font-size: 13.5px;
+  font-weight: 600;
+}
+
+/* Extracted inline CSS: inline-style-194. */
+.inline-style-194 {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 72px 24px 96px;
+  box-sizing: border-box;
+}
+
+/* Extracted inline CSS: inline-style-195. */
+.inline-style-195 {
+  text-align: center;
+}
+
+/* Extracted inline CSS: inline-style-196. */
+.inline-style-196 {
+  margin: 12px 0 0;
+  font-size: clamp(26px, 3.2vw, 34px);
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+/* Extracted inline CSS: inline-style-197. */
+.inline-style-197 {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient( 90deg, transparent, #000 8%, #000 92%, transparent );
+  mask-image: linear-gradient( 90deg, transparent, #000 8%, #000 92%, transparent );
+}
+
+/* Extracted inline CSS: inline-style-198. */
+.inline-style-198 {
+  display: flex;
+  width: max-content;
+}
+
+/* Extracted inline CSS: inline-style-199. */
+.inline-style-199 {
+  background: #f08a5d;
+}
+
+/* Extracted inline CSS: inline-style-200. */
+.inline-style-200 {
+  background: #6c9bff;
+}
+
+/* Extracted inline CSS: inline-style-201. */
+.inline-style-201 {
+  background: #4cc38a;
+}
+
+/* Extracted inline CSS: inline-style-202. */
+.inline-style-202 {
+  background: #a98bff;
+}
