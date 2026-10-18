@@ -7,6 +7,103 @@
     window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var SLIDE_MS = 7000;
 
+  var siteNav = document.querySelector("[data-site-nav]");
+  if (siteNav) {
+    var navToggle = siteNav.querySelector(".nav-toggle");
+    var navMenu = siteNav.querySelector("#primary-navigation");
+    var navScrim = siteNav.querySelector(".nav-scrim");
+    var navLinks = Array.prototype.slice.call(navMenu.querySelectorAll("a"));
+    document.body.appendChild(navScrim);
+    navMenu.setAttribute("aria-hidden", window.innerWidth <= 760 ? "true" : "false");
+
+    function closeNavigation(restoreFocus) {
+      siteNav.classList.remove("is-open");
+      navToggle.setAttribute("aria-expanded", "false");
+      navToggle.setAttribute("aria-label", "Open navigation");
+      navMenu.setAttribute("aria-hidden", "true");
+      navScrim.hidden = true;
+      document.body.classList.remove("nav-open");
+      if (restoreFocus) {
+        navToggle.focus();
+      }
+    }
+
+    function openNavigation() {
+      siteNav.classList.add("is-open");
+      navToggle.setAttribute("aria-expanded", "true");
+      navToggle.setAttribute("aria-label", "Close navigation");
+      navMenu.setAttribute("aria-hidden", "false");
+      navScrim.hidden = false;
+      document.body.classList.add("nav-open");
+      window.requestAnimationFrame(function () {
+        navLinks[0].focus();
+      });
+    }
+
+    navToggle.addEventListener("click", function () {
+      if (navToggle.getAttribute("aria-expanded") === "true") {
+        closeNavigation(true);
+      } else {
+        openNavigation();
+      }
+    });
+    navScrim.addEventListener("click", function () {
+      closeNavigation(true);
+    });
+    navLinks.forEach(function (link) {
+      link.addEventListener("click", function () {
+        if (window.innerWidth > 760) {
+          return;
+        }
+        closeNavigation(false);
+        var href = link.getAttribute("href");
+        var destination = href && href.charAt(0) === "#"
+          ? document.getElementById(href.slice(1))
+          : null;
+        if (destination) {
+          if (!destination.hasAttribute("tabindex")) {
+            destination.setAttribute("tabindex", "-1");
+          }
+          window.setTimeout(function () {
+            destination.focus({ preventScroll: true });
+          }, 0);
+        } else {
+          navToggle.focus({ preventScroll: true });
+        }
+      });
+    });
+    document.addEventListener("keydown", function (event) {
+      if (navToggle.getAttribute("aria-expanded") !== "true") {
+        return;
+      }
+      if (event.key === "Escape") {
+        closeNavigation(true);
+        return;
+      }
+      if (event.key === "Tab") {
+        var firstLink = navLinks[0];
+        var lastLink = navLinks[navLinks.length - 1];
+        if (event.shiftKey && document.activeElement === firstLink) {
+          event.preventDefault();
+          lastLink.focus();
+        } else if (!event.shiftKey && document.activeElement === lastLink) {
+          event.preventDefault();
+          firstLink.focus();
+        }
+      }
+    });
+    window.addEventListener("resize", function () {
+      if (window.innerWidth > 760) {
+        if (navToggle.getAttribute("aria-expanded") === "true") {
+          closeNavigation(false);
+        }
+        navMenu.setAttribute("aria-hidden", "false");
+      } else if (navToggle.getAttribute("aria-expanded") !== "true") {
+        navMenu.setAttribute("aria-hidden", "true");
+      }
+    });
+  }
+
   /* ---------- hero slider ---------- */
   var hero = document.getElementById("top");
   var slides = Array.prototype.slice.call(document.querySelectorAll(".slide"));
