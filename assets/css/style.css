@@ -48,6 +48,19 @@ h3 {
   transform-origin: center;
   animation: spin 24s linear infinite;
 }
+.ahl-group-wheel-wrap {
+  flex: 0 1 550px;
+  width: 100%;
+  max-width: 550px;
+  min-width: min(100%, 260px);
+}
+.ahl-group-wheel {
+  display: block;
+  width: 100%;
+  height: auto;
+  transform-origin: center;
+  animation: spin 180s linear infinite;
+}
 .drift1 {
   animation: drift1 18s ease-in-out infinite alternate;
 }
@@ -68,7 +81,7 @@ h3 {
   border-radius: 50%;
   background:
     linear-gradient(rgba(0, 0, 0, 0.48), rgba(0, 0, 0, 0.48)),
-    url("../images/photos/all.jpg") center / cover no-repeat;
+    url("../images/apex-group-wheel2.svg") center / cover no-repeat;
 }
 .about-heading h2 {
   color: #ffffff;
@@ -246,6 +259,7 @@ h3 {
 }
 @media (prefers-reduced-motion: reduce) {
   .spin,
+  .ahl-group-wheel,
   .drift1,
   .marq,
   .breathe,
@@ -1522,13 +1536,23 @@ h3 {
   right: 0;
   top: 0;
   z-index: 6;
+  background: linear-gradient(
+    90deg,
+    rgba(224, 239, 250, 0.78) 0%,
+    rgba(176, 204, 228, 0.58) 24%,
+    rgba(8, 26, 66, 0.25) 49%,
+    rgba(7, 16, 30, 0) 86%,
+    rgba(7, 16, 30, 0) 100%
+  );
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
 }
 
 /* Extracted inline CSS: inline-style-004. */
 .inline-style-004 {
   max-width: 1360px;
   margin: 0 auto;
-  padding: 20px 24px;
+  padding: 10px 24px;
   box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
@@ -1542,14 +1566,11 @@ h3 {
   display: flex;
   align-items: center;
   text-decoration: none;
-  background: #ffffff;
-  border-radius: 12px;
-  padding: 8px 14px;
 }
 
 /* Extracted inline CSS: inline-style-006. */
 .inline-style-006 {
-  height: 38px;
+  height: 54px;
   width: auto;
   display: block;
 }
@@ -1632,6 +1653,15 @@ h3 {
   background-image: url(../images/photos/askml.jpg);
   background-position: 50% 38%;
 }
+.hero-ahl-slide .inline-style-013,
+.hero-ahl-slide .inline-style-014 {
+  background-image: url("../images/photos/ahl-hero.jpg");
+  background-position: center 45%;
+}
+
+.dot[data-go="0"].is-active .ring {
+  animation-duration: 14s;
+}
 
 /* Extracted inline CSS: inline-style-015. */
 .inline-style-015 {
@@ -1657,7 +1687,7 @@ h3 {
 .inline-style-017 {
   position: relative;
   width: 100%;
-  max-width: 1180px;
+  max-width: 1300px;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
@@ -2496,7 +2526,7 @@ h3 {
 /* Extracted inline CSS: inline-style-091. */
 .inline-style-091 {
   max-width: 1400px;
-  margin: -92px auto 32px;
+  margin: 32px auto;
   padding: 0 24px;
   box-sizing: border-box;
   position: relative;
