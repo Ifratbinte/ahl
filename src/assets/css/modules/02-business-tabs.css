@@ -1,0 +1,22 @@
+/* ---------- business tabs ---------- */
+.tab {
+  cursor: pointer;
+  font-family: "Manrope", sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  padding: 13px 24px;
+  border-radius: 99px;
+  min-height: 44px;
+  background: #ffffff;
+  color: #0a2540;
+  border: 2px solid #c9d5e2;
+}
+.tab.is-active {
+  background: var(--c);
+  color: #ffffff;
+  border-color: var(--c);
+}
+.panel[hidden] {
+  display: none;
+}
+

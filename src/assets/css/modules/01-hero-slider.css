@@ -1,0 +1,79 @@
+/* ---------- hero slider ---------- */
+.slide {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateX(40px);
+  transition:
+    opacity 0.45s ease,
+    transform 0.45s ease,
+    visibility 0s linear 0.45s;
+}
+.slide.is-before {
+  transform: translateX(-40px);
+}
+.slide.is-active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: none;
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease,
+    visibility 0s;
+}
+.slide .bgwrap {
+  transform: scale(1.09);
+  transition: transform 0.45s ease;
+}
+.slide.is-active .bgwrap {
+  transform: scale(1);
+  transition: transform 9s ease-out;
+}
+.dot {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dot .wrap {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: rotate(-90deg);
+  opacity: 0;
+}
+.dot.is-active .wrap {
+  opacity: 1;
+}
+.dot .ring {
+  stroke-dasharray: 69.1;
+  stroke-dashoffset: 69.1;
+}
+.dot.is-active .ring {
+  animation: ring 7s linear forwards;
+}
+.is-paused .dot.is-active .ring {
+  animation: none;
+  stroke-dashoffset: 0;
+}
+.dot .pt {
+  display: block;
+  border-radius: 50%;
+  width: 7px;
+  height: 7px;
+  background: rgba(255, 255, 255, 0.5);
+}
+.dot.is-active .pt {
+  background: #ffffff;
+}
+.rbtn-wrap {
+  display: inline-flex;
+}
+

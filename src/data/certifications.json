@@ -1,0 +1,46 @@
+{
+  "eyebrow": "Our certifications",
+  "title": "Audited and certified to global standards",
+  "items": [
+    {
+      "name": "GOTS, Global Organic Textile Standard",
+      "logo": "assets/images/certs/gots.png",
+      "url": "https://www.global-standard.org/"
+    },
+    {
+      "name": "BSCI, Business Social Compliance Initiative",
+      "logo": "assets/images/certs/bsci.png",
+      "url": "https://www.siscertifications.com/bsci-certification"
+    },
+    {
+      "name": "SMETA audit",
+      "logo": "assets/images/certs/smeta.png",
+      "url": "https://www.sedex.com/our-services/smeta-audit/"
+    },
+    {
+      "name": "OEKO-TEX Standard 100",
+      "logo": "assets/images/certs/oeko-tex.png",
+      "url": "https://www.oeko-tex.com/en/"
+    },
+    {
+      "name": "Organic Content Standard 100",
+      "logo": "assets/images/certs/organic-100.png",
+      "url": "https://certifications.controlunion.com/"
+    },
+    {
+      "name": "GSV, Global Security Verification",
+      "logo": "assets/images/certs/gsv.png",
+      "url": "https://apexholdings.com/"
+    },
+    {
+      "name": "IDFL",
+      "logo": "assets/images/certs/idfl.png",
+      "url": "https://idfl.com/"
+    },
+    {
+      "name": "Sedex",
+      "logo": "assets/images/certs/sedex.png",
+      "url": "https://www.sedex.com/"
+    }
+  ]
+}

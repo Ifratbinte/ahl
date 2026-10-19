@@ -1,0 +1,265 @@
+body {
+  margin: 0;
+  font-family: "Manrope", system-ui, sans-serif;
+  color: #0a2540;
+  background: #f6f8fa;
+}
+h1,
+h2,
+h3 {
+  font-family: "Sora", "Manrope", sans-serif;
+}
+.nav a {
+  color: #c9d6e6;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 10px 4px;
+}
+.nav a:hover {
+  color: #ffffff;
+}
+.card {
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 32px rgba(10, 37, 64, 0.14);
+}
+.lnk {
+  color: #0a2540;
+  font-weight: 700;
+  font-size: 14px;
+  text-decoration: none;
+  border-bottom: 2px solid #19b3a6;
+}
+.lnk:hover {
+  color: #0e7c73;
+}
+.tab {
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+.spin {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: spin 24s linear infinite;
+}
+.drift1 {
+  animation: drift1 18s ease-in-out infinite alternate;
+}
+.marq {
+  animation: marq 60s linear infinite;
+}
+.marq:hover {
+  animation-play-state: paused;
+}
+.breathe {
+  animation: breathe 10s ease-in-out infinite;
+}
+
+.floaty {
+  animation: drift1 16s ease-in-out infinite alternate;
+}
+.about-image {
+  border-radius: 50%;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.48), rgba(0, 0, 0, 0.48)),
+    url("../images/apex-group-wheel.svg") center / cover no-repeat;
+}
+.about-heading h2 {
+  color: #ffffff;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.65);
+}
+.about-heading-label {
+  color: #a9eee2;
+}
+.drift-b {
+  animation: driftb 22s ease-in-out infinite alternate;
+}
+.mq2 {
+  animation: marq 45s linear infinite;
+}
+.mq2r {
+  animation: marq 55s linear infinite reverse;
+}
+.mq2:hover,
+.mq2r:hover {
+  animation-play-state: paused;
+}
+.dotp {
+  animation: pulseDot 2.6s ease-out infinite;
+}
+.dotp2 {
+  animation: pulseG 2.4s ease-out infinite;
+}
+.tab:hover {
+  transform: translateY(-2px);
+}
+.gx {
+  transform-origin: left;
+}
+@keyframes revealIn {
+  from {
+    opacity: 0;
+    translate: 0 34px;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+@keyframes growX {
+  from {
+    scale: 0 1;
+  }
+  to {
+    scale: 1 1;
+  }
+}
+@keyframes popIn {
+  from {
+    opacity: 0;
+    scale: 0.8;
+    rotate: -14deg;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+    rotate: 0deg;
+  }
+}
+@keyframes driftb {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(-30px, 18px);
+  }
+}
+@keyframes pulseDot {
+  0%,
+  100% {
+    box-shadow:
+      0 0 0 4px #ffffff,
+      0 0 0 4px rgba(10, 37, 64, 0);
+  }
+  50% {
+    box-shadow:
+      0 0 0 4px #ffffff,
+      0 0 0 10px rgba(10, 37, 64, 0.12);
+  }
+}
+@keyframes pulseG {
+  0% {
+    box-shadow: 0 0 0 0 rgba(76, 195, 138, 0.6);
+  }
+  100% {
+    box-shadow: 0 0 0 9px rgba(76, 195, 138, 0);
+  }
+}
+@supports (animation-timeline: view()) {
+  .rv {
+    animation: revealIn linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 45%;
+  }
+  .rv2 {
+    animation: revealIn linear both;
+    animation-timeline: view();
+    animation-range: entry 10% entry 55%;
+  }
+  .gx {
+    animation: growX linear both;
+    animation-timeline: view();
+    animation-range: entry 15% entry 75%;
+  }
+  .pi {
+    animation: popIn linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 60%;
+  }
+}
+.sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+.ctl2 {
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+.ctl2:hover {
+  background: rgba(255, 255, 255, 0.24) !important;
+  transform: scale(1.06);
+}
+@keyframes ring {
+  from {
+    stroke-dashoffset: 69.1;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes drift1 {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(26px, -20px);
+  }
+}
+@keyframes fill {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes marq {
+  to {
+    transform: translateX(-50%);
+  }
+}
+@keyframes breathe {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.07);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .spin,
+  .drift1,
+  .marq,
+  .breathe,
+  .floaty,
+  .drift-b,
+  .mq2,
+  .mq2r,
+  .dotp,
+  .dotp2,
+  .rv,
+  .rv2,
+  .gx,
+  .pi {
+    animation: none !important;
+  }
+}
+

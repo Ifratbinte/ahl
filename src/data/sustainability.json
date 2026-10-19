@@ -1,0 +1,57 @@
+{
+  "eyebrow": "Sustainability",
+  "title": "A pioneer in sustainable manufacturing",
+  "intro": "Our efforts are driven by digitization, ecological cognizance, productivity, innovation and adaptability, through a three-pronged approach.",
+  "cardHint": "Hover to read more",
+  "pillars": [
+    {
+      "key": "environment",
+      "title": "Environmental friendliness",
+      "bars": [
+        "environment-1",
+        "environment-2",
+        "environment-3",
+        "environment-4",
+        "environment-5",
+        "environment-6"
+      ],
+      "text": "One of the largest privately owned water treatment plants in the country, researching wastewater recycling. Factories use chemicals that follow ZDHC guidelines, and singeing and sublimation reduce dye wastage and chemical use."
+    },
+    {
+      "key": "materials",
+      "title": "Recyclable materials",
+      "bars": [
+        "materials-1",
+        "materials-2",
+        "materials-3",
+        "materials-4",
+        "materials-5",
+        "materials-6"
+      ],
+      "text": "Global Recycle Standard (GRS) certified, turning pre-consumer waste into new fibre. Materials include recycled polyester, recycled ocean plastic, bamboo fibre and organic cotton, with an online scrap platform run with Reverse Resources."
+    },
+    {
+      "key": "csr",
+      "title": "CSR in daily operations",
+      "bars": [
+        "csr-1",
+        "csr-2",
+        "environment-1",
+        "csr-3",
+        "csr-4",
+        "csr-5"
+      ],
+      "text": "Corporate social responsibility is mainstreamed into everyday operations, with a focus on the welfare of employees and the communities around our factories."
+    }
+  ],
+  "efficiency": {
+    "title": "Energy and resource efficiency",
+    "description": "Across factories and offices, as part of the IFC PaCT programme in our dyeing houses.",
+    "benefits": [
+      "LED lighting across sites",
+      "Servo motors replace clutch motors",
+      "Waste heat powers cooling",
+      "IFC PaCT in dyeing houses"
+    ]
+  }
+}

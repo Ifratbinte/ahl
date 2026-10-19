@@ -1,0 +1,61 @@
+<section id="about" class="about-section">
+  <div aria-hidden="true" class="floaty about-image about-image-decoration"></div>
+  <div aria-hidden="true" class="drift-b about-accent-orb"></div>
+  <div class="about-intro-layout">
+    <div class="rv about-heading about-heading">
+      <div class="about-heading-label about-eyebrow">{{data.about.eyebrow}}</div>
+      <h2 class="section-title">{{data.about.title}}</h2>
+    </div>
+    <div class="rv2 about-copy">
+      <p class="about-lead">
+        {{data.about.lead}}
+      </p>
+      <p class="about-description">
+        {{data.about.description}}
+      </p>
+      <a
+        class="lnk about-link"
+        href="{{data.about.link.url}}"
+        target="_blank"
+        rel="noopener"
+        >{{data.about.link.label}}</a
+      >
+    </div>
+  </div>
+
+  <div class="journey-scroll" data-journey>
+    <div class="journey">
+      <div class="journey-bg" aria-hidden="true">
+        <span class="orb o1 floaty"></span>
+        <span class="orb o2 drift-b"></span>
+        <span class="orb o3 floaty"></span>
+      </div>
+      <div class="journey-head rv">
+        <div class="journey-eyebrow">{{data.about.journey.eyebrow}}</div>
+        <h3>{{data.about.journey.title}}</h3>
+      </div>
+      <div class="tl-wrap">
+        <div class="tl-track">
+          <div class="tl-line" aria-hidden="true">
+            <span class="tl-fill"></span>
+          </div>
+          <ol class="tl">
+            {{#each data.about.journey.milestones as milestone}}
+            <li class="tl-item {{#if @even}}left{{else}}right{{/if}} timeline-item{{milestone.theme | mod}}">
+              <span class="tl-node" aria-hidden="true"></span>
+              <div class="tl-card">
+                <span class="tl-ghost" aria-hidden="true">{{milestone.year}}</span>
+                <div class="tl-year">{{milestone.year}}</div>
+                <p>{{milestone.text}}</p>
+              </div>
+            </li>
+            {{#unless @last}}
+
+            {{/unless}}
+            {{/each}}
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

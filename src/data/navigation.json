@@ -1,0 +1,36 @@
+{
+  "brand": {
+    "logo": "assets/images/logo-horizontal.png",
+    "alt": "Apex Holdings Limited",
+    "homeLabel": "Apex Holdings Limited, home"
+  },
+  "links": [
+    {
+      "label": "About",
+      "href": "#about"
+    },
+    {
+      "label": "Our Businesses",
+      "href": "#businesses"
+    },
+    {
+      "label": "Sustainability",
+      "href": "#sustainability"
+    },
+    {
+      "label": "CSR",
+      "href": "https://apexholdings.com/csr",
+      "external": true
+    },
+    {
+      "label": "Career",
+      "href": "https://apexholdings.com/career",
+      "external": true
+    },
+    {
+      "label": "Contact",
+      "href": "#contact",
+      "hideInFooter": true
+    }
+  ]
+}

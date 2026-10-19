@@ -1,0 +1,15 @@
+{
+  "name": "apex-holdings-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Official static website of Apex Holdings Limited (HTML, CSS, JS).",
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "build": "node scripts/build.mjs",
+    "preview": "node scripts/build.mjs && node scripts/dev.mjs"
+  }
+}

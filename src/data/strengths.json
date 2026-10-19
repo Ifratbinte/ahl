@@ -1,0 +1,29 @@
+{
+  "label": "Key strengths",
+  "items": [
+    {
+      "value": 22000,
+      "suffix": "+",
+      "label": "Employees",
+      "theme": "food"
+    },
+    {
+      "value": 15,
+      "suffix": "+",
+      "label": "Business concerns",
+      "theme": "textile"
+    },
+    {
+      "value": 6,
+      "suffix": "",
+      "label": "Export-oriented companies",
+      "theme": "agro"
+    },
+    {
+      "value": 2,
+      "suffix": "",
+      "label": "Public listed companies",
+      "theme": "diversified"
+    }
+  ]
+}

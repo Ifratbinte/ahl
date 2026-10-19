@@ -1,4 +1,4 @@
-<!-- CONTACT + FOOTER -->
+<!-- decorative waves (artwork, not content) -->
 <div class="wave" aria-hidden="true">
   <svg class="wv w1" viewBox="0 0 2880 180" preserveAspectRatio="none">
     <path
@@ -41,13 +41,13 @@
       <div class="f-brand">
         <div class="f-logo">
           <img
-            src="assets/images/logo-horizontal.png"
-            alt="Apex Holdings Limited"
+            src="{{page.root}}{{data.navigation.brand.logo}}"
+            alt="{{data.navigation.brand.alt}}"
           />
         </div>
-        <h2>Let's talk about working together.</h2>
-        <a class="f-cta" href="mailto:info@apexholdings.com"
-          >info@apexholdings.com<svg
+        <h2>{{data.contact.heading}}</h2>
+        <a class="f-cta" href="mailto:{{data.contact.email}}"
+          >{{data.contact.email}}<svg
             viewBox="0 0 22 22"
             width="18"
             height="18"
@@ -64,104 +64,45 @@
         ></a>
       </div>
       <div class="f-col">
-        <div class="f-title">Contact us</div>
+        <div class="f-title">{{data.contact.title}}</div>
         <ul class="f-list">
+          {{#each data.contact.items as item}}
           <li>
             <span class="f-ico"
-              ><svg
-                viewBox="0 0 24 24"
-                width="20"
-                height="20"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.8"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                aria-hidden="true"
-              >
-                <path
-                  d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"
-                />
-                <circle cx="12" cy="9.5" r="2.5" /></svg></span
+              >{{item.icon | icon}}</span
             ><span
-              >18 Gulshan Avenue, Shanta Skymark,<br />Gulshan, Dhaka-1212,
-              Bangladesh</span
+              >{{item.lines | lines}}</span
             >
           </li>
-          <li>
-            <span class="f-ico"
-              ><svg
-                viewBox="0 0 24 24"
-                width="20"
-                height="20"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.8"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                aria-hidden="true"
-              >
-                <path
-                  d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"
-                /></svg></span
-            ><span
-              >+880 9606669988<br />+88-02-9861685,&nbsp;+88-02-8810850</span
-            >
-          </li>
-          <li>
-            <span class="f-ico"
-              ><svg
-                viewBox="0 0 24 24"
-                width="20"
-                height="20"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.8"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                aria-hidden="true"
-              >
-                <circle cx="12" cy="12" r="9" />
-                <path d="M12 7v5l3 2" /></svg></span
-            ><span>Sat–Thu · 08:00 am – 04:30 pm</span>
-          </li>
+          {{/each}}
         </ul>
       </div>
       <div class="f-col">
-        <div class="f-title">Quick menu</div>
+        <div class="f-title">{{data.contact.quickMenuTitle}}</div>
         <nav class="f-links" aria-label="Footer">
-          <a href="#about">About</a>
-          <a href="#businesses">Our Businesses</a>
-          <a href="#sustainability">Sustainability</a>
-          <a href="https://apexholdings.com/csr" target="_blank" rel="noopener"
-            >CSR</a
-          >
-          <a
-            href="https://apexholdings.com/career"
-            target="_blank"
-            rel="noopener"
-            >Career</a
-          >
+          {{#each data.navigation.links as link}}
+          {{#unless link.hideInFooter}}
+          <!-- @include components/nav-link.html -->
+          {{/unless}}
+          {{/each}}
         </nav>
       </div>
       <div class="f-col">
-        <div class="f-title">Our divisions</div>
+        <div class="f-title">{{data.contact.divisionsTitle}}</div>
         <ul class="f-div">
-          <li class="inline-style-125"><span></span>Food<em>2</em></li>
-          <li class="inline-style-127"><span></span>Textile<em>5</em></li>
-          <li class="inline-style-128"><span></span>Agro<em>3</em></li>
-          <li class="inline-style-129"><span></span>Diversified<em>2</em></li>
+          {{#each data.businesses.divisions as division}}
+          <li class="division-color--{{division.key}}"><span></span>{{division.label}}<em>{{division.count}}</em></li>
+          {{/each}}
         </ul>
       </div>
     </div>
     <div class="f-bottom">
-      <span>© Apex Holdings Limited. All rights reserved.</span>
+      <span>{{data.contact.copyright}}</span>
       <span class="f-seq" aria-hidden="true"
-        ><i class="inline-style-199"></i><i class="inline-style-200"></i
-        ><i class="inline-style-201"></i><i class="inline-style-202"></i
-      ></span>
+        >{{#each data.businesses.divisions as division}}<i class="footer-division-dot--{{division.key}}"></i>{{/each}}</span
+      >
       <a class="f-top" href="#top"
-        >Back to top<svg
+        >{{data.contact.backToTop}}<svg
           viewBox="0 0 20 20"
           width="16"
           height="16"

@@ -1,0 +1,48 @@
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "{{site.url | json}}/#organization",
+            "name": "{{site.name | json}}",
+            "alternateName": "{{site.alternateName | json}}",
+            "url": "{{site.url | json}}/",
+            "logo": "{{site.url | json}}/assets/images/logo-horizontal.png",
+            "image": "{{site.url | json}}{{site.ogImage | json}}",
+            "description": "{{page.description | json}}",
+            "foundingDate": "{{site.foundingDate | json}}",
+            "email": "{{data.contact.email | json}}",
+            "telephone": "{{data.contact.telephone | json}}",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "{{data.contact.address.streetAddress | json}}",
+              "addressLocality": "{{data.contact.address.addressLocality | json}}",
+              "postalCode": "{{data.contact.address.postalCode | json}}",
+              "addressCountry": "{{data.contact.address.addressCountry | json}}"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "contactType": "customer service",
+              "email": "{{data.contact.email | json}}",
+              "telephone": "{{data.contact.telephone | json}}",
+              "areaServed": "Worldwide",
+              "availableLanguage": ["English", "Bengali"]
+            },
+            "subOrganization": [
+              {{#each data.companies as company}}
+              { "@type": "Organization", "name": "{{company.name | json}}", "url": "{{company.url | json}}" }{{#unless @last}},{{/unless}}
+              {{/each}}
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "{{site.url | json}}/#website",
+            "url": "{{site.url | json}}/",
+            "name": "{{site.name | json}}",
+            "inLanguage": "{{site.lang | json}}",
+            "publisher": { "@id": "{{site.url | json}}/#organization" }
+          }
+        ]
+      }
+    </script>

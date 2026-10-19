@@ -1,0 +1,25 @@
+/* ================= Our businesses: parallax backdrop ================= */
+.parallax {
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 0;
+  top: -16%;
+  bottom: -16%;
+  background: url(../images/bg/shirts.jpg) 70% center/cover no-repeat;
+  opacity: 0.22;
+  will-change: transform;
+  -webkit-mask-image: linear-gradient(
+    270deg,
+    #000 25%,
+    rgba(0, 0, 0, 0.35) 60%,
+    transparent 92%
+  );
+  mask-image: linear-gradient(
+    270deg,
+    #000 25%,
+    rgba(0, 0, 0, 0.35) 60%,
+    transparent 92%
+  );
+}
+

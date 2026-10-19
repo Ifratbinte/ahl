@@ -1,0 +1,36 @@
+<!--@page
+{
+  "title": "Page not found | Apex Holdings Limited",
+  "description": "The page you are looking for could not be found. Return to the Apex Holdings Limited home page.",
+  "path": "/404.html",
+  "robots": "noindex, follow",
+  "ogType": "website",
+  "sitemap": false,
+  "absoluteAssets": true,
+  "preloadImage": "assets/images/logo-horizontal.png"
+}
+-->
+<!doctype html>
+<html lang="{{site.lang}}">
+  <head>
+<!-- @include head/meta.html -->
+<!-- @include head/assets.html -->
+  </head>
+  <body class="error-page">
+    <main class="error-page-main">
+      <a href="/" aria-label="Apex Holdings Limited, home">
+        <img
+          src="/assets/images/logo-horizontal.png"
+          alt="Apex Holdings Limited"
+          class="error-page-logo"
+        />
+      </a>
+      <p class="error-page-code">404</p>
+      <h1 class="error-page-title">Page not found</h1>
+      <p class="error-page-text">
+        The page you are looking for may have moved or no longer exists.
+      </p>
+      <a class="error-page-link" href="/">Back to home</a>
+    </main>
+  </body>
+</html>

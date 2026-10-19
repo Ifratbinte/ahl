@@ -1,0 +1,154 @@
+/* ================= Sustainability: flip cards ================= */
+.flip {
+  position: relative;
+  flex: 1 1 300px;
+  min-width: 0;
+  height: 350px;
+  perspective: 1400px;
+  outline: none;
+  cursor: pointer;
+}
+.flip-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.85s cubic-bezier(0.4, 0.15, 0.2, 1);
+}
+.flip.is-flipped .flip-inner,
+.flip:focus-visible .flip-inner {
+  transform: rotateY(180deg);
+}
+@media (hover: hover) {
+  .flip:hover .flip-inner {
+    transform: rotateY(180deg);
+  }
+}
+.face {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  box-sizing: border-box;
+  border-radius: 22px;
+  padding: 30px 28px;
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.front {
+  color: #ffffff;
+  background: linear-gradient(155deg, var(--c1), var(--c2));
+  box-shadow: 0 14px 32px rgba(10, 37, 64, 0.18);
+  justify-content: space-between;
+}
+.front-top .num {
+  font-family: "Sora", sans-serif;
+  font-weight: 700;
+  font-size: 58px;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+.front-top h3 {
+  margin: 14px 0 0;
+  font-size: 20px;
+  line-height: 1.3;
+  font-weight: 600;
+  max-width: 250px;
+}
+.bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  height: 96px;
+}
+.bars span {
+  flex: 1;
+  border-radius: 10px;
+  background: #ffffff;
+  transform-origin: bottom;
+  animation: barUp 1.1s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+.bars span:nth-child(even) {
+  background: rgba(255, 255, 255, 0.28);
+}
+.bars span:nth-child(2) {
+  animation-delay: 0.08s;
+}
+.bars span:nth-child(3) {
+  animation-delay: 0.16s;
+}
+.bars span:nth-child(4) {
+  animation-delay: 0.24s;
+}
+.bars span:nth-child(5) {
+  animation-delay: 0.32s;
+}
+.bars span:nth-child(6) {
+  animation-delay: 0.4s;
+}
+.flip:hover .bars span {
+  animation: barBob 1.4s ease-in-out infinite alternate;
+}
+.flip-hint {
+  position: absolute;
+  right: 24px;
+  top: 30px;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+  opacity: 0.75;
+}
+.back {
+  transform: rotateY(180deg);
+  background: var(--t);
+  border: 1.5px solid var(--c);
+  color: #0a2540;
+  box-shadow: 0 14px 32px rgba(10, 37, 64, 0.12);
+  justify-content: center;
+}
+.back-badge {
+  align-self: flex-start;
+  background: var(--c);
+  color: #ffffff;
+  font-family: "Sora", sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  padding: 6px 12px;
+  border-radius: 99px;
+}
+.back h3 {
+  margin: 16px 0 0;
+  font-size: 20px;
+  line-height: 1.3;
+  font-weight: 600;
+}
+.back p {
+  margin: 12px 0 0;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #33475e;
+}
+@keyframes barUp {
+  from {
+    transform: scaleY(0.15);
+    opacity: 0;
+  }
+  to {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+@keyframes barBob {
+  from {
+    transform: scaleY(1);
+  }
+  to {
+    transform: scaleY(0.82);
+  }
+}
+

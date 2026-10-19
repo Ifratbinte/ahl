@@ -1,0 +1,88 @@
+{
+  "eyebrow": "Our businesses",
+  "title": "Four divisions, one group",
+  "mix": {
+    "title": "Portfolio mix",
+    "subtitle": "Companies by division, as listed on our division pages",
+    "totalLabel": "companies"
+  },
+  "divisions": [
+    {
+      "key": "food",
+      "label": "Food",
+      "heading": "A standard in the food business",
+      "companies": [
+        {
+          "extends": "@companies.afl",
+          "description": "A 100% export-oriented, value-added shrimp processor and the largest frozen seafood processor and exporter in Bangladesh, with modern processing, freezing and storage plant."
+        },
+        {
+          "extends": "@companies.acfl",
+          "description": "A new venture starting with the local food and beverage market, then expanding to export-ready, ready-to-eat products for the USA, Europe and the Middle East."
+        }
+      ]
+    },
+    {
+      "key": "textile",
+      "label": "Textile",
+      "heading": "A pioneer in the textile business",
+      "companies": [
+        {
+          "extends": "@companies.all",
+          "description": "Incorporated in 1999 as a fully vertical setup for high-quality intimate apparel, built on consistency, quality, on-time delivery and competitive pricing."
+        },
+        {
+          "extends": "@companies.afwl",
+          "description": "Our newest venture, in a modern 900,000 sq ft building, making export-quality knit garments for infants, children and women from in-house fabrics."
+        },
+        {
+          "extends": "@companies.atpml",
+          "description": "A 100% export-oriented textile and garment manufacturer supplying large retail chains in the European Union and North America."
+        },
+        {
+          "extends": "@companies.askml",
+          "description": "A vertically integrated maker of knit garments for infants, children and women, with solid dyed, yarn dyed and all-over printed fabrics produced in-house."
+        },
+        {
+          "extends": "@companies.aydl",
+          "description": "In commercial production since January 2003, producing dyed yarn for knitting and weaving, plus sewing and embroidery thread for garment makers."
+        }
+      ]
+    },
+    {
+      "key": "agro",
+      "label": "Agro",
+      "heading": "An innovator in the agricultural business",
+      "companies": [
+        {
+          "extends": "@companies.aal",
+          "description": "Driven by a philosophy of enriching the lives of those who produce and those who consume, and of helping agriculture progress and thrive."
+        },
+        {
+          "extends": "@companies.aosil",
+          "description": "An innovation-driven producer extending soybean and cereal crops in Bangladesh, growing soybeans since 2012 to build a soybean-based industry."
+        },
+        {
+          "extends": "@companies.abbl",
+          "description": "A maker of sustainable agricultural inputs with its own R&D, manufacturing and testing infrastructure and qualified professionals.",
+          "name": "Apex Biofertilizers & Biopesticides Ltd"
+        }
+      ]
+    },
+    {
+      "key": "diversified",
+      "label": "Diversified",
+      "heading": "Expanding our diversified businesses",
+      "companies": [
+        {
+          "extends": "@companies.mbl",
+          "description": "Producing and distributing specialty chemicals since 1994, supplying active textile and leather auxiliaries to local industries."
+        },
+        {
+          "extends": "@companies.arel",
+          "description": "Off-grid and grid-connected solar and bio-gas systems for commercial, residential and public-sector customers, working with international NGOs on green energy."
+        }
+      ]
+    }
+  ]
+}

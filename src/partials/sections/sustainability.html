@@ -1,0 +1,92 @@
+<section id="sustainability" class="sustainability-section">
+  <div aria-hidden="true" class="floaty sustainability-accent-orb--green"></div>
+  <div aria-hidden="true" class="drift-b sustainability-accent-orb--blue"></div>
+  <div class="sustainability-header">
+    <div class="rv sustainability-heading">
+      <div class="sustainability-eyebrow">{{data.sustainability.eyebrow}}</div>
+      <h2 class="section-title">{{data.sustainability.title}}</h2>
+    </div>
+    <p class="sustainability-intro">
+      {{data.sustainability.intro}}
+    </p>
+  </div>
+
+  <div class="sustainability-pillars">
+    {{#each data.sustainability.pillars as pillar}}
+    <article
+      class="flip rv2"
+      tabindex="0"
+      aria-label="{{pillar.title}} (hover, focus or tap to read more)"
+    >
+      <div class="flip-inner">
+        <div class="face front sustainability-card-front--{{pillar.key}}">
+          <div class="front-top">
+            <div class="num">{{@number | pad2}}</div>
+            <h3>{{pillar.title}}</h3>
+          </div>
+          <div class="bars" aria-hidden="true">
+            {{#each pillar.bars as bar}}<span class="sustainability-bar--{{bar}}"></span>{{/each}}
+          </div>
+          <span class="flip-hint" aria-hidden="true">{{data.sustainability.cardHint}}</span>
+        </div>
+        <div class="face back sustainability-card-back--{{pillar.key}}">
+          <div class="back-badge">{{@number | pad2}}</div>
+          <h3>{{pillar.title}}</h3>
+          <p>
+            {{pillar.text}}
+          </p>
+        </div>
+      </div>
+    </article>
+    {{#unless @last}}
+
+    {{/unless}}
+    {{/each}}
+  </div>
+
+  <div class="rv efficiency-callout">
+    <svg
+      aria-hidden="true"
+      width="260"
+      height="260"
+      viewBox="0 0 260 260"
+      class="efficiency-decoration"
+    >
+      <g class="spin">
+        <circle
+          cx="130"
+          cy="130"
+          r="100"
+          fill="none"
+          stroke="#4CC38A"
+          stroke-width="2"
+          stroke-dasharray="4 10"
+        ></circle>
+      </g>
+      <circle
+        cx="130"
+        cy="130"
+        r="60"
+        fill="none"
+        stroke="#6C9BFF"
+        stroke-width="2"
+      ></circle>
+    </svg>
+    <div class="efficiency-copy">
+      <div class="efficiency-title">{{data.sustainability.efficiency.title}}</div>
+      <div class="efficiency-description">
+        {{data.sustainability.efficiency.description}}
+      </div>
+    </div>
+    <div class="efficiency-benefits">
+      {{#each data.sustainability.efficiency.benefits as benefit}}
+      <span class="efficiency-benefit"
+        ><span class="dotp2 hero-badge-dot--agro"></span>{{benefit}}</span
+      >
+      {{#unless @last}}
+
+      {{/unless}}
+      {{/each}}
+    </div>
+  </div>
+</section>

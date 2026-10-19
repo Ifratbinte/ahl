@@ -1,0 +1,86 @@
+{
+  "askml": {
+    "name": "Apex Spinning & Knitting Mills Limited",
+    "shortName": "Apex Spinning & Knitting Mills",
+    "abbr": "ASKML",
+    "url": "http://apexknitting.com",
+    "division": "textile"
+  },
+  "mbl": {
+    "name": "Matex Bangladesh Limited",
+    "shortName": "Matex Bangladesh",
+    "abbr": "MBL",
+    "url": "http://matexbd.com",
+    "division": "diversified"
+  },
+  "all": {
+    "name": "Apex Lingerie Limited",
+    "shortName": "Apex Lingerie",
+    "abbr": "ALL",
+    "url": "http://apexlingerie.com",
+    "division": "textile"
+  },
+  "aydl": {
+    "name": "Apex Yarn Dyeing Limited",
+    "shortName": "Apex Yarn Dyeing",
+    "abbr": "AYDL",
+    "url": "http://www.apexthreads.com",
+    "division": "textile"
+  },
+  "atpml": {
+    "name": "Apex Textile Printing Mills Limited",
+    "shortName": "Apex Textile Printing Mills",
+    "abbr": "ATPML",
+    "url": "https://www.apextextileprinting.com",
+    "division": "textile"
+  },
+  "afwl": {
+    "name": "Apex Fashion Wear Limited",
+    "shortName": "Apex Fashion Wear",
+    "abbr": "AFWL",
+    "url": "http://apexfashionwear.com",
+    "division": "textile"
+  },
+  "aal": {
+    "name": "Apex Agriscience Limited",
+    "shortName": "Apex Agriscience",
+    "abbr": "AAL",
+    "url": "http://apexagriscience.com",
+    "division": "agro"
+  },
+  "acfl": {
+    "name": "Apex Convenience Foods Limited",
+    "shortName": "Apex Convenience Foods",
+    "abbr": "ACFL",
+    "url": "http://apexconveniencefoods.com",
+    "division": "food"
+  },
+  "abbl": {
+    "name": "Apex Biofertilizers & Biopesticides Limited",
+    "shortName": "Apex Biofertilizers & Biopesticides",
+    "abbr": "ABBL",
+    "url": "http://apexbiofertilizer.com",
+    "division": "agro"
+  },
+  "afl": {
+    "name": "Apex Foods Limited",
+    "shortName": "Apex Foods",
+    "abbr": "AFL",
+    "url": "https://www.apexfoods.com/",
+    "division": "food"
+  },
+  "aosil": {
+    "name": "Apex Organic Soya Industries Limited",
+    "shortName": "Apex Organic Soya Industries",
+    "abbr": "AOSIL",
+    "url": "https://apexorganicsoya.com/",
+    "division": "agro"
+  },
+  "arel": {
+    "name": "Apex Renewable Energy Limited",
+    "shortName": "Apex Renewable Energy",
+    "abbr": "AREL",
+    "url": "https://www.apexrenewablesltd.com/",
+    "division": "diversified"
+  }
+}

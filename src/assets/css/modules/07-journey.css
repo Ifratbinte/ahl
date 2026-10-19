@@ -1,0 +1,463 @@
+/* ================= Our journey ================= */
+.journey {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  margin-top: 0;
+  border-radius: 28px;
+  padding: 64px 32px 72px;
+  background: linear-gradient(180deg, #ffffff 0%, #f1f5fa 100%);
+  box-shadow: 0 2px 14px rgba(10, 37, 64, 0.06);
+}
+.journey-scroll {
+  position: relative;
+  margin-top: 64px;
+}
+.journey-bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+.orb {
+  position: absolute;
+  border-radius: 50%;
+}
+.journey .o1 {
+  left: -70px;
+  top: 60px;
+  width: 240px;
+  height: 240px;
+  background: #f08a5d;
+  opacity: 0.13;
+}
+.journey .o2 {
+  right: -60px;
+  top: 36%;
+  width: 220px;
+  height: 220px;
+  background: #6c9bff;
+  opacity: 0.16;
+}
+.journey .o3 {
+  left: 12%;
+  bottom: -70px;
+  width: 200px;
+  height: 200px;
+  background: #4cc38a;
+  opacity: 0.15;
+}
+.journey-head {
+  text-align: center;
+}
+.journey-eyebrow {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  color: #0e7c73;
+}
+.journey-head h3 {
+  margin: 10px 0 0;
+  font-size: clamp(28px, 3.4vw, 40px);
+  line-height: 1.15;
+  font-weight: 700;
+  color: #0a2540;
+}
+.tl-wrap {
+  position: relative;
+  max-width: 980px;
+  margin: 56px auto 0;
+}
+.tl-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  margin-left: -2px;
+  border-radius: 99px;
+  background: #dce5ef;
+}
+.tl-fill {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: var(--p, 100%);
+  border-radius: 99px;
+  background: linear-gradient(
+    180deg,
+    #f08a5d,
+    #6c9bff 40%,
+    #4cc38a 75%,
+    #a98bff
+  );
+}
+.tl {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.tl-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 0 72px;
+}
+.tl-item:last-child {
+  margin-bottom: 0;
+}
+.tl-card {
+  position: relative;
+  overflow: hidden;
+  grid-column: 1;
+  margin-right: 64px;
+  padding: 26px 28px 24px;
+  border-radius: 20px;
+  background: #ffffff;
+  border: 1px solid #e6ecf3;
+  text-align: right;
+  box-shadow: 0 8px 26px rgba(10, 37, 64, 0.07);
+  transition:
+    transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1),
+    box-shadow 0.4s ease,
+    border-color 0.4s ease;
+}
+.tl-item.right .tl-card {
+  grid-column: 2;
+  margin-right: 0;
+  margin-left: 64px;
+  text-align: left;
+}
+.tl-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 5px;
+  right: 0;
+  background: var(--c);
+}
+.tl-item.right .tl-card::before {
+  right: auto;
+  left: 0;
+}
+.tl-card::after {
+  content: "";
+  position: absolute;
+  top: 34px;
+  width: 64px;
+  height: 3px;
+  right: -64px;
+  background: linear-gradient(90deg, var(--c), transparent);
+  opacity: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition:
+    transform 0.5s ease 0.2s,
+    opacity 0.5s ease 0.2s;
+}
+.tl-item.right .tl-card::after {
+  right: auto;
+  left: -64px;
+  transform-origin: right;
+  background: linear-gradient(270deg, var(--c), transparent);
+}
+.tl-ghost {
+  position: absolute;
+  right: 16px;
+  bottom: -14px;
+  font-family: "Sora", sans-serif;
+  font-weight: 700;
+  font-size: 88px;
+  line-height: 1;
+  color: var(--c);
+  opacity: 0.055;
+  pointer-events: none;
+  transition:
+    transform 0.6s ease,
+    opacity 0.4s ease;
+}
+.tl-item.right .tl-ghost {
+  right: auto;
+  left: 16px;
+}
+.tl-year {
+  position: relative;
+  font-family: "Sora", sans-serif;
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 1;
+  letter-spacing: -1px;
+  color: var(--c);
+}
+.tl-card p {
+  position: relative;
+  margin: 12px 0 0;
+  font-size: 15.5px;
+  line-height: 1.6;
+  color: #33475e;
+}
+.tl-node {
+  position: absolute;
+  left: 50%;
+  top: 26px;
+  width: 22px;
+  height: 22px;
+  margin-left: -11px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 4px solid #c9d5e2;
+  box-sizing: border-box;
+  z-index: 2;
+  transition:
+    background 0.4s ease,
+    border-color 0.4s ease,
+    transform 0.4s ease;
+}
+.tl-node::after {
+  content: "";
+  position: absolute;
+  left: -9px;
+  top: -9px;
+  right: -9px;
+  bottom: -9px;
+  border-radius: 50%;
+  border: 2px solid var(--c);
+  opacity: 0;
+}
+.tl-item:hover .tl-card {
+  transform: translateY(-6px);
+  border-color: var(--c);
+  box-shadow: 0 18px 38px rgba(10, 37, 64, 0.13);
+}
+.tl-item:hover .tl-ghost {
+  transform: scale(1.12) translateY(-6px);
+  opacity: 0.12;
+}
+.tl-item:hover .tl-node {
+  transform: scale(1.25);
+}
+.tl-item:hover .tl-card::after {
+  opacity: 0.9;
+  transform: scaleX(1);
+}
+
+/* scroll-triggered state (only when the script is running) */
+.tl-anim .tl-fill {
+  height: var(--p, 0%);
+}
+.tl-anim .tl-item .tl-card {
+  opacity: 0;
+  transform: translateX(-46px);
+  transition:
+    opacity 0.8s ease calc(var(--i) * 40ms),
+    transform 0.9s cubic-bezier(0.2, 0.8, 0.2, 1) calc(var(--i) * 40ms),
+    box-shadow 0.4s ease,
+    border-color 0.4s ease;
+}
+.tl-anim .tl-item.right .tl-card {
+  transform: translateX(46px);
+}
+.tl-anim .tl-item.in .tl-card {
+  opacity: 1;
+  transform: none;
+}
+.tl-anim .tl-item.in:hover .tl-card {
+  transform: translateY(-6px);
+}
+.tl-item.in .tl-node {
+  background: var(--c);
+  border-color: var(--c);
+}
+.tl-item.in .tl-node::after {
+  animation: nodePulse 2.6s ease-out infinite;
+}
+.journey-scroll.is-horizontal .journey {
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  height: 100vh;
+  height: 100svh;
+  min-height: 500px;
+  padding: 44px clamp(20px, 4vw, 56px);
+}
+.journey-scroll.is-horizontal .journey-head {
+  flex: 0 0 auto;
+}
+.journey-scroll.is-horizontal .tl-wrap {
+  flex: 0 0 clamp(330px, 54vh, 420px);
+  width: 100%;
+  max-width: none;
+  margin: 34px auto 0;
+  overflow: hidden;
+}
+.journey-scroll.is-horizontal .tl-track {
+  position: relative;
+  width: max-content;
+  height: 100%;
+  padding: 0 var(--tl-side-pad, 0px);
+  box-sizing: content-box;
+  will-change: transform;
+}
+.journey-scroll.is-horizontal .tl-line {
+  left: var(--tl-center, 140px);
+  right: var(--tl-center, 140px);
+  top: 50%;
+  bottom: auto;
+  width: auto;
+  height: 4px;
+  margin: -2px 0 0;
+}
+.journey-scroll.is-horizontal .tl-fill {
+  width: var(--p, 0%);
+  height: 100%;
+  background: linear-gradient(90deg, #f08a5d, #6c9bff 40%, #4cc38a 75%, #a98bff);
+}
+.journey-scroll.is-horizontal .tl {
+  display: flex;
+  height: 100%;
+}
+.journey-scroll.is-horizontal .tl-item {
+  flex: 0 0 clamp(260px, 28vw, 320px);
+  grid-template-columns: 1fr;
+  grid-template-rows: minmax(0, 1fr) 22px minmax(0, 1fr);
+  margin: 0;
+  padding: 0 14px;
+  box-sizing: border-box;
+}
+.journey-scroll.is-horizontal .tl-card {
+  grid-row: 1;
+  align-self: end;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0 0 26px;
+}
+.journey-scroll.is-horizontal .tl-item.right .tl-card {
+  grid-column: 1;
+  grid-row: 3;
+  align-self: start;
+  margin: 26px 0 0;
+}
+.journey-scroll.is-horizontal .tl-card::after {
+  top: auto;
+  right: 50%;
+  bottom: -27px;
+  width: 3px;
+  height: 27px;
+  transform: scaleY(0);
+  transform-origin: top;
+  background: var(--c);
+}
+.journey-scroll.is-horizontal .tl-item.right .tl-card::after {
+  top: -27px;
+  right: auto;
+  bottom: auto;
+  left: 50%;
+  transform-origin: bottom;
+  background: var(--c);
+}
+.journey-scroll.is-horizontal .tl-item:hover .tl-card::after {
+  transform: scaleY(1);
+}
+.journey-scroll.is-horizontal .tl-node {
+  top: 50%;
+  left: 50%;
+  margin: -11px 0 0 -11px;
+}
+.journey-scroll.is-horizontal .tl-item .tl-card {
+  opacity: 1;
+  transform: none;
+}
+.journey-scroll.is-horizontal .tl-item.active .tl-card {
+  border-color: var(--c);
+  box-shadow: 0 14px 32px rgba(10, 37, 64, 0.14);
+}
+.journey-scroll.is-horizontal .tl-item.active .tl-node {
+  background: var(--c);
+  border-color: var(--c);
+  transform: scale(1.22);
+}
+.journey-scroll.is-horizontal .tl-item.active .tl-node::after {
+  animation: nodePulse 2.6s ease-out infinite;
+}
+@keyframes nodePulse {
+  0% {
+    transform: scale(0.6);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1.35);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 760px) {
+  .journey {
+    padding: 48px 18px 56px;
+    border-radius: 22px;
+  }
+  .tl-wrap {
+    margin-top: 40px;
+  }
+  .tl-line {
+    left: 20px;
+    margin-left: -2px;
+  }
+  .tl-item,
+  .tl-item.right {
+    grid-template-columns: 1fr;
+    margin-bottom: 40px;
+  }
+  .tl-card,
+  .tl-item.right .tl-card {
+    grid-column: 1;
+    margin: 0 0 0 52px;
+    text-align: left;
+  }
+  .tl-card::before,
+  .tl-item.right .tl-card::before {
+    right: auto;
+    left: 0;
+  }
+  .tl-card::after,
+  .tl-item.right .tl-card::after {
+    left: -32px;
+    right: auto;
+    width: 32px;
+    transform-origin: right;
+    background: linear-gradient(270deg, var(--c), transparent);
+  }
+  .tl-ghost,
+  .tl-item.right .tl-ghost {
+    left: auto;
+    right: 14px;
+  }
+  .tl-node {
+    left: 20px;
+  }
+  .tl-anim .tl-item .tl-card,
+  .tl-anim .tl-item.right .tl-card {
+    transform: translateY(34px);
+  }
+  .journey-scroll.is-horizontal .journey {
+    min-height: 540px;
+    padding: 36px 16px;
+  }
+  .journey-scroll.is-horizontal .tl-wrap {
+    flex-basis: 350px;
+    margin-top: 28px;
+  }
+  .journey-scroll.is-horizontal .tl-item {
+    flex-basis: min(76vw, 310px);
+    grid-template-rows: minmax(0, 1fr) 22px minmax(0, 1fr);
+  }
+}
+

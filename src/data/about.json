@@ -1,0 +1,51 @@
+{
+  "eyebrow": "About us",
+  "title": "Who we are",
+  "lead": "Apex Holdings Limited (AHL) is a holding company that manages manufacturing and export-oriented enterprises spanning frozen & convenience foods, textiles & apparel, chemicals and agro businesses.",
+  "description": "The sponsors set up their first export-oriented manufacturing enterprise in 1980 and have grown into a sizable group of companies. As the number of companies grew, AHL was formed and registered in Bangladesh in 1998 to coordinate and keep control over each individual company.",
+  "link": {
+    "label": "Learn more about us",
+    "url": "https://apexholdings.com/about"
+  },
+  "journey": {
+    "eyebrow": "Milestones",
+    "title": "Our Journey",
+    "milestones": [
+      {
+        "year": "1979",
+        "text": "Apex Foods Limited incorporated",
+        "theme": "food"
+      },
+      {
+        "year": "1980",
+        "text": "Sponsors set up their first export-oriented manufacturing enterprise",
+        "theme": "textile"
+      },
+      {
+        "year": "1994",
+        "text": "Matex begins producing specialty chemicals",
+        "theme": "diversified"
+      },
+      {
+        "year": "1998",
+        "text": "Apex Holdings Limited formed and registered in Bangladesh",
+        "theme": "agro"
+      },
+      {
+        "year": "1999",
+        "text": "Apex Lingerie Limited incorporated",
+        "theme": "textile-secondary"
+      },
+      {
+        "year": "2003",
+        "text": "Apex Yarn Dyeing starts commercial production",
+        "theme": "textile-tertiary"
+      },
+      {
+        "year": "2012",
+        "text": "Soybean production begins at Apex Organic Soya",
+        "theme": "agro-secondary"
+      }
+    ]
+  }
+}

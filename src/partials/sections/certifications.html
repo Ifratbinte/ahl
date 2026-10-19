@@ -1,0 +1,43 @@
+<section id="certifications" class="certifications-section">
+  <div class="certifications-heading">
+    <div class="businesses-eyebrow">{{data.certifications.eyebrow}}</div>
+    <h2 class="certifications-title">{{data.certifications.title}}</h2>
+  </div>
+  <div class="certifications-marquee">
+    <!-- the list is repeated twice so the marquee loops seamlessly -->
+    <div class="mq2 certifications-track">
+      {{#each data.certifications.items | repeat:2 as cert}}
+      <a
+        class="cert"
+        href="{{cert.url}}"
+        target="_blank"
+        rel="noopener"
+        title="{{cert.name}}"
+        ><img
+          src="{{page.root}}{{cert.logo}}"
+          alt="{{cert.name}}"
+          loading="lazy"
+      /></a>
+      {{#unless @last}}
+
+      {{/unless}}
+      {{/each}}
+    </div>
+    <!-- second row: same logos in reverse order, decorative only -->
+    <div class="mq2r certifications-track" aria-hidden="true">
+      {{#each data.certifications.items | reverse | repeat:2 as cert}}
+      <a
+        class="cert"
+        href="{{cert.url}}"
+        tabindex="-1"
+        target="_blank"
+        rel="noopener"
+        ><img src="{{page.root}}{{cert.logo}}" alt="" loading="lazy"
+      /></a>
+      {{#unless @last}}
+
+      {{/unless}}
+      {{/each}}
+    </div>
+  </div>
+</section>

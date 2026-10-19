@@ -1,0 +1,38 @@
+{
+  "heading": "Let's talk about working together.",
+  "email": "info@apexholdings.com",
+  "telephone": "+880 9606669988",
+  "address": {
+    "streetAddress": "18 Gulshan Avenue, Shanta Skymark, Gulshan",
+    "addressLocality": "Dhaka",
+    "postalCode": "1212",
+    "addressCountry": "BD"
+  },
+  "title": "Contact us",
+  "items": [
+    {
+      "icon": "location",
+      "lines": [
+        "18 Gulshan Avenue, Shanta Skymark,",
+        "Gulshan, Dhaka-1212, Bangladesh"
+      ]
+    },
+    {
+      "icon": "phone",
+      "lines": [
+        "+880 9606669988",
+        "+88-02-9861685, +88-02-8810850"
+      ]
+    },
+    {
+      "icon": "clock",
+      "lines": [
+        "Sat–Thu · 08:00 am – 04:30 pm"
+      ]
+    }
+  ],
+  "quickMenuTitle": "Quick menu",
+  "divisionsTitle": "Our divisions",
+  "copyright": "© Apex Holdings Limited. All rights reserved.",
+  "backToTop": "Back to top"
+}

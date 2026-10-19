@@ -1,0 +1,272 @@
+<header class="hero-section">
+  <h1 class="sr">{{data.hero.srTitle}}</h1>
+
+  <!-- nav over the hero -->
+  <div class="nav hero-navigation" data-site-nav>
+    <div class="hero-navigation-inner">
+      <a
+        href="#top"
+        aria-label="{{data.navigation.brand.homeLabel}}"
+        class="hero-brand-link"
+      >
+        <img
+          src="{{page.root}}{{data.navigation.brand.logo}}"
+          alt="{{data.navigation.brand.alt}}"
+          class="hero-brand-logo"
+        />
+      </a>
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-label="Open navigation"
+        aria-controls="primary-navigation"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav
+        class="hero-navigation-links"
+        id="primary-navigation"
+        aria-label="Primary navigation"
+        aria-hidden="false"
+      >
+        <a
+          class="nav-drawer-brand"
+          href="#top"
+          aria-label="{{data.navigation.brand.homeLabel}}"
+        >
+          <img src="{{page.root}}{{data.navigation.brand.logo}}" alt="{{data.navigation.brand.alt}}" />
+        </a>
+        {{#each data.navigation.links as link}}
+        <!-- @include components/nav-link.html -->
+        {{/each}}
+      </nav>
+      <button
+        class="nav-scrim"
+        type="button"
+        aria-label="Close navigation"
+        hidden
+      ></button>
+    </div>
+  </div>
+
+  <section
+    id="top"
+    aria-roledescription="carousel"
+    aria-label="{{data.hero.carouselLabel}}"
+    class="hero-carousel"
+  >
+    <div class="hero-slides">
+      {{#each data.hero.slides as slide}}
+      <div
+        class="slide{{#if @first}} is-active{{/if}} hero-slide{{#if slide.slideClass}} {{slide.slideClass}}{{/if}}"
+        role="group"
+        aria-roledescription="slide"
+        aria-label="{{@number | pad2}} / {{@total | pad2}}"
+        aria-hidden="{{#if @first}}false{{else}}true{{/if}}"
+        {{#if slide.duration}}
+        data-duration="{{slide.duration}}"
+        {{/if}}
+      >
+        <div class="bgwrap hero-background{{slide.style.background | mod}}" aria-hidden="true">
+          <div class="hero-background-image{{slide.style.image | mod}}"></div>
+          <div class="hero-background-image-side{{slide.style.image | mod}}"></div>
+          <div class="hero-background-overlay"></div>
+          <div class="hero-background-top-overlay"></div>
+        </div>
+
+        <div class="hero-slide-layout">
+          <div class="hero-copy">
+            <div class="hero-meta">
+              <span class="hero-badge{{slide.style.badge | mod}}"
+                ><span class="hero-badge-dot{{slide.style.badge | mod}}"></span>{{slide.badge}}</span
+              >
+              <span class="hero-slide-index">{{@number | pad2}} / {{@total | pad2}}</span>
+            </div>
+            <h2 class="hero-title">{{slide.name}}</h2>
+            <p class="hero-subtitle">
+              {{slide.subtitle}}
+            </p>
+            <p class="hero-description">
+              {{slide.description}}
+            </p>
+            {{#if slide.highlights}}
+            <ul class="hero-highlights">
+              {{#each slide.highlights as highlight}}
+              <li class="hero-highlight">
+                {{#if slide.style.icon}}
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 18 18"
+                  aria-hidden="true"
+                  class="hero-highlight-icon"
+                >
+                  <path
+                    d="M3.5 9.5l3.5 3.5 7.5-8"
+                    fill="none"
+                    stroke="{{slide.style.icon}}"
+                    stroke-width="2.4"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path></svg
+                >{{/if}}{{highlight}}
+              </li>
+              {{/each}}
+            </ul>
+            {{/if}}
+            <div class="hero-action-wrap">
+              <a
+                href="{{slide.url}}"
+                target="_blank"
+                rel="noopener"
+                tabindex="{{#if @first}}0{{else}}-1{{/if}}"
+                class="hero-action"
+              >
+                <span class="hero-action-icon"
+                  ><span class="hero-action-icon-shadow{{slide.style.action | mod}}"></span
+                  ><span class="hero-action-icon-disc"
+                    ><svg
+                      width="22"
+                      height="22"
+                      viewBox="0 0 22 22"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M4 11h14M12 5l6 6-6 6"
+                        fill="none"
+                        stroke="#0A2540"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path></svg></span
+                ></span>
+                {{slide.actionLabel}}
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-stat-card">
+            <div>
+              <div class="hero-stat-heading">At a glance</div>
+              <div class="hero-stat-value">{{slide.stat.value}}</div>
+              <div class="hero-stat-caption{{slide.style.caption | mod}}">{{slide.stat.caption}}</div>
+            </div>
+            <div class="hero-stat-grid">
+              {{#each slide.stat.items as item}}
+              <div class="hero-stat-item">
+                <div class="hero-stat-number">{{item.value}}</div>
+                <div class="hero-stat-label">{{item.label}}</div>
+              </div>
+              {{/each}}
+            </div>
+          </div>
+        </div>
+      </div>
+      {{#unless @last}}
+
+      {{/unless}}
+      {{/each}}
+    </div>
+
+    <!-- left rail: vertical arrows -->
+    <div class="hero-carousel-controls">
+      <button
+        class="ctl2 hero-carousel-control"
+        type="button"
+        data-action="prev"
+        aria-label="Previous company"
+      >
+        <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true">
+          <path
+            d="M4 12l6-6 6 6"
+            fill="none"
+            stroke="#FFFFFF"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          ></path>
+        </svg>
+      </button>
+      <button
+        class="ctl2 hero-carousel-control"
+        type="button"
+        data-action="toggle"
+        id="toggle"
+        aria-label="Pause slideshow"
+      >
+        <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true">
+          <path
+            id="toggleIcon"
+            d="M4 3h3.5v12H4zM10.5 3H14v12h-3.5z"
+            fill="#FFFFFF"
+          ></path>
+        </svg>
+      </button>
+      <button
+        class="ctl2 hero-carousel-control"
+        type="button"
+        data-action="next"
+        aria-label="Next company"
+      >
+        <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true">
+          <path
+            d="M4 8l6 6 6-6"
+            fill="none"
+            stroke="#FFFFFF"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          ></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- right rail: counter + vertical dots -->
+    <div class="hero-carousel-pagination">
+      <div class="hero-carousel-counter">
+        <span id="cur" class="hero-carousel-counter-current">01</span
+        ><span class="hero-carousel-counter-total"> / {{data.hero.slides | count | pad2}}</span>
+      </div>
+      {{#each data.hero.slides as slide}}
+      <button
+        class="dot{{#if @first}} is-active{{/if}}"
+        type="button"
+        data-go="{{@index}}"
+        aria-label="{{@number | pad2}}: {{slide.name}}"
+        aria-current="{{#if @first}}true{{else}}false{{/if}}"
+      >
+        <svg class="wrap" width="30" height="30" viewBox="0 0 30 30" aria-hidden="true">
+          <circle cx="15" cy="15" r="11" fill="none" stroke="rgba(255,255,255,.3)" stroke-width="1.5"></circle>
+          <circle cx="15" cy="15" r="11" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" class="ring"></circle>
+        </svg>
+        <span class="pt"></span>
+      </button>
+      {{#unless @last}}
+
+      {{/unless}}
+      {{/each}}
+    </div>
+  </section>
+
+  <!-- Company marquee (disabled). To enable, remove the comment markers around this block. -->
+  <!-- <div aria-hidden="true" class="hero-marquee-section">
+    <div class="hero-marquee-viewport">
+      <div class="marq hero-marquee-track">
+        {{#each data.hero.marquee | repeat:2 as item}}
+        <span class="hero-marquee-item"
+          ><span class="hero-marquee-dot{{item.division | mod}}"></span>{{item.name}}<img
+            src="{{page.root}}assets/images/symbol.png"
+            alt=""
+            class="hero-marquee-logo"
+        /></span>
+        {{/each}}
+      </div>
+    </div> -->
+  </div>
+  <!-- NOTE: the </div> above is left over from the disabled marquee. Browsers treat it as
+       closing .page-shell early, and the current layout depends on that. Remove it only
+       together with a visual check. -->
+</header>

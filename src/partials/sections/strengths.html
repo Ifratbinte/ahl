@@ -1,0 +1,16 @@
+<section aria-label="{{data.strengths.label}}" class="strengths-section">
+  <div class="strengths-grid">
+    {{#each data.strengths.items as item}}
+    <div class="card strength-card{{item.theme | mod}}">
+      <div class="strength-value">
+        <span class="count" data-count="{{item.value}}">{{item.value | number}}</span
+        ><span class="strength-suffix{{item.theme | mod}}">{{item.suffix}}</span>
+      </div>
+      <div class="strength-label">{{item.label}}</div>
+    </div>
+    {{#unless @last}}
+
+    {{/unless}}
+    {{/each}}
+  </div>
+</section>
