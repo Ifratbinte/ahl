@@ -1658,9 +1658,29 @@ h3 {
   background-image: url("../images/photos/ahl-hero.jpg");
   background-position: center 45%;
 }
+.hero-aosil-slide .inline-style-012 {
+  background-image: linear-gradient(135deg, #143522, #708338);
+}
+.hero-aosil-slide .inline-style-013,
+.hero-aosil-slide .inline-style-014 {
+  background-image: url("../images/photos/aosil.jpg");
+  background-position: center 52%;
+}
+.hero-arel-slide .inline-style-012 {
+  background-image: linear-gradient(135deg, #102b42, #1b645f);
+}
+.hero-arel-slide .inline-style-013,
+.hero-arel-slide .inline-style-014 {
+  background-image: url("../images/photos/arel.jpg");
+  background-position: center 48%;
+}
 
 .dot[data-go="0"].is-active .ring {
   animation-duration: 14s;
+}
+.dot[data-go="11"].is-active .ring,
+.dot[data-go="12"].is-active .ring {
+  animation-duration: 12s;
 }
 
 /* Extracted inline CSS: inline-style-015. */
@@ -2891,8 +2911,14 @@ h3 {
 
 /* Extracted inline CSS: inline-style-136. */
 .inline-style-136 {
-  width: 40px;
-  height: 40px;
+  width: auto;
+  min-width: 40px;
+  height: auto;
+  min-height: 40px;
+  align-self: flex-start;
+  padding: 0 10px;
+  box-sizing: border-box;
+  white-space: nowrap;
   border-radius: 10px;
   background: #b3461a;
   color: #ffffff;
@@ -2965,8 +2991,14 @@ h3 {
 
 /* Extracted inline CSS: inline-style-143. */
 .inline-style-143 {
-  width: 40px;
-  height: 40px;
+  width: auto;
+  min-width: 40px;
+  height: auto;
+  min-height: 40px;
+  align-self: flex-start;
+  padding: 0 10px;
+  box-sizing: border-box;
+  white-space: nowrap;
   border-radius: 10px;
   background: #2358c4;
   color: #ffffff;
@@ -3017,8 +3049,14 @@ h3 {
 
 /* Extracted inline CSS: inline-style-147. */
 .inline-style-147 {
-  width: 40px;
-  height: 40px;
+  width: auto;
+  min-width: 40px;
+  height: auto;
+  min-height: 40px;
+  align-self: flex-start;
+  padding: 0 10px;
+  box-sizing: border-box;
+  white-space: nowrap;
   border-radius: 10px;
   background: #1f7f46;
   color: #ffffff;
@@ -3069,8 +3107,14 @@ h3 {
 
 /* Extracted inline CSS: inline-style-151. */
 .inline-style-151 {
-  width: 40px;
-  height: 40px;
+  width: auto;
+  min-width: 40px;
+  height: auto;
+  min-height: 40px;
+  align-self: flex-start;
+  padding: 0 10px;
+  box-sizing: border-box;
+  white-space: nowrap;
   border-radius: 10px;
   background: #6a3fb5;
   color: #ffffff;
