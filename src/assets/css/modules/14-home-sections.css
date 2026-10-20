@@ -146,7 +146,7 @@
    ABOUT
    --------------------------------------------------------------------- */
 .hm-about {
-  padding: clamp(96px, 10vw, 140px) 0 clamp(80px, 9vw, 120px);
+  padding: clamp(96px, 10vw, 140px) 0 clamp(80px, 9vw, 0);
   background: #f6f8fa;
 }
 .hm-about-bg {

@@ -27,7 +27,7 @@
     {
       "icon": "clock",
       "lines": [
-        "Sat–Thu · 08:00 am – 04:30 pm"
+        "Sat–Thu · 08:00 am – 04:50 pm"
       ]
     }
   ],
@@ -51,7 +51,7 @@
   ],
   "hours": {
     "days": "Saturday – Thursday",
-    "time": "08:00 am – 04:30 pm",
+    "time": "08:00 am – 04:50 pm",
     "openDays": [
       6,
       0,

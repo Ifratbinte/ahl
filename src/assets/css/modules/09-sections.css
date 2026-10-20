@@ -938,7 +938,7 @@
 
 .strengths-section {
   max-width: var(--page-max);
-  margin: -32px auto 32px;
+  margin: -32px auto 120px;
   padding: 0 var(--page-gutter);
   box-sizing: border-box;
   position: relative;
