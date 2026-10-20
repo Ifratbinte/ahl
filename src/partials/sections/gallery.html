@@ -1,0 +1,85 @@
+<section id="gallery" class="hm-gallery" aria-labelledby="hm-gallery-title">
+  <div class="hm-gallery-bg" aria-hidden="true">
+    <span class="hm-aurora hm-aurora--1"></span>
+    <span class="hm-aurora hm-aurora--2"></span>
+  </div>
+
+  <div class="hm-container">
+    <header class="hm-gallery-head">
+      <div>
+        <div class="hm-eyebrow hm-eyebrow--light" data-reveal>{{data.gallery.eyebrow}}</div>
+        <h2 class="hm-title hm-title--light" id="hm-gallery-title" data-reveal style="--d: 1">{{data.gallery.title}}</h2>
+      </div>
+      <p class="hm-gallery-intro" data-reveal style="--d: 2">{{data.gallery.intro}}</p>
+    </header>
+
+    <!-- featured player + scrollable playlist: more videos only lengthen the list, not the section -->
+    <div class="hm-gal" data-gallery data-reveal style="--d: 2">
+      {{#each data.gallery.videos | limit:1 as video}}
+      <a
+        class="hm-gal-feature pg-tone--{{video.theme}}"
+        href="https://www.youtube.com/watch?v={{video.youtubeId}}"
+        target="_blank"
+        rel="noopener"
+        data-gallery-feature
+        data-video="{{video.youtubeId}}"
+        aria-label="{{data.gallery.playLabel}}: {{video.title}}"
+      >
+        <img class="hm-gal-feature-img" src="https://i.ytimg.com/vi/{{video.youtubeId}}/hqdefault.jpg" alt="" loading="lazy" decoding="async" data-gallery-img onerror="this.style.visibility='hidden'" />
+        <span class="hm-gal-shade" aria-hidden="true"></span>
+        <span class="hm-gal-play" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="28" height="28"><path d="M8 5.5v13l11-6.5z" fill="currentColor" /></svg>
+        </span>
+        <span class="hm-gal-feature-copy">
+          <span class="hm-gal-chip" data-gallery-chip>{{video.category}}</span>
+          <span class="hm-gal-feature-title" data-gallery-title>{{video.title}}</span>
+          <span class="hm-gal-feature-text" data-gallery-text>{{video.description}}</span>
+        </span>
+      </a>
+      {{/each}}
+
+      <div class="hm-gal-side">
+        <div class="hm-gal-count"><b>{{data.gallery.videos | count | pad2}}</b> {{data.gallery.countLabel}}</div>
+        <ol class="hm-gal-list">
+          {{#each data.gallery.videos as video}}
+          <li>
+            <a
+              class="hm-gal-item pg-tone--{{video.theme}}{{#if @first}} is-active{{/if}}"
+              href="https://www.youtube.com/watch?v={{video.youtubeId}}"
+              target="_blank"
+              rel="noopener"
+              data-gallery-item
+              data-video="{{video.youtubeId}}"
+              data-title="{{video.title}}"
+              data-text="{{video.description}}"
+              data-category="{{video.category}}"
+              data-theme="{{video.theme}}"
+              {{#if @first}}aria-current="true"{{/if}}
+            >
+              <span class="hm-gal-thumb">
+                <img src="https://i.ytimg.com/vi/{{video.youtubeId}}/mqdefault.jpg" alt="" loading="lazy" decoding="async" onerror="this.style.visibility='hidden'" />
+                <span class="hm-gal-thumb-play" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14"><path d="M8 5.5v13l11-6.5z" fill="currentColor" /></svg></span>
+              </span>
+              <span class="hm-gal-item-copy">
+                <span class="hm-gal-item-cat">{{@number | pad2}} · {{video.category}}</span>
+                <span class="hm-gal-item-title">{{video.title}}</span>
+              </span>
+            </a>
+          </li>
+          {{/each}}
+        </ol>
+      </div>
+    </div>
+  </div>
+
+  <!-- video lightbox (filled by pages.js; nothing loads from YouTube until a video is played) -->
+  <div class="hm-lightbox" role="dialog" aria-modal="true" aria-label="{{data.gallery.eyebrow}}" hidden data-lightbox>
+    <div class="hm-lightbox-backdrop" data-lightbox-close></div>
+    <div class="hm-lightbox-frame">
+      <button type="button" class="hm-lightbox-close" aria-label="{{data.gallery.closeLabel}}" data-lightbox-close>
+        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" /></svg>
+      </button>
+      <div class="hm-lightbox-player" data-lightbox-player></div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,31 @@
+{
+  "eyebrow": "Gallery",
+  "title": "See Apex in motion",
+  "intro": "Step inside our factories and meet the people behind the group. Pick a video from the list to watch it here.",
+  "countLabel": "videos",
+  "playLabel": "Play video",
+  "closeLabel": "Close video",
+  "videos": [
+    {
+      "youtubeId": "fT5NoRSHkRI",
+      "title": "Introducing the Apex Textile Complex",
+      "category": "Textile",
+      "theme": "textile",
+      "description": "A walk through our integrated textile complex, from yarn and fabric to finished garments."
+    },
+    {
+      "youtubeId": "DU-WkkxjeIE",
+      "title": "Apex Holdings corporate documentary",
+      "category": "Corporate",
+      "theme": "agro",
+      "description": "The story of Apex Holdings Limited: four decades of export-led growth across our divisions."
+    },
+    {
+      "youtubeId": "ZsHSrAHeMY4",
+      "title": "COVID-19 safety measures at Apex",
+      "category": "People",
+      "theme": "food",
+      "description": "How we kept our workforce safe and our factories running responsibly during the pandemic."
+    }
+  ]
+}

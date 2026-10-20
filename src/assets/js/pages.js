@@ -509,6 +509,95 @@
     toggleTop();
   }
 
+  // ---------- home: video gallery (featured player, playlist, lightbox) ----------
+  $$("[data-gallery]").forEach(function (gallery) {
+    var feature = gallery.querySelector("[data-gallery-feature]");
+    var items = $$("[data-gallery-item]", gallery);
+    var section = gallery.closest("section") || document;
+    var box = section.querySelector("[data-lightbox]");
+    var player = box && box.querySelector("[data-lightbox-player]");
+    var lastFocus = null;
+    if (!feature) return;
+
+    function openVideo(id, title) {
+      if (!box || !player) {
+        window.open("https://www.youtube.com/watch?v=" + id, "_blank", "noopener");
+        return;
+      }
+      lastFocus = document.activeElement;
+      var frame = document.createElement("iframe");
+      frame.src = "https://www.youtube-nocookie.com/embed/" + id + "?autoplay=1&rel=0&modestbranding=1";
+      frame.title = title || "Video";
+      frame.allow = "autoplay; encrypted-media; picture-in-picture; fullscreen";
+      frame.allowFullscreen = true;
+      player.innerHTML = "";
+      player.appendChild(frame);
+      box.hidden = false;
+      document.body.classList.add("hm-lightbox-open");
+      var close = box.querySelector(".hm-lightbox-close");
+      if (close) close.focus();
+    }
+    function closeVideo() {
+      if (!box || box.hidden) return;
+      box.hidden = true;
+      player.innerHTML = "";
+      document.body.classList.remove("hm-lightbox-open");
+      if (lastFocus) lastFocus.focus();
+    }
+    function select(item) {
+      items.forEach(function (it) {
+        var on = it === item;
+        it.classList.toggle("is-active", on);
+        if (on) it.setAttribute("aria-current", "true");
+        else it.removeAttribute("aria-current");
+      });
+      var id = item.getAttribute("data-video");
+      feature.classList.add("is-swapping");
+      window.setTimeout(function () {
+        feature.setAttribute("data-video", id);
+        feature.href = item.href;
+        feature.setAttribute("aria-label", (feature.getAttribute("aria-label") || "").split(":")[0] + ": " + item.getAttribute("data-title"));
+        feature.className = feature.className.replace(/pg-tone--\S+/, "pg-tone--" + item.getAttribute("data-theme"));
+        var img = feature.querySelector("[data-gallery-img]");
+        img.style.visibility = "";
+        img.src = "https://i.ytimg.com/vi/" + id + "/hqdefault.jpg";
+        feature.querySelector("[data-gallery-title]").textContent = item.getAttribute("data-title");
+        feature.querySelector("[data-gallery-text]").textContent = item.getAttribute("data-text");
+        feature.querySelector("[data-gallery-chip]").textContent = item.getAttribute("data-category");
+        feature.classList.remove("is-swapping");
+      }, reduceMotion ? 0 : 300);
+    }
+
+    feature.addEventListener("click", function (e) {
+      e.preventDefault();
+      openVideo(feature.getAttribute("data-video"), feature.querySelector("[data-gallery-title]").textContent);
+    });
+    items.forEach(function (item) {
+      item.addEventListener("click", function (e) {
+        e.preventDefault();
+        // first click shows it in the player, a second click plays it
+        if (item.classList.contains("is-active")) openVideo(item.getAttribute("data-video"), item.getAttribute("data-title"));
+        else select(item);
+      });
+    });
+    if (box) {
+      $$("[data-lightbox-close]", box).forEach(function (el) {
+        el.addEventListener("click", closeVideo);
+      });
+      document.addEventListener("keydown", function (e) {
+        if (box.hidden) return;
+        if (e.key === "Escape") closeVideo();
+        if (e.key === "Tab") {
+          // keep focus inside the lightbox: close button <-> player
+          e.preventDefault();
+          var closeBtn = box.querySelector(".hm-lightbox-close");
+          var frame = player.querySelector("iframe");
+          (document.activeElement === closeBtn && frame ? frame : closeBtn).focus();
+        }
+      });
+    }
+  });
+
   // ---------- home: pointer-driven tilt of the group visual ----------
   if (finePointer && !reduceMotion) {
     $$("[data-pointer-tilt]").forEach(function (el) {

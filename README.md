@@ -107,6 +107,7 @@ the result into plain HTML, so search engines see all content without JavaScript
 | Sustainability pillars and benefits          | `sustainability.json`                        |
 | Certification logos                          | `certifications.json`                        |
 | Contact details, footer text                 | `contact.json` (also used in JSON-LD)        |
+| Home video gallery                           | `gallery.json` → `videos` (YouTube ID, title, category, colour, description) |
 | Company photo, "since" year, highlights, key figures | `companies.json` (used on the home slider and the Our Businesses page) |
 | Division intro, tagline, colour, photo       | `businesses.json` → `divisions`              |
 | Our Businesses page copy                     | `businessesPage.json`                        |
