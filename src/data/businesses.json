@@ -34,7 +34,7 @@
       "label": "Textile",
       "heading": "A pioneer in the textile business",
       "accent": "#6C9BFF",
-      "image": "assets/images/photos/askml.jpg",
+      "image": "assets/images/photos/afwl.jpg",
       "companies": [
         {
           "extends": "@companies.all",
@@ -63,7 +63,7 @@
       "label": "Agro",
       "heading": "An innovator in the agricultural business",
       "accent": "#4CC38A",
-      "image": "assets/images/photos/aosil.jpg",
+      "image": "assets/images/photos/abbl.jpg",
       "companies": [
         {
           "extends": "@companies.aal",
@@ -85,7 +85,7 @@
       "label": "Diversified",
       "heading": "Expanding our diversified businesses",
       "accent": "#A98BFF",
-      "image": "assets/images/photos/arel.jpg",
+      "image": "assets/images/photos/mbl.jpg",
       "companies": [
         {
           "extends": "@companies.mbl",

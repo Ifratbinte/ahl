@@ -50,47 +50,10 @@
 
       <div class="hm-actions" data-reveal style="--d: 5">
         <a class="hm-btn hm-btn--dark" href="{{page.root}}{{data.about.secondaryLink.href}}">{{data.about.secondaryLink.label}}{{"arrow-right" | icon}}</a>
-        <a class="hm-btn hm-btn--line" href="{{data.about.link.url}}" target="_blank" rel="noopener">{{data.about.link.label}}</a>
+        <a class="hm-btn hm-btn--line" href="{{page.root}}{{data.about.link.href}}">{{data.about.link.label}}</a>
       </div>
     </div>
   </div>
 
-  <!-- journey (original milestones timeline; behaviour in main.js) -->
-  <div class="hm-journey-wrap">
-    <div class="journey-scroll" data-journey>
-      <div class="journey">
-        <div class="journey-bg" aria-hidden="true">
-          <span class="orb o1 floaty"></span>
-          <span class="orb o2 drift-b"></span>
-          <span class="orb o3 floaty"></span>
-        </div>
-        <div class="journey-head rv">
-          <div class="journey-eyebrow hm-eyebrow">{{data.about.journey.eyebrow}}</div>
-          <h3 class="hm-title">{{data.about.journey.title}}</h3>
-        </div>
-        <div class="tl-wrap">
-          <div class="tl-track">
-            <div class="tl-line" aria-hidden="true">
-              <span class="tl-fill"></span>
-            </div>
-            <ol class="tl">
-              {{#each data.about.journey.milestones as milestone}}
-              <li class="tl-item {{#if @even}}left{{else}}right{{/if}} timeline-item{{milestone.theme | mod}}">
-                <span class="tl-node" aria-hidden="true"></span>
-                <div class="tl-card">
-                  <span class="tl-ghost" aria-hidden="true">{{milestone.year}}</span>
-                  <div class="tl-year">{{milestone.year}}</div>
-                  <p>{{milestone.text}}</p>
-                </div>
-              </li>
-              {{#unless @last}}
-
-              {{/unless}}
-              {{/each}}
-            </ol>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+<!-- @include sections/journey.html -->
 </section>

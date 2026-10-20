@@ -1,0 +1,55 @@
+{
+  "hero": {
+    "eyebrow": "Apex Holdings Limited",
+    "title": "About Us",
+    "image": "assets/images/photos/ahl-hero.jpg",
+    "primaryCta": {
+      "label": "Who We Are",
+      "href": "#who-we-are"
+    },
+    "secondaryCta": {
+      "label": "Our Business Segments",
+      "href": "#segments"
+    },
+    "scrollLabel": "Scroll to Who We Are",
+    "breadcrumb": "About Us"
+  },
+  "intro": {
+    "eyebrow": "About Us",
+    "title": "Who We Are",
+    "paragraphs": [
+      "Apex Holdings Limited (AHL) is a holding company for the management of a wide range of manufacturing and export-oriented enterprises, ranging from Frozen & Convenience Foods, Textiles & Apparels, Chemicals & Agro businesses. The company was formed and registered in Bangladesh in 1998.",
+      "The sponsors of AHL had set up its first export-oriented manufacturing enterprise in 1980 and have ever since grown into a sizable group of companies. As the number of companies under the management increased, the need for a management company to facilitate coordination and to maintain control over the individual company became necessary."
+    ],
+    "facts": [
+      {
+        "value": "1980",
+        "label": "First export-oriented manufacturing enterprise"
+      },
+      {
+        "value": "1998",
+        "label": "Formed and registered in Bangladesh"
+      }
+    ],
+    "companiesLabel": "Group companies"
+  },
+  "segments": {
+    "eyebrow": "Our",
+    "title": "Business Segments",
+    "companiesLabel": "companies",
+    "linkLabel": "Read More",
+    "labelPrefix": "Our",
+    "labelSuffix": "Division"
+  },
+  "cta": {
+    "eyebrow": "Contact Us",
+    "title": "Let's talk about working together.",
+    "primary": {
+      "label": "Email us"
+    },
+    "secondary": {
+      "label": "Contact us",
+      "href": "contact/"
+    }
+  }
+}

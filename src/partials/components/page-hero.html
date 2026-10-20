@@ -7,7 +7,7 @@
         </div>
         <div class="pg-container pg-hero-inner">
           <nav class="pg-breadcrumb" aria-label="Breadcrumb">
-            <a href="{{page.root}}">Home</a><span aria-hidden="true">/</span><span aria-current="page">{{hero.eyebrow}}</span>
+            <a href="{{page.root}}">Home</a><span aria-hidden="true">/</span><span aria-current="page">{{hero.breadcrumb | default:hero.eyebrow}}</span>
           </nav>
           <div class="pg-eyebrow pg-eyebrow--light" data-reveal>{{hero.eyebrow}}</div>
           <h1 class="pg-hero-title" data-reveal style="--d: 1">

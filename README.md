@@ -112,6 +112,7 @@ the result into plain HTML, so search engines see all content without JavaScript
 | Division intro, tagline, colour, photo       | `businesses.json` → `divisions`              |
 | Our Businesses page copy                     | `businessesPage.json`                        |
 | Sustainability page content                  | `sustainabilityPage.json`                    |
+| About page (Who We Are, facts, business segments, CTA) | `aboutPage.json`; strengths, journey, video gallery and certifications reuse `strengths.json`, `about.json` → `journey`, `gallery.json`, `certifications.json` |
 | CSR page content (initiatives, Fair Wage, facilities) | `csrPage.json`                      |
 | Careers page (culture, areas, benefits, openings, form) | `careersPage.json` → add jobs to `openings.items` (`title`, `company`, `location`, `type`, `deadline`, `category` or `href`) |
 | Contact page (channels, topics, form, map, directory) | `contactPage.json`; phones, hours and map links live in `contact.json` |

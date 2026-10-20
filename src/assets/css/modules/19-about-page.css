@@ -1,0 +1,214 @@
+
+/* =====================================================================
+   About page ("ab-" prefix). Strengths, journey, gallery and
+   certifications reuse the home page sections unchanged.
+   ===================================================================== */
+
+/* key strengths strip sits over the bottom edge of the hero, like on home */
+.pg-body--about .strengths-section {
+  z-index: 3;
+  margin-bottom: 0;
+}
+
+/* who we are */
+.ab-facts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin: 32px 0 0;
+}
+.ab-fact {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 18px 16px;
+  border-radius: 18px;
+  background: #ffffff;
+  border: 1px solid var(--pg-line);
+}
+.ab-fact dd {
+  margin: 0;
+  font-family: "Sora", "Manrope", sans-serif;
+  font-size: clamp(26px, 2.6vw, 34px);
+  font-weight: 700;
+  line-height: 1;
+  color: var(--pg-navy);
+}
+.ab-fact dt {
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--pg-muted);
+}
+.ab-fact--accent {
+  background: linear-gradient(140deg, #0a2540, #0e7c73);
+  border-color: transparent;
+}
+.ab-fact--accent dd {
+  color: #ffffff;
+}
+.ab-fact--accent dt {
+  color: #a9eee2;
+}
+
+/* business segments */
+.ab-segments {
+  background: #f4f7fb;
+}
+.ab-seg-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.ab-seg a {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-radius: var(--pg-radius);
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid var(--pg-line);
+  color: var(--pg-navy);
+  text-decoration: none;
+  transition:
+    transform 0.45s var(--pg-ease),
+    box-shadow 0.45s var(--pg-ease),
+    border-color 0.3s ease;
+}
+.ab-seg a:hover {
+  transform: translateY(-6px);
+  border-color: var(--tone);
+  box-shadow: var(--pg-shadow);
+}
+.ab-seg-media {
+  position: relative;
+  display: block;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: var(--tone-soft);
+}
+.ab-seg-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s var(--pg-ease);
+}
+.ab-seg a:hover .ab-seg-media img {
+  transform: scale(1.07);
+}
+.ab-seg-media::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 4px;
+  background: var(--tone);
+}
+.ab-seg-count {
+  position: absolute;
+  left: 14px;
+  top: 14px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(7, 16, 30, 0.72);
+  color: #ffffff;
+  font-size: 12px;
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+}
+.ab-seg-count b {
+  color: var(--tone);
+  font-family: "Sora", "Manrope", sans-serif;
+}
+.ab-seg-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 8px;
+  padding: 20px 22px 22px;
+}
+.ab-seg-label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--tone-strong);
+}
+.ab-seg-heading {
+  font-family: "Sora", "Manrope", sans-serif;
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+.ab-seg-abbrs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 4px;
+}
+.ab-seg-abbrs em {
+  padding: 3px 9px;
+  border-radius: 999px;
+  background: var(--tone-soft);
+  color: var(--tone-strong);
+  font-style: normal;
+  font-size: 11.5px;
+  font-weight: 700;
+}
+.ab-seg-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: auto;
+  padding-top: 12px;
+  font-size: 14px;
+  font-weight: 700;
+}
+.ab-seg-link svg {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.3s var(--pg-ease);
+}
+.ab-seg a:hover .ab-seg-link svg {
+  transform: translateX(4px);
+}
+
+/* journey: the shared timeline needs its own top spacing here */
+.ab-journey .hm-journey-wrap .journey-scroll {
+  margin-top: 0;
+}
+
+@media (max-width: 1100px) {
+  .ab-seg-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 560px) {
+  .ab-seg-grid {
+    grid-template-columns: 1fr;
+  }
+  .ab-seg-media {
+    aspect-ratio: 16 / 9;
+  }
+  .ab-facts {
+    gap: 8px;
+  }
+  .ab-fact {
+    padding: 14px 12px;
+  }
+  .ab-fact dd {
+    font-size: 22px;
+  }
+  .ab-fact dt {
+    font-size: 11.5px;
+  }
+}
+
+/* hero: shorter, and the strengths strip takes the scroll cue's place */
+.pg-hero.ab-hero {
+  min-height: min(78vh, 760px);
+}
+.ab-hero .pg-scroll-cue {
+  display: none;
+}

@@ -1,0 +1,117 @@
+<!--@page
+{
+  "id": "about",
+  "title": "About Us | Apex Holdings Limited",
+  "description": "Apex Holdings Limited (AHL) is a holding company for the management of manufacturing and export-oriented enterprises in frozen & convenience foods, textiles & apparels, chemicals and agro businesses, formed in Bangladesh in 1998.",
+  "path": "/about/",
+  "changefreq": "monthly",
+  "priority": "0.9",
+  "preloadImage": "assets/images/photos/ahl-hero.jpg"
+}
+-->
+<!doctype html>
+<html lang="{{site.lang}}" class="pg-html">
+  <head>
+<!-- @include head/meta.html -->
+<!-- @include head/assets.html -->
+<!-- @include head/structured-data.html -->
+  </head>
+  <body class="pg-body pg-body--about">
+<!-- @include components/page-head-common.html -->
+    <div class="page-shell">
+      <!-- HERO -->
+      <header class="hero-section pg-hero ab-hero" id="top">
+<!-- @include components/site-nav.html -->
+        {{#each data.aboutPage.hero | wrap as hero}}
+<!-- @include components/page-hero.html -->
+        {{/each}}
+      </header>
+
+      <main id="main">
+        <!-- KEY STRENGTHS (shared with the home page) -->
+<!-- @include sections/strengths.html -->
+
+        <!-- WHO WE ARE -->
+        {{#each data.aboutPage.intro | wrap as intro}}
+        <section class="pg-section ab-intro" id="who-we-are" aria-labelledby="ab-intro-title">
+          <div class="pg-container pg-split">
+            <div class="pg-split-head">
+              <div class="pg-eyebrow" data-reveal>{{intro.eyebrow}}</div>
+              <h2 class="pg-title" id="ab-intro-title" data-reveal style="--d: 1">{{intro.title}}</h2>
+              <dl class="ab-facts" data-reveal style="--d: 2">
+                {{#each intro.facts as fact}}
+                <div class="ab-fact">
+                  <dd data-count-to="{{fact.value}}" data-count-plain>{{fact.value}}</dd>
+                  <dt>{{fact.label}}</dt>
+                </div>
+                {{/each}}
+                <div class="ab-fact ab-fact--accent">
+                  <dd data-count-to="{{data.businesses.totalCompanies}}">{{data.businesses.totalCompanies}}</dd>
+                  <dt>{{intro.companiesLabel}}</dt>
+                </div>
+              </dl>
+            </div>
+            <div class="pg-split-body">
+              {{#each intro.paragraphs as paragraph}}
+              <p class="pg-lead" data-reveal style="--d: 2">{{paragraph}}</p>
+              {{/each}}
+            </div>
+          </div>
+        </section>
+        {{/each}}
+
+        <!-- BUSINESS SEGMENTS -->
+        {{#each data.aboutPage.segments | wrap as seg}}
+        <section class="pg-section ab-segments" id="segments" aria-labelledby="ab-seg-title">
+          <div class="pg-container">
+            <div class="pg-section-head pg-section-head--center">
+              <div class="pg-eyebrow" data-reveal>{{seg.eyebrow}}</div>
+              <h2 class="pg-title" id="ab-seg-title" data-reveal style="--d: 1">{{seg.title}}</h2>
+            </div>
+            <ul class="ab-seg-grid">
+              {{#each data.businesses.divisions as division}}
+              <li class="ab-seg pg-tone--{{division.key}}" data-reveal style="--d: {{@index}}">
+                <a href="{{page.root}}businesses/#division-{{division.key}}">
+                  <span class="ab-seg-media">
+                    <img src="{{page.root}}{{division.image}}" alt="" loading="lazy" decoding="async" />
+                    <span class="ab-seg-count"><b>{{division.count | pad2}}</b> {{seg.companiesLabel}}</span>
+                  </span>
+                  <span class="ab-seg-body">
+                    <span class="ab-seg-label">{{seg.labelPrefix}} {{division.label}} {{seg.labelSuffix}}</span>
+                    <span class="ab-seg-heading">{{division.heading}}</span>
+                    <span class="ab-seg-abbrs">
+                      {{#each division.companies as company}}<em title="{{company.name}}">{{company.abbr}}</em>{{/each}}
+                    </span>
+                    <span class="ab-seg-link">{{seg.linkLabel}}{{"arrow-right" | icon}}</span>
+                  </span>
+                </a>
+              </li>
+              {{/each}}
+            </ul>
+          </div>
+        </section>
+        {{/each}}
+
+        <!-- OUR JOURNEY (shared with the home page) -->
+        <section class="ab-journey" aria-label="{{data.about.journey.title}}">
+<!-- @include sections/journey.html -->
+        </section>
+
+        <!-- VIDEO GALLERY (shared with the home page) -->
+<!-- @include sections/gallery.html -->
+
+        <!-- CERTIFICATIONS (shared with the home page) -->
+<!-- @include sections/certifications.html -->
+
+        {{#each data.aboutPage.cta | wrap as cta}}
+<!-- @include components/page-cta.html -->
+        {{/each}}
+      </main>
+
+<!-- @include sections/footer.html -->
+    </div>
+
+    <script src="{{page.root}}assets/js/main.js"></script>
+    <script src="{{page.root}}assets/js/pages.js"></script>
+  </body>
+</html>
