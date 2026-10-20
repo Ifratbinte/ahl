@@ -42,7 +42,7 @@
           <p class="pg-hero-lead" data-reveal style="--d: 2">{{hero.lead}}</p>
           <div class="pg-actions" data-reveal style="--d: 3">
             <a class="pg-btn pg-btn--light" href="{{hero.primaryCta.href}}">{{hero.primaryCta.label}}{{"arrow-down" | icon}}</a>
-            <a class="pg-btn pg-btn--ghost" href="{{hero.secondaryCta.href}}">{{hero.secondaryCta.label}}</a>
+            <a class="pg-btn pg-btn--ghost" href="{{#if hero.secondaryCta.internal}}{{page.root}}{{/if}}{{hero.secondaryCta.href}}">{{hero.secondaryCta.label}}</a>
           </div>
           <dl class="pg-hero-stats" data-reveal style="--d: 4">
             {{#each data.strengths.items as stat}}
@@ -65,7 +65,7 @@
             <div class="bz-map-copy">
               <div class="pg-eyebrow" data-reveal>{{map.eyebrow}}</div>
               <h2 class="pg-title" id="bz-map-title" data-reveal style="--d: 1">{{map.title}}</h2>
-              <p class="pg-lead" data-reveal style="--d: 2">{{map.intro}}</p>
+              {{#if map.intro}}<p class="pg-lead" data-reveal style="--d: 2">{{map.intro}}</p>{{/if}}
 
               <div class="bz-map-panels" data-reveal style="--d: 3">
                 {{#each data.businesses.divisions as division}}
@@ -74,7 +74,7 @@
                     <span class="bz-map-panel-count">{{division.count | pad2}}</span>
                     <div>
                       <h3>{{division.label}} Division</h3>
-                      <p>{{division.tagline}}</p>
+                      {{#if division.tagline}}<p>{{division.tagline}}</p>{{/if}}
                     </div>
                   </div>
                   <ul class="bz-map-panel-list">
@@ -133,7 +133,7 @@
           <div class="pg-container pg-section-head pg-section-head--center">
             <div class="pg-eyebrow" data-reveal>{{heading.eyebrow}}</div>
             <h2 class="pg-title" id="bz-divisions-title" data-reveal style="--d: 1">{{heading.title}}</h2>
-            <p class="pg-lead" data-reveal style="--d: 2">{{heading.intro}}</p>
+            {{#if heading.intro}}<p class="pg-lead" data-reveal style="--d: 2">{{heading.intro}}</p>{{/if}}
           </div>
           {{/each}}
 
@@ -143,8 +143,8 @@
               <header class="bz-division-head">
                 <div class="pg-eyebrow" data-reveal>{{division.label}} Division · {{division.count}} {{data.businessesPage.map.companiesLabel}}</div>
                 <h3 class="bz-division-title" id="division-{{division.key}}-title" data-reveal style="--d: 1">{{division.heading}}</h3>
-                <p class="bz-division-tagline" data-reveal style="--d: 2">{{division.tagline}}</p>
-                <!-- <p class="bz-division-intro" data-reveal style="--d: 3">{{division.intro}}</p> -->
+                {{#if division.tagline}}<p class="bz-division-tagline" data-reveal style="--d: 2">{{division.tagline}}</p>{{/if}}
+                <!-- <p class="bz-division-intro" data-reveal style="--d: 3">{{division.intro | default}}</p> -->
               </header>
 
               <!-- company carousel: badges and dots switch slides -->
@@ -231,7 +231,7 @@
             <div class="bz-mix-copy">
               <div class="pg-eyebrow" data-reveal>{{mix.eyebrow}}</div>
               <h2 class="pg-title" id="bz-mix-title" data-reveal style="--d: 1">{{mix.title}}</h2>
-              <p class="pg-lead" data-reveal style="--d: 2">{{mix.intro}}</p>
+              {{#if mix.intro}}<p class="pg-lead" data-reveal style="--d: 2">{{mix.intro}}</p>{{/if}}
               <ul class="bz-legend" data-reveal style="--d: 3">
                 {{#each data.businesses.divisions as division}}
                 <li class="pg-tone--{{division.key}}" data-donut-key="{{division.key}}" tabindex="0">
@@ -253,7 +253,7 @@
           <div class="pg-container pg-section-head">
             <div class="pg-eyebrow" data-reveal>{{journey.eyebrow}}</div>
             <h2 class="pg-title" id="bz-journey-title" data-reveal style="--d: 1">{{journey.title}}</h2>
-            <p class="pg-lead" data-reveal style="--d: 2">{{journey.intro}}</p>
+            {{#if journey.intro}}<p class="pg-lead" data-reveal style="--d: 2">{{journey.intro}}</p>{{/if}}
           </div>
           <div class="bz-journey-track" tabindex="0" aria-label="{{journey.title}}">
             <ol class="bz-journey-list">

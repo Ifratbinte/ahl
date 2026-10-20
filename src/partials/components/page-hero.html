@@ -1,0 +1,32 @@
+<div class="pg-hero-media" aria-hidden="true">
+          <div class="pg-hero-image" data-speed="0.25" style="background-image: url('{{page.root}}{{hero.image}}')"></div>
+          <div class="pg-hero-shade"></div>
+          <span class="pg-orb pg-orb--food"></span>
+          <span class="pg-orb pg-orb--textile"></span>
+          <span class="pg-orb pg-orb--agro"></span>
+        </div>
+        <div class="pg-container pg-hero-inner">
+          <nav class="pg-breadcrumb" aria-label="Breadcrumb">
+            <a href="{{page.root}}">Home</a><span aria-hidden="true">/</span><span aria-current="page">{{hero.eyebrow}}</span>
+          </nav>
+          <div class="pg-eyebrow pg-eyebrow--light" data-reveal>{{hero.eyebrow}}</div>
+          <h1 class="pg-hero-title" data-reveal style="--d: 1">
+            {{hero.title}}{{#if hero.titleAccent}} <span class="pg-gradient-text">{{hero.titleAccent}}</span>{{/if}}
+          </h1>
+          {{#if hero.lead}}<p class="pg-hero-lead" data-reveal style="--d: 2">{{hero.lead}}</p>{{/if}}
+          <div class="pg-actions" data-reveal style="--d: 3">
+            <a class="pg-btn pg-btn--light" href="{{#if hero.primaryCta.internal}}{{page.root}}{{/if}}{{hero.primaryCta.href}}">{{hero.primaryCta.label}}{{"arrow-down" | icon}}</a>
+            <a class="pg-btn pg-btn--ghost" href="{{#if hero.secondaryCta.internal}}{{page.root}}{{/if}}{{hero.secondaryCta.href}}">{{hero.secondaryCta.label}}</a>
+          </div>
+          {{#if hero.stats}}
+          <dl class="pg-hero-stats pg-hero-stats--auto" data-reveal style="--d: 4">
+            {{#each hero.stats as stat}}
+            <div class="pg-hero-stat pg-tone--{{stat.tone}}">
+              <dt>{{stat.label}}</dt>
+              <dd>{{stat.value}}{{stat.suffix}}</dd>
+            </div>
+            {{/each}}
+          </dl>
+          {{/if}}
+        </div>
+        <a class="pg-scroll-cue" href="{{hero.primaryCta.href}}" aria-label="{{hero.scrollLabel}}"><span></span></a>

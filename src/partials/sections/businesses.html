@@ -6,13 +6,13 @@
   </div>
 
   <div class="hm-container">
-    <header class="hm-divisions-head">
+    <!-- <header class="hm-divisions-head">
       <div>
         <div class="hm-eyebrow hm-eyebrow--light" data-reveal>{{data.businesses.eyebrow}}</div>
         <h2 class="hm-title hm-title--light" id="hm-divisions-title" data-reveal style="--d: 1">{{data.businesses.title}}</h2>
       </div>
-      <p class="hm-divisions-intro" data-reveal style="--d: 2">{{data.businesses.intro}}</p>
-    </header>
+      {{#if data.businesses.intro}}<p class="hm-divisions-intro" data-reveal style="--d: 2">{{data.businesses.intro}}</p>{{/if}}
+    </header> -->
 
     <!-- division explorer: expanding panels (accordion on small screens) -->
     <div class="hm-explorer" data-explorer data-reveal style="--d: 2">
@@ -30,7 +30,7 @@
         </h3>
         <div class="hm-panel-body" id="hm-panel-body-{{division.key}}" role="region" aria-labelledby="hm-panel-btn-{{division.key}}">
           <p class="hm-panel-tagline">{{division.heading}}</p>
-          <p class="hm-panel-text">{{division.intro}}</p>
+          {{#if division.intro}}<p class="hm-panel-text">{{division.intro}}</p>{{/if}}
           <ul class="hm-panel-companies">
             {{#each division.companies as company}}
             <li style="--d: {{@index}}">

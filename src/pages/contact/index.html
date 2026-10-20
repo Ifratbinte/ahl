@@ -1,0 +1,98 @@
+<!--@page
+{
+  "id": "contact",
+  "title": "Contact Us | Apex Holdings Limited",
+  "description": "Contact Apex Holdings Limited, 18 Gulshan Avenue, Shanta Skymark, Gulshan, Dhaka-1212, Bangladesh. Phone, email, office hours, map and direct links to every company in the group.",
+  "path": "/contact/",
+  "changefreq": "monthly",
+  "priority": "0.8",
+  "preloadImage": "assets/images/photos/ahl-hero.jpg"
+}
+-->
+<!doctype html>
+<html lang="{{site.lang}}" class="pg-html">
+  <head>
+<!-- @include head/meta.html -->
+<!-- @include head/assets.html -->
+<!-- @include head/structured-data.html -->
+  </head>
+  <body class="pg-body pg-body--contact">
+<!-- @include components/page-head-common.html -->
+    <div class="page-shell">
+      <!-- HERO -->
+      <header class="hero-section pg-hero ct-hero" id="top">
+<!-- @include components/site-nav.html -->
+        {{#each data.contactPage.hero | wrap as hero}}
+<!-- @include components/page-hero.html -->
+        {{/each}}
+      </header>
+
+      <main id="main">
+        <!-- CONTACT CHANNELS -->
+        {{#each data.contactPage.channels | wrap as ch}}
+        <section class="ct-channels" id="visit" aria-label="Contact details">
+          <ul class="pg-container ct-channel-grid">
+            <li class="ct-channel pg-tone--food" data-reveal>
+              <span class="ct-channel-icon">{{"location" | icon}}</span>
+              <h2>{{ch.visit.title}}</h2>
+              <address>{{data.contact.address.streetAddress}},<br />{{data.contact.address.addressLocality}}-{{data.contact.address.postalCode}}, Bangladesh</address>
+              <a class="ct-channel-link" href="{{data.contact.map.link}}" target="_blank" rel="noopener">{{ch.visit.action}}{{"arrow-up-right" | icon}}</a>
+            </li>
+            <li class="ct-channel pg-tone--textile" data-reveal style="--d: 1">
+              <span class="ct-channel-icon">{{"phone" | icon}}</span>
+              <h2>{{ch.call.title}}</h2>
+              <ul class="ct-phones">
+                {{#each data.contact.phones as phone}}
+                <li><a href="{{phone.href}}">{{phone.label}}</a></li>
+                {{/each}}
+              </ul>
+            </li>
+            <li class="ct-channel pg-tone--agro" data-reveal style="--d: 2">
+              <span class="ct-channel-icon">{{"mail" | icon}}</span>
+              <h2>{{ch.email.title}}</h2>
+              <a class="ct-channel-link ct-channel-link--big" href="mailto:{{data.contact.email}}">{{data.contact.email}}</a>
+            </li>
+            <li class="ct-channel pg-tone--diversified" data-reveal style="--d: 3">
+              <span class="ct-channel-icon">{{"clock" | icon}}</span>
+              <h2>{{ch.hours.title}}</h2>
+              <p><b>{{data.contact.hours.days}}</b><br />{{data.contact.hours.time}}</p>
+              <span class="ct-status" data-office-status data-days="{{data.contact.hours.openDays | join:','}}" data-open="{{data.contact.hours.open}}" data-close="{{data.contact.hours.close}}" data-tz="{{data.contact.hours.utcOffset}}" data-open-label="{{data.contact.hours.openLabel}}" data-closed-label="{{data.contact.hours.closedLabel}}" hidden></span>
+            </li>
+          </ul>
+        </section>
+        {{/each}}
+
+        <!-- EMAIL US + MAP -->
+        <section class="pg-section ct-connect" aria-labelledby="ct-form-title">
+          <div class="pg-container ct-connect-layout">
+            {{#each data.contactPage.form | wrap as form}}
+            <div class="pg-form-card ct-form-card" id="{{form.id}}" data-reveal>
+              <div class="pg-eyebrow">{{form.eyebrow}}</div>
+              <h2 class="pg-title" id="ct-form-title">{{form.title}}</h2>
+<!-- @include components/form.html -->
+            </div>
+            {{/each}}
+            {{#each data.contactPage.map | wrap as map}}
+            <aside class="ct-map" data-reveal style="--d: 2" aria-labelledby="ct-map-title">
+              <div class="ct-map-frame">
+                <iframe src="{{data.contact.map.embed}}" title="{{map.frameTitle}}" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+              </div>
+              <div class="ct-map-info">
+                <div class="pg-eyebrow">{{map.eyebrow}}</div>
+                <h2 class="ct-map-title" id="ct-map-title">{{map.title}}</h2>
+                <p>{{data.contact.address.streetAddress}}, {{data.contact.address.addressLocality}}-{{data.contact.address.postalCode}}, Bangladesh</p>
+                <a class="pg-btn pg-btn--solid" href="{{data.contact.map.link}}" target="_blank" rel="noopener">{{map.action}}{{"arrow-up-right" | icon}}</a>
+              </div>
+            </aside>
+            {{/each}}
+          </div>
+        </section>
+      </main>
+
+<!-- @include sections/footer.html -->
+    </div>
+
+    <script src="{{page.root}}assets/js/main.js"></script>
+    <script src="{{page.root}}assets/js/pages.js"></script>
+  </body>
+</html>

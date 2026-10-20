@@ -43,7 +43,7 @@
           <p class="pg-hero-lead" data-reveal style="--d: 2">{{hero.lead}}</p>
           <div class="pg-actions" data-reveal style="--d: 3">
             <a class="pg-btn pg-btn--light" href="{{hero.primaryCta.href}}">{{hero.primaryCta.label}}{{"arrow-down" | icon}}</a>
-            <a class="pg-btn pg-btn--ghost" href="{{hero.secondaryCta.href}}">{{hero.secondaryCta.label}}</a>
+            <a class="pg-btn pg-btn--ghost" href="{{#if hero.secondaryCta.internal}}{{page.root}}{{/if}}{{hero.secondaryCta.href}}">{{hero.secondaryCta.label}}</a>
           </div>
           <ul class="su-hero-pillars" data-reveal style="--d: 4">
             {{#each data.sustainabilityPage.pillars as pillar}}
@@ -78,7 +78,7 @@
           <div class="pg-container pg-section-head pg-section-head--center">
             <div class="pg-eyebrow" data-reveal>{{approach.eyebrow}}</div>
             <h2 class="pg-title" id="su-approach-title" data-reveal style="--d: 1">{{approach.title}}</h2>
-            <p class="pg-lead" data-reveal style="--d: 2">{{approach.intro}}</p>
+            {{#if approach.intro}}<p class="pg-lead" data-reveal style="--d: 2">{{approach.intro}}</p>{{/if}}
           </div>
           {{/each}}
           <div class="pg-container su-pillars">
@@ -89,7 +89,7 @@
                 <span class="su-pillar-num">{{@number | pad2}}</span>
               </div>
               <h3>{{pillar.title}}</h3>
-              <p class="su-pillar-summary">{{pillar.summary}}</p>
+              {{#if pillar.summary}}<p class="su-pillar-summary">{{pillar.summary}}</p>{{/if}}
               <ul>
                 {{#each pillar.points as point}}
                 <li>{{point}}</li>
@@ -132,7 +132,7 @@
             <div class="pg-section-head">
               <div class="pg-eyebrow" data-reveal>{{eff.eyebrow}}</div>
               <h2 class="pg-title" id="su-eff-title" data-reveal style="--d: 1">{{eff.title}}</h2>
-              <p class="pg-lead" data-reveal style="--d: 2">{{eff.intro}}</p>
+              {{#if eff.intro}}<p class="pg-lead" data-reveal style="--d: 2">{{eff.intro}}</p>{{/if}}
             </div>
             <div class="su-eff-layout" data-ptabs data-reveal style="--d: 2">
               <div class="su-eff-list" role="tablist" aria-label="{{eff.title}}">
@@ -173,8 +173,9 @@
             </div>
             <ul class="su-swatches">
               {{#each mat.items as item}}
-              <li class="su-swatch su-swatch--{{@number}}" data-reveal style="--d: {{@index}}">
-                <span class="su-swatch-tag">{{item.tag}}</span>
+              <li class="su-swatch su-swatch--{{@number}}{{#if item.image}} su-swatch--photo{{/if}}" data-reveal style="--d: {{@index}}">
+                {{#if item.image}}<img class="su-swatch-img" src="{{page.root}}{{item.image}}" alt="{{item.name}}" loading="lazy" decoding="async" />{{/if}}
+                {{#if item.tag}}<span class="su-swatch-tag">{{item.tag}}</span>{{/if}}
                 <b>{{item.name}}</b>
               </li>
               {{/each}}
@@ -227,7 +228,7 @@
               <div>
                 <div class="pg-eyebrow" data-reveal>{{people.eyebrow}}</div>
                 <h2 class="pg-title" id="su-people-title" data-reveal style="--d: 1">{{people.title}}</h2>
-                <p class="pg-lead" data-reveal style="--d: 2">{{people.intro}}</p>
+                {{#if people.intro}}<p class="pg-lead" data-reveal style="--d: 2">{{people.intro}}</p>{{/if}}
               </div>
               <div class="su-trees" data-reveal style="--d: 2">
                 <span class="su-trees-icon">{{"tree" | icon}}</span>

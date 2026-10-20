@@ -4,9 +4,9 @@
       <div class="pg-cta-glow" aria-hidden="true"></div>
       <div class="pg-eyebrow pg-eyebrow--light">{{cta.eyebrow}}</div>
       <h2 class="pg-cta-title" id="pg-cta-title">{{cta.title}}</h2>
-      <p class="pg-cta-text">{{cta.text}}</p>
+      {{#if cta.text}}<p class="pg-cta-text">{{cta.text}}</p>{{/if}}
       <div class="pg-actions">
-        <a class="pg-btn pg-btn--light" href="mailto:{{data.contact.email}}">{{cta.primary.label}}{{"arrow-right" | icon}}</a>
+        <a class="pg-btn pg-btn--light" href="{{#if cta.primary.href}}{{page.root}}{{cta.primary.href}}{{else}}mailto:{{data.contact.email}}{{/if}}">{{cta.primary.label}}{{"arrow-right" | icon}}</a>
         <a class="pg-btn pg-btn--ghost" href="{{page.root}}{{cta.secondary.href}}">{{cta.secondary.label}}</a>
       </div>
     </div>

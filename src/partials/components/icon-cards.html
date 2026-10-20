@@ -1,0 +1,10 @@
+<ul class="pg-cards">
+              {{#each cards.items as card}}
+              <li class="pg-card pg-tone--{{card.tone}}" data-reveal data-tilt style="--d: {{@index}}">
+                <span class="pg-card-icon">{{card.icon | icon}}</span>
+                <span class="pg-card-num" aria-hidden="true">{{@number | pad2}}</span>
+                <h3>{{card.title}}</h3>
+                {{#if card.text}}<p>{{card.text}}</p>{{/if}}
+              </li>
+              {{/each}}
+            </ul>

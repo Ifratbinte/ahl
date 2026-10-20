@@ -1,0 +1,95 @@
+<!--@page
+{
+  "id": "careers",
+  "title": "Careers | Apex Holdings Limited",
+  "description": "Build your career with Apex Holdings Limited. Explore career areas across foods, textiles, agro and chemicals, see how we support our people and send us your resume.",
+  "path": "/careers/",
+  "changefreq": "weekly",
+  "priority": "0.8",
+  "preloadImage": "assets/images/photos/acfl.jpg"
+}
+-->
+<!doctype html>
+<html lang="{{site.lang}}" class="pg-html">
+  <head>
+<!-- @include head/meta.html -->
+<!-- @include head/assets.html -->
+<!-- @include head/structured-data.html -->
+  </head>
+  <body class="pg-body pg-body--careers">
+<!-- @include components/page-head-common.html -->
+    <div class="page-shell">
+      <!-- HERO -->
+      <header class="hero-section pg-hero cr-hero" id="top">
+<!-- @include components/site-nav.html -->
+        {{#each data.careersPage.hero | wrap as hero}}
+<!-- @include components/page-hero.html -->
+        {{/each}}
+      </header>
+
+      <main id="main">
+        <!-- A CAREER WITH US -->
+        {{#each data.careersPage.culture | wrap as culture}}
+        <section class="pg-section cr-culture" aria-labelledby="cr-culture-title">
+          <div class="pg-container pg-split">
+            <div class="pg-split-head">
+              <div class="pg-eyebrow" data-reveal>{{culture.eyebrow}}</div>
+              <h2 class="pg-title" id="cr-culture-title" data-reveal style="--d: 1">{{culture.title}}</h2>
+            </div>
+            <div class="pg-split-body">
+              {{#each culture.paragraphs as paragraph}}
+              <p class="pg-lead" data-reveal style="--d: 2">{{paragraph}}</p>
+              {{/each}}
+            </div>
+          </div>
+        </section>
+        {{/each}}
+
+        <!-- JOB CATEGORIES -->
+        {{#each data.careersPage.areas | wrap as areas}}
+        <section class="pg-section cr-areas" id="areas" aria-labelledby="cr-areas-title">
+          <div class="pg-container">
+            <div class="pg-section-head pg-section-head--center">
+              <div class="pg-eyebrow" data-reveal>{{areas.eyebrow}}</div>
+              <h2 class="pg-title" id="cr-areas-title" data-reveal style="--d: 1">{{areas.title}}</h2>
+            </div>
+            <ul class="cr-area-grid">
+              {{#each areas.items as area}}
+              <li data-reveal>
+                <a class="cr-area" href="#apply" data-prefill="apply-category" data-value="{{area.label}}">
+                  <span class="cr-area-icon">{{area.icon | icon}}</span>
+                  <span class="cr-area-label">{{area.label}}</span>
+                  <span class="cr-area-go" aria-hidden="true">{{"arrow-right" | icon}}</span>
+                </a>
+              </li>
+              {{/each}}
+            </ul>
+          </div>
+        </section>
+        {{/each}}
+
+        <!-- SEND US YOUR RESUME -->
+        {{#each data.careersPage.form | wrap as form}}
+        <section class="pg-section cr-apply" id="{{form.id}}" aria-labelledby="cr-apply-title">
+          <div class="pg-container cr-apply-layout">
+            <div class="cr-apply-side">
+              <div class="pg-eyebrow" data-reveal>{{form.eyebrow}}</div>
+              <h2 class="pg-title" id="cr-apply-title" data-reveal style="--d: 1">{{form.title}}</h2>
+              <p class="pg-lead" data-reveal style="--d: 2">{{form.intro}}</p>
+              <p class="cr-apply-mail" data-reveal style="--d: 3">{{"mail" | icon}}<a href="mailto:{{data.contact.email}}">{{data.contact.email}}</a></p>
+            </div>
+            <div class="pg-form-card" data-reveal style="--d: 2">
+<!-- @include components/form.html -->
+            </div>
+          </div>
+        </section>
+        {{/each}}
+      </main>
+
+<!-- @include sections/footer.html -->
+    </div>
+
+    <script src="{{page.root}}assets/js/main.js"></script>
+    <script src="{{page.root}}assets/js/pages.js"></script>
+  </body>
+</html>

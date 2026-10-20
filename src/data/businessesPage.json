@@ -3,7 +3,7 @@
     "eyebrow": "Our Businesses",
     "title": "Four divisions.",
     "titleAccent": "One group.",
-    "lead": "Apex Holdings Limited manages manufacturing and export-oriented enterprises across frozen and convenience foods, textiles and apparel, agriculture, specialty chemicals and renewable energy.",
+    "lead": "Apex Holdings Limited (AHL) is a holding company for the management of a wide range of manufacturing and export-oriented enterprises, ranging from Frozen & Convenience Foods, Textiles & Apparels, Chemicals & Agro businesses.",
     "image": "assets/images/photos/ahl-combo.jpg",
     "primaryCta": {
       "label": "Explore the divisions",
@@ -11,15 +11,16 @@
     },
     "secondaryCta": {
       "label": "Talk to us",
-      "href": "#contact"
+      "href": "contact/",
+      "internal": true
     },
     "scrollLabel": "Scroll to explore"
   },
   "subnavLabel": "Jump to a division",
   "map": {
     "eyebrow": "Group structure",
-    "title": "One holding company, four engines of growth",
-    "intro": "AHL was formed in 1998 to coordinate and keep control over a growing family of companies. Select a division to see the companies behind it.",
+    "title": "Our Business Segments",
+    "intro": "As the number of companies under the management increased, the need for a management company to facilitate coordination and to maintain control over the individual company became necessary.",
     "centerLabel": "AHL",
     "centerCaption": "Apex Holdings Limited",
     "hint": "Tap or hover a division",
@@ -27,8 +28,7 @@
   },
   "divisionsHeading": {
     "eyebrow": "Our divisions",
-    "title": "Meet the companies",
-    "intro": "Every company runs with its own expertise, backed by the shared standards, governance and values of the Apex group."
+    "title": "Our companies"
   },
   "card": {
     "websiteLabel": "Visit website",
@@ -37,25 +37,22 @@
   },
   "mix": {
     "eyebrow": "Portfolio",
-    "title": "A balanced, export-led portfolio",
-    "intro": "Twelve companies across four divisions. Hover the chart or the legend to compare them.",
+    "title": "Portfolio mix",
     "centerLabel": "companies"
   },
   "journey": {
     "eyebrow": "Milestones",
-    "title": "Decades of steady growth",
-    "intro": "From one export-oriented plant in 1980 to a diversified group."
+    "title": "Our Journey"
   },
   "cta": {
-    "eyebrow": "Work with us",
-    "title": "Let's build what comes next, together",
-    "text": "Whether you are a buyer, partner or investor, our team will connect you with the right company in the group.",
+    "eyebrow": "Contact Us",
+    "title": "Let's talk about working together.",
     "primary": {
-      "label": "Email our team"
+      "label": "Email us"
     },
     "secondary": {
-      "label": "Our sustainability commitment",
-      "href": "sustainability/",
+      "label": "Contact us",
+      "href": "contact/",
       "internal": true
     }
   }

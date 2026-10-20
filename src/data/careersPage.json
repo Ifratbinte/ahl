@@ -1,0 +1,162 @@
+{
+  "hero": {
+    "eyebrow": "Career",
+    "title": "A Career With Us",
+    "image": "assets/images/photos/corporate.jpg",
+    "primaryCta": {
+      "label": "Send us your resume",
+      "href": "#apply"
+    },
+    "secondaryCta": {
+      "label": "Job categories",
+      "href": "#areas"
+    },
+    "scrollLabel": "Scroll to A Career With Us"
+  },
+  "culture": {
+    "eyebrow": "Career",
+    "title": "A Career With Us",
+    "paragraphs": [
+      "The “People” has been the key success factor that we have achieved in a short span of time. Thus our management values to hire, engage and retain talented employees. Our Strategy is to constantly strives and renews its commitment to meet the career aspiration and priorities of the employees.",
+      "The board of directors views the employees as most valuable capital of the organization and is endowed with unique qualities and if thoughtfully and inspiringly led the workforce can bring superior result with creativity. In line with the growth aspiration of ours, the management carefully identifies potential future leaders amongst its employees and takes extra ordinary effort to build them."
+    ]
+  },
+  "areas": {
+    "eyebrow": "Select Job Category",
+    "title": "Job categories",
+    "items": [
+      {
+        "icon": "coin",
+        "label": "Accounting/Finance"
+      },
+      {
+        "icon": "leaf",
+        "label": "Agro (Plant/Animal/Fisheries)"
+      },
+      {
+        "icon": "truck",
+        "label": "Commercial/Supply Chain"
+      },
+      {
+        "icon": "pen",
+        "label": "Design/Creative"
+      },
+      {
+        "icon": "building",
+        "label": "Engineer/Architect"
+      },
+      {
+        "icon": "factory",
+        "label": "Garments/Textile"
+      },
+      {
+        "icon": "users",
+        "label": "HR/Org. Development"
+      },
+      {
+        "icon": "code",
+        "label": "IT/Telecommunication"
+      },
+      {
+        "icon": "scale",
+        "label": "Law/Legal"
+      },
+      {
+        "icon": "megaphone",
+        "label": "Marketing/Sales"
+      },
+      {
+        "icon": "gear",
+        "label": "Production/Operation"
+      },
+      {
+        "icon": "flask",
+        "label": "Research/Consultancy"
+      },
+      {
+        "icon": "phone",
+        "label": "Secretary/Receptionist"
+      },
+      {
+        "icon": "shield",
+        "label": "Security/Support Service"
+      }
+    ]
+  },
+  "form": {
+    "id": "apply",
+    "eyebrow": "Send Us",
+    "title": "Send Us your Resume",
+    "intro": "If you are interested to join our team then please upload your information.",
+    "endpoint": "",
+    "subject": "Resume",
+    "submitLabel": "Send Details",
+    "fileLabel": "Your Resume",
+    "mailtoNote": "Your email app will open with these details. Please attach your resume before sending.",
+    "successTitle": "Almost done",
+    "successText": "Attach your resume in your email app and press send.",
+    "errorText": "Please check the highlighted fields.",
+    "fields": [
+      {
+        "name": "name",
+        "label": "Your Name",
+        "type": "text",
+        "required": true,
+        "autocomplete": "name"
+      },
+      {
+        "name": "email",
+        "label": "Your Email",
+        "type": "email",
+        "required": true,
+        "autocomplete": "email"
+      },
+      {
+        "name": "gender",
+        "label": "Select your Gender",
+        "type": "radio",
+        "required": true,
+        "options": [
+          "Male",
+          "Female"
+        ]
+      },
+      {
+        "name": "phone",
+        "label": "Your Phone",
+        "type": "tel",
+        "required": true,
+        "autocomplete": "tel"
+      },
+      {
+        "name": "category",
+        "label": "Select Job Category",
+        "type": "select",
+        "required": true,
+        "placeholder": "Select Job Category",
+        "options": [
+          "Accounting/Finance",
+          "Agro (Plant/Animal/Fisheries)",
+          "Commercial/Supply Chain",
+          "Design/Creative",
+          "Engineer/Architect",
+          "Garments/Textile",
+          "HR/Org. Development",
+          "IT/Telecommunication",
+          "Law/Legal",
+          "Marketing/Sales",
+          "Production/Operation",
+          "Research/Consultancy",
+          "Secretary/Receptionist",
+          "Security/Support Service"
+        ]
+      },
+      {
+        "name": "salary",
+        "label": "Expected Salary",
+        "type": "text",
+        "required": true
+      }
+    ]
+  }
+}

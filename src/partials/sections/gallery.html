@@ -10,7 +10,7 @@
         <div class="hm-eyebrow hm-eyebrow--light" data-reveal>{{data.gallery.eyebrow}}</div>
         <h2 class="hm-title hm-title--light" id="hm-gallery-title" data-reveal style="--d: 1">{{data.gallery.title}}</h2>
       </div>
-      <p class="hm-gallery-intro" data-reveal style="--d: 2">{{data.gallery.intro}}</p>
+      {{#if data.gallery.intro}}<p class="hm-gallery-intro" data-reveal style="--d: 2">{{data.gallery.intro}}</p>{{/if}}
     </header>
 
     <!-- featured player + scrollable playlist: more videos only lengthen the list, not the section -->
@@ -31,9 +31,9 @@
           <svg viewBox="0 0 24 24" width="28" height="28"><path d="M8 5.5v13l11-6.5z" fill="currentColor" /></svg>
         </span>
         <span class="hm-gal-feature-copy">
-          <span class="hm-gal-chip" data-gallery-chip>{{video.category}}</span>
+          <span class="hm-gal-chip" data-gallery-chip>01 / {{data.gallery.videos | count | pad2}}</span>
           <span class="hm-gal-feature-title" data-gallery-title>{{video.title}}</span>
-          <span class="hm-gal-feature-text" data-gallery-text>{{video.description}}</span>
+          <span class="hm-gal-feature-text" data-gallery-text>{{video.description | default}}</span>
         </span>
       </a>
       {{/each}}
@@ -51,8 +51,8 @@
               data-gallery-item
               data-video="{{video.youtubeId}}"
               data-title="{{video.title}}"
-              data-text="{{video.description}}"
-              data-category="{{video.category}}"
+              data-text="{{video.description | default}}"
+              data-category="{{@number | pad2}} / {{@total | pad2}}"
               data-theme="{{video.theme}}"
               {{#if @first}}aria-current="true"{{/if}}
             >
@@ -61,7 +61,7 @@
                 <span class="hm-gal-thumb-play" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14"><path d="M8 5.5v13l11-6.5z" fill="currentColor" /></svg></span>
               </span>
               <span class="hm-gal-item-copy">
-                <span class="hm-gal-item-cat">{{@number | pad2}} · {{video.category}}</span>
+                <span class="hm-gal-item-cat">{{@number | pad2}}</span>
                 <span class="hm-gal-item-title">{{video.title}}</span>
               </span>
             </a>

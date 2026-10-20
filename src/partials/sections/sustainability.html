@@ -3,8 +3,8 @@
   <div aria-hidden="true" class="drift-b sustainability-accent-orb--blue"></div>
   <div class="sustainability-header">
     <div class="rv sustainability-heading">
-      <div class="sustainability-eyebrow">{{data.sustainability.eyebrow}}</div>
-      <h2 class="section-title">{{data.sustainability.title}}</h2>
+      <div class="sustainability-eyebrow hm-eyebrow">{{data.sustainability.eyebrow}}</div>
+      <h2 class="section-title hm-title">{{data.sustainability.title}}</h2>
     </div>
     <p class="sustainability-intro">
       {{data.sustainability.intro}}
@@ -19,7 +19,8 @@
       aria-label="{{pillar.title}} (hover, focus or tap to read more)"
     >
       <div class="flip-inner">
-        <div class="face front sustainability-card-front--{{pillar.key}}">
+        <div class="face front sustainability-card-front--{{pillar.key}}{{#if pillar.image}} sustainability-card-front--photo{{/if}}">
+          {{#if pillar.image}}<img class="sustainability-card-img" src="{{page.root}}{{pillar.image}}" alt="" loading="lazy" decoding="async" />{{/if}}
           <div class="front-top">
             <div class="num">{{@number | pad2}}</div>
             <h3>{{pillar.title}}</h3>
@@ -27,7 +28,7 @@
           <div class="bars" aria-hidden="true">
             {{#each pillar.bars as bar}}<span class="sustainability-bar--{{bar}}"></span>{{/each}}
           </div>
-          <!-- <span class="flip-hint" aria-hidden="true">{{data.sustainability.cardHint}}</span> -->
+          <span class="flip-hint" aria-hidden="true">{{data.sustainability.cardHint}}</span>
         </div>
         <div class="face back sustainability-card-back--{{pillar.key}}">
           <div class="back-badge">{{@number | pad2}}</div>

@@ -15,7 +15,8 @@
         "environment-5",
         "environment-6"
       ],
-      "text": "One of the largest privately owned water treatment plants in the country, researching wastewater recycling. Factories use chemicals that follow ZDHC guidelines, and singeing and sublimation reduce dye wastage and chemical use."
+      "text": "One of the largest privately owned water treatment plants in the country, researching wastewater recycling. Factories use chemicals that follow ZDHC guidelines, and singeing and sublimation reduce dye wastage and chemical use.",
+      "image": "assets/images/bg/sustainability.jpg"
     },
     {
       "key": "materials",
@@ -28,7 +29,8 @@
         "materials-5",
         "materials-6"
       ],
-      "text": "Global Recycle Standard (GRS) certified, turning pre-consumer waste into new fibre. Materials include recycled polyester, recycled ocean plastic, bamboo fibre and organic cotton, with an online scrap platform run with Reverse Resources."
+      "text": "Global Recycle Standard (GRS) certified, turning pre-consumer waste into new fibre. Materials include recycled polyester, recycled ocean plastic, bamboo fibre and organic cotton, with an online scrap platform run with Reverse Resources.",
+      "image": "assets/images/photos/sustainability/bamboo-fiber.jpg"
     },
     {
       "key": "csr",
@@ -41,7 +43,8 @@
         "csr-4",
         "csr-5"
       ],
-      "text": "Corporate social responsibility is mainstreamed into everyday operations, with a focus on the welfare of employees and the communities around our factories."
+      "text": "Corporate social responsibility is mainstreamed into everyday operations, with a focus on the welfare of employees and the communities around our factories.",
+      "image": "assets/images/photos/csr/child-care.jpg"
     }
   ],
   "efficiency": {

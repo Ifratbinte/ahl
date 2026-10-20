@@ -1,0 +1,54 @@
+<form class="pg-form" id="{{form.id}}-form" data-form data-endpoint="{{form.endpoint}}" data-mailto="{{data.contact.email}}" data-subject="{{form.subject}}" data-error="{{form.errorText}}" action="{{form.endpoint | default:'#'}}" method="post" novalidate>
+              <div class="pg-form-grid">
+                {{#each form.fields as field}}
+                {{#if field.type | eq:'radio'}}
+                <fieldset class="pg-field{{#if field.wide}} pg-field--wide{{/if}}" data-field>
+                  <legend class="pg-label">{{field.label}}{{#if field.required}}<span class="pg-req" aria-hidden="true">*</span>{{/if}}</legend>
+                  <div class="pg-choices">
+                    {{#each field.options as option}}
+                    <label class="pg-choice"><input type="radio" name="{{field.name}}" value="{{option}}"{{#if field.required}} required{{/if}} /><span>{{option}}</span></label>
+                    {{/each}}
+                  </div>
+                  <span class="pg-field-error" data-field-error></span>
+                </fieldset>
+                {{else}}
+                <div class="pg-field{{#if field.wide}} pg-field--wide{{/if}}" data-field>
+                  <label class="pg-label" for="{{form.id}}-{{field.name}}">{{field.label}}{{#if field.required}}<span class="pg-req" aria-hidden="true">*</span>{{/if}}</label>
+                  {{#if field.type | eq:'select'}}
+                  <div class="pg-select">
+                    <select id="{{form.id}}-{{field.name}}" name="{{field.name}}"{{#if field.required}} required{{/if}}>
+                      <option value="">{{field.placeholder | default:'Select'}}</option>
+                      {{#each field.options as option}}
+                      <option value="{{option}}">{{option}}</option>
+                      {{/each}}
+                    </select>
+                  </div>
+                  {{else}}
+                  {{#if field.type | eq:'textarea'}}
+                  <textarea id="{{form.id}}-{{field.name}}" name="{{field.name}}" rows="5" placeholder="{{field.placeholder | default}}"{{#if field.required}} required{{/if}}></textarea>
+                  {{else}}
+                  <input id="{{form.id}}-{{field.name}}" name="{{field.name}}" type="{{field.type}}" autocomplete="{{field.autocomplete | default:'off'}}" placeholder="{{field.placeholder | default}}"{{#if field.required}} required{{/if}} />
+                  {{/if}}
+                  {{/if}}
+                  <span class="pg-field-error" data-field-error></span>
+                </div>
+                {{/if}}
+                {{/each}}
+                {{#if form.endpoint}}
+                <div class="pg-field pg-field--wide" data-field>
+                  <label class="pg-label" for="{{form.id}}-file">{{form.fileLabel | default:'Attachment'}}</label>
+                  <input id="{{form.id}}-file" name="attachment" type="file" accept=".pdf,.doc,.docx" />
+                  <span class="pg-field-error" data-field-error></span>
+                </div>
+                {{/if}}
+              </div>
+              <div class="pg-form-foot">
+                <p class="pg-form-note">{{#unless form.endpoint}}{{form.mailtoNote}}{{/unless}}</p>
+                <button class="pg-btn pg-btn--solid" type="submit">{{form.submitLabel}}{{"send" | icon}}</button>
+              </div>
+              <p class="pg-form-alert" data-form-alert role="alert" hidden></p>
+              <div class="pg-form-success" data-form-success role="status" tabindex="-1" hidden>
+                <span class="pg-form-success-icon">{{"check" | icon}}</span>
+                <div><b>{{form.successTitle}}</b><p>{{form.successText}}</p></div>
+              </div>
+            </form>

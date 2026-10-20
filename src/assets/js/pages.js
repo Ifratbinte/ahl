@@ -1,4 +1,4 @@
-/* Apex Holdings Limited: page enhancements (home About + Divisions, Our Businesses, Sustainability)
+/* Apex Holdings Limited: page enhancements (home About + Divisions, Our Businesses, Sustainability, CSR, Careers, Contact)
  * Scroll reveal, counters, parallax, progress bar, sticky sub-nav scroll-spy,
  * group map, donut chart, card tilt, tabs and the circular loop. No dependencies.
  * Everything degrades gracefully: without JS all content is visible.
@@ -617,4 +617,206 @@
       });
     });
   }
+
+  // ---------- forms (Contact, Careers): validation + email or endpoint ----------
+  // data-endpoint empty: opens the visitor's email app with the message filled in.
+  // data-endpoint set (e.g. a Formspree / Netlify Forms URL): posts the form there.
+  $$("[data-form]").forEach(function (form) {
+    var alertBox = form.querySelector("[data-form-alert]");
+    var success = form.querySelector("[data-form-success]");
+    var fields = $$("[data-field]", form);
+    var EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+    var PHONE = /^\+?[\d\s\-().]{7,20}$/;
+
+    fields.forEach(function (field, i) {
+      var err = field.querySelector("[data-field-error]");
+      if (err) {
+        err.id = form.id + "-err-" + i;
+        $$("input, select, textarea", field).forEach(function (c) {
+          c.setAttribute("aria-describedby", err.id);
+        });
+      }
+      field.addEventListener("input", function () {
+        if (field.classList.contains("is-invalid")) check(field);
+      });
+      field.addEventListener("change", function () {
+        if (field.classList.contains("is-invalid")) check(field);
+      });
+    });
+
+    function labelOf(field) {
+      var l = field.querySelector(".pg-label");
+      return l ? l.textContent.replace(/\*|\(optional\)/g, "").trim() : "";
+    }
+
+    function check(field) {
+      var controls = $$("input, select, textarea", field);
+      var first = controls[0];
+      var msg = "";
+      if (first && first.type === "radio") {
+        if (first.required && !controls.some(function (c) { return c.checked; })) msg = "Please choose one option.";
+      } else if (first) {
+        var v = first.value.trim();
+        if (first.required && !v) msg = first.tagName === "SELECT" ? "Please choose an option." : "Please fill in this field.";
+        else if (v && first.type === "email" && !EMAIL.test(v)) msg = "Please enter a valid email address.";
+        else if (v && first.type === "tel" && !PHONE.test(v)) msg = "Please enter a valid phone number.";
+      }
+      field.classList.toggle("is-invalid", !!msg);
+      controls.forEach(function (c) {
+        if (msg) c.setAttribute("aria-invalid", "true");
+        else c.removeAttribute("aria-invalid");
+      });
+      var err = field.querySelector("[data-field-error]");
+      if (err) err.textContent = msg;
+      return !msg;
+    }
+
+    function values() {
+      var out = [];
+      fields.forEach(function (field) {
+        var controls = $$("input, select, textarea", field);
+        if (!controls.length || controls[0].type === "file") return;
+        var v = controls[0].type === "radio"
+          ? (controls.filter(function (c) { return c.checked; })[0] || {}).value || ""
+          : controls[0].value.trim();
+        if (v) out.push({ name: controls[0].name, label: labelOf(field), value: v });
+      });
+      return out;
+    }
+
+    function done() {
+      if (alertBox) alertBox.hidden = true;
+      if (success) {
+        success.hidden = false;
+        success.focus();
+      }
+    }
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var ok = fields.map(check).every(Boolean);
+      if (success) success.hidden = true;
+      if (!ok) {
+        if (alertBox) {
+          alertBox.textContent = form.getAttribute("data-error") || "Please check the highlighted fields.";
+          alertBox.hidden = false;
+        }
+        var bad = form.querySelector(".is-invalid input, .is-invalid select, .is-invalid textarea");
+        if (bad) bad.focus();
+        return;
+      }
+      var endpoint = form.getAttribute("data-endpoint");
+      if (endpoint) {
+        var btn = form.querySelector("[type=submit]");
+        if (btn) btn.disabled = true;
+        fetch(endpoint, { method: "POST", body: new FormData(form), headers: { Accept: "application/json" } })
+          .then(function (r) {
+            if (!r.ok) throw new Error(r.status);
+            form.reset();
+            done();
+          })
+          .catch(function () {
+            if (alertBox) {
+              alertBox.textContent = "Sorry, your message could not be sent. Please email " + form.getAttribute("data-mailto") + ".";
+              alertBox.hidden = false;
+            }
+          })
+          .then(function () {
+            if (btn) btn.disabled = false;
+          });
+        return;
+      }
+      var list = values();
+      var pick = function (n) {
+        var f = list.filter(function (x) { return x.name === n; })[0];
+        return f ? f.value : "";
+      };
+      var subject = [form.getAttribute("data-subject"), pick("topic") || pick("category"), pick("name")]
+        .filter(Boolean)
+        .join(" | ");
+      var body = list
+        .map(function (x) {
+          return x.name === "message" ? "\n" + x.value : x.label + ": " + x.value;
+        })
+        .join("\n");
+      window.location.href =
+        "mailto:" + form.getAttribute("data-mailto") +
+        "?subject=" + encodeURIComponent(subject) +
+        "&body=" + encodeURIComponent(body + "\n");
+      done();
+    });
+  });
+
+  // ---------- prefill a form select from a chip / card (career areas, contact topics) ----------
+  function syncPressed(select) {
+    $$('[data-prefill="' + select.id + '"][aria-pressed]').forEach(function (b) {
+      b.setAttribute("aria-pressed", b.getAttribute("data-value") === select.value ? "true" : "false");
+    });
+  }
+  $$("[data-prefill]").forEach(function (trigger) {
+    var select = document.getElementById(trigger.getAttribute("data-prefill"));
+    if (!select) return;
+    select.addEventListener("change", function () {
+      syncPressed(select);
+    });
+    trigger.addEventListener("click", function () {
+      var value = trigger.getAttribute("data-value");
+      var has = Array.prototype.some.call(select.options, function (o) {
+        return o.value === value;
+      });
+      if (!value || !has) return;
+      select.value = value;
+      select.dispatchEvent(new Event("change", { bubbles: true }));
+      if (trigger.tagName === "A") {
+        // let the anchor scroll first, then put the cursor in the first empty field
+        setTimeout(function () {
+          var form = select.form;
+          var empty = form && $$("input:not([type=radio]):not([type=file]), textarea", form).filter(function (c) {
+            return !c.value;
+          })[0];
+          (empty || select).focus({ preventScroll: true });
+        }, reduceMotion ? 0 : 650);
+      }
+    });
+  });
+
+  // ---------- filterable list (contact: group directory) ----------
+  $$("[data-filter]").forEach(function (root) {
+    var buttons = $$("[data-filter-btn]", root);
+    var items = $$("[data-filter-item]", root);
+    buttons.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var key = btn.getAttribute("data-filter-btn");
+        buttons.forEach(function (b) {
+          var on = b === btn;
+          b.classList.toggle("is-active", on);
+          b.setAttribute("aria-pressed", on ? "true" : "false");
+        });
+        items.forEach(function (item) {
+          item.hidden = key !== "all" && item.getAttribute("data-filter-item") !== key;
+        });
+      });
+    });
+  });
+
+  // ---------- office open / closed badge (contact) ----------
+  $$("[data-office-status]").forEach(function (el) {
+    var tz = parseFloat(el.getAttribute("data-tz")) || 0;
+    var days = (el.getAttribute("data-days") || "").split(",").map(Number);
+    var toMin = function (t) {
+      var p = (t || "0:0").split(":");
+      return +p[0] * 60 + +p[1];
+    };
+    function update() {
+      var local = new Date(Date.now() + tz * 3600000);
+      var mins = local.getUTCHours() * 60 + local.getUTCMinutes();
+      var open = days.indexOf(local.getUTCDay()) > -1 &&
+        mins >= toMin(el.getAttribute("data-open")) && mins < toMin(el.getAttribute("data-close"));
+      el.classList.toggle("is-open", open);
+      el.textContent = el.getAttribute(open ? "data-open-label" : "data-closed-label");
+      el.hidden = false;
+    }
+    update();
+    setInterval(update, 60000);
+  });
 })();

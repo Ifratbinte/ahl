@@ -112,6 +112,9 @@ the result into plain HTML, so search engines see all content without JavaScript
 | Division intro, tagline, colour, photo       | `businesses.json` → `divisions`              |
 | Our Businesses page copy                     | `businessesPage.json`                        |
 | Sustainability page content                  | `sustainabilityPage.json`                    |
+| CSR page content (initiatives, Fair Wage, facilities) | `csrPage.json`                      |
+| Careers page (culture, areas, benefits, openings, form) | `careersPage.json` → add jobs to `openings.items` (`title`, `company`, `location`, `type`, `deadline`, `category` or `href`) |
+| Contact page (channels, topics, form, map, directory) | `contactPage.json`; phones, hours and map links live in `contact.json` |
 
 Order in the JSON = order on the page. Numbers such as "01 / 13", card numbers,
 division counts ("Textile · 5"), the portfolio total and left/right timeline sides are
@@ -212,6 +215,20 @@ Run `npm run build`, then publish the `dist/` folder.
 - **GitHub Pages:** publish `dist/` (e.g. with the `actions/upload-pages-artifact` action).
 
 ## Known follow-ups (not changed yet, by design)
+
+- **Content source.** All page text comes from apexholdings.com and the sister-concern websites
+  (or the original reference design). Section labels and button texts are the only additions.
+  Optional fields (`intro`, `tagline`, `lead`, card `text`, `description`) can be left out of the
+  JSON and their markup disappears.
+- **Forms (Contact, Careers) on a static host.** The fields match the official forms (Contact:
+  name, email, message; Career: name, email, gender, phone, job category, expected salary,
+  resume). With `"endpoint": ""` in `contactPage.json` / `careersPage.json` → `form`, submitting
+  validates and opens the visitor's email app addressed to `contact.json` → `email` (applicants
+  attach their resume themselves). Set `endpoint` to a form service URL (e.g. Formspree, Netlify
+  Forms) to post submissions directly; the Careers form then also shows the "Your Resume" upload.
+- **CSR photos.** The six official CSR gallery photos live in `src/assets/images/photos/csr/`
+  (the two largest resized to 1600 px) and are linked from `csrPage.json` → `facilities.items[].image`.
+- The Contact map is a Google Maps embed (no API key) and needs network access to show.
 
 - The home About and Divisions sections were redesigned with new `hm-` styles. The old rules for
   those sections (`about-*`, `tl-*` / `journey-*`, `division-tabs`, `business-*`, `mix-*` in

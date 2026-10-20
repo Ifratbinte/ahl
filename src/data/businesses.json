@@ -1,7 +1,6 @@
 {
   "eyebrow": "Our businesses",
   "title": "Four divisions, one group",
-  "intro": "From frozen seafood to knitwear, soybeans to solar: every company runs on its own expertise, backed by the standards and values of the Apex group.",
   "explorer": {
     "hint": "Select a division to explore its companies",
     "exploreLabel": "Explore the division",
@@ -17,8 +16,6 @@
       "key": "food",
       "label": "Food",
       "heading": "A standard in the food business",
-      "tagline": "Quality and taste, from Bangladesh to the world",
-      "intro": "From value-added frozen seafood exported since 1979 to a new generation of ready-to-eat products, our Food Division is built on quality, taste, competitive pricing and sustainable manufacturing.",
       "accent": "#F08A5D",
       "image": "assets/images/photos/afl.jpg",
       "companies": [
@@ -36,8 +33,6 @@
       "key": "textile",
       "label": "Textile",
       "heading": "A pioneer in the textile business",
-      "tagline": "A vertically integrated textile chain",
-      "intro": "Five export-oriented companies cover yarn dyeing, knitting, printing and finished garments, supplying leading retail chains in the European Union and North America with consistent quality and on-time delivery.",
       "accent": "#6C9BFF",
       "image": "assets/images/photos/askml.jpg",
       "companies": [
@@ -67,8 +62,6 @@
       "key": "agro",
       "label": "Agro",
       "heading": "An innovator in the agricultural business",
-      "tagline": "Enriching the lives of those who produce and those who consume",
-      "intro": "We take the challenges of agriculture as our own. From soybean cultivation and fresh produce to biofertilizers made with in-house R&D, our Agro Division helps farming in Bangladesh progress and thrive.",
       "accent": "#4CC38A",
       "image": "assets/images/photos/aosil.jpg",
       "companies": [
@@ -91,8 +84,6 @@
       "key": "diversified",
       "label": "Diversified",
       "heading": "Expanding our diversified businesses",
-      "tagline": "Specialty chemicals and clean energy",
-      "intro": "Specialty textile and leather chemicals since 1994, and off-grid and grid-connected solar and biogas systems, pursuing economic success together with environmental protection and social responsibility.",
       "accent": "#A98BFF",
       "image": "assets/images/photos/arel.jpg",
       "companies": [

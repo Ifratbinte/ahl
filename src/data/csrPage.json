@@ -1,0 +1,138 @@
+{
+  "hero": {
+    "eyebrow": "Corporate Social Responsibility",
+    "title": "We are determined to",
+    "titleAccent": "invest in our people.",
+    "image": "assets/images/photos/afwl.jpg",
+    "primaryCta": {
+      "label": "CSR Policy",
+      "href": "#policy"
+    },
+    "secondaryCta": {
+      "label": "Contact us",
+      "href": "contact/",
+      "internal": true
+    },
+    "scrollLabel": "Scroll to CSR Policy",
+    "stats": [
+      {
+        "value": "1000",
+        "suffix": "+",
+        "label": "Trees planted a year",
+        "tone": "agro"
+      },
+      {
+        "value": "ILO",
+        "suffix": "",
+        "label": "Fair Wage Method",
+        "tone": "textile"
+      }
+    ]
+  },
+  "policy": {
+    "eyebrow": "CSR",
+    "title": "CSR Policy",
+    "paragraphs": [
+      "We have mainstreamed corporate social responsibility into our operations and chooses to holistically develop our employees.",
+      "We do not see these works just as corporate social responsibility but as a way to develop the community and the larger global sector."
+    ]
+  },
+  "initiatives": {
+    "eyebrow": "Our initiatives",
+    "title": "Some of our initiatives",
+    "items": [
+      {
+        "icon": "tree",
+        "tone": "agro",
+        "title": "Planting 1000+ trees a year"
+      },
+      {
+        "icon": "droplet",
+        "tone": "textile",
+        "title": "Providing safe drinking water"
+      },
+      {
+        "icon": "heart",
+        "tone": "food",
+        "title": "On-premises medical facilities for staff and family"
+      },
+      {
+        "icon": "bus",
+        "tone": "diversified",
+        "title": "On-premises transport facilities for staff and family"
+      },
+      {
+        "icon": "child",
+        "tone": "agro",
+        "title": "Daycare centers with certified childcare givers for working mothers"
+      },
+      {
+        "icon": "book",
+        "tone": "textile",
+        "title": "Wellbeing training sessions on financial literacy and nutrition"
+      }
+    ]
+  },
+  "fairWage": {
+    "eyebrow": "Fair Wage Method",
+    "title": "The Fair Wage Method",
+    "text": "Along with the support from the International Labor Organization (ILO), we have jointly developed a wage management system called the Fair Wage Method to address wage disparity challenges in the global garment manufacturing sector.",
+    "badge": "ILO",
+    "badgeCaption": "International Labor Organization"
+  },
+  "facilities": {
+    "eyebrow": "Gallery",
+    "title": "Facilities for our people",
+    "items": [
+      {
+        "icon": "users",
+        "tone": "textile",
+        "title": "Employee Help Desk",
+        "image": "assets/images/photos/csr/help-desk.jpg"
+      },
+      {
+        "icon": "heart",
+        "tone": "food",
+        "title": "Medical Service",
+        "image": "assets/images/photos/csr/medical-service.jpg"
+      },
+      {
+        "icon": "flame",
+        "tone": "agro",
+        "title": "Employee Canteen",
+        "image": "assets/images/photos/csr/canteen.jpg"
+      },
+      {
+        "icon": "child",
+        "tone": "diversified",
+        "title": "Child Care Center",
+        "image": "assets/images/photos/csr/child-care.jpg"
+      },
+      {
+        "icon": "bus",
+        "tone": "textile",
+        "title": "Employee Transport Service",
+        "image": "assets/images/photos/csr/transport.jpg"
+      },
+      {
+        "icon": "shield",
+        "tone": "agro",
+        "title": "Employee Medical Center",
+        "image": "assets/images/photos/csr/medical-center.jpg"
+      }
+    ]
+  },
+  "cta": {
+    "eyebrow": "Career",
+    "title": "A Career With Us",
+    "text": "If you are interested to join our team then please upload your information.",
+    "primary": {
+      "label": "Send us your resume",
+      "href": "careers/#apply"
+    },
+    "secondary": {
+      "label": "Contact us",
+      "href": "contact/"
+    }
+  }
+}

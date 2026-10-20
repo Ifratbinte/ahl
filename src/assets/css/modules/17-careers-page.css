@@ -1,0 +1,143 @@
+
+/* =====================================================================
+   Careers page ("cr-" prefix)
+   ===================================================================== */
+
+/* culture: hire / engage / develop / retain */
+.cr-culture {
+  background: linear-gradient(180deg, #ffffff 0%, #f4f7fb 100%);
+}
+/* career areas */
+.cr-areas {
+  background: #f4f7fb;
+  padding-top: 0;
+}
+.cr-area-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.cr-area-grid > li:nth-child(4n + 2) { --d: 1; }
+.cr-area-grid > li:nth-child(4n + 3) { --d: 2; }
+.cr-area-grid > li:nth-child(4n + 4) { --d: 3; }
+.cr-area {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  height: 100%;
+  padding: 16px 18px;
+  border-radius: 18px;
+  background: #ffffff;
+  border: 1px solid var(--pg-line);
+  color: var(--pg-navy);
+  text-decoration: none;
+  box-sizing: border-box;
+  transition:
+    transform 0.4s var(--pg-ease),
+    box-shadow 0.4s var(--pg-ease),
+    background 0.3s ease,
+    color 0.3s ease;
+}
+.cr-area-icon {
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  width: 44px;
+  height: 44px;
+  border-radius: 13px;
+  background: #e3f4f1;
+  color: var(--pg-teal);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+.cr-area-label {
+  flex: 1;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 1.35;
+}
+.cr-area-go {
+  display: grid;
+  opacity: 0;
+  transform: translateX(-8px);
+  transition: opacity 0.3s ease, transform 0.4s var(--pg-ease);
+}
+.cr-area-go svg {
+  width: 18px;
+  height: 18px;
+}
+.cr-area:hover,
+.cr-area:focus-visible {
+  transform: translateY(-3px);
+  background: #0a2540;
+  color: #ffffff;
+  box-shadow: 0 16px 34px rgba(10, 37, 64, 0.2);
+}
+.cr-area:hover .cr-area-icon,
+.cr-area:focus-visible .cr-area-icon {
+  background: rgba(169, 238, 226, 0.15);
+  color: #a9eee2;
+}
+.cr-area:hover .cr-area-go,
+.cr-area:focus-visible .cr-area-go {
+  opacity: 1;
+  transform: none;
+}
+
+/* apply */
+.cr-apply-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  gap: clamp(32px, 5vw, 72px);
+  align-items: start;
+}
+.cr-apply-side {
+  position: sticky;
+  top: 110px;
+}
+.cr-apply-mail {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 8px 0 0;
+  font-weight: 700;
+}
+.cr-apply-mail svg {
+  color: var(--pg-teal);
+}
+.cr-apply-mail a {
+  color: var(--pg-navy);
+  text-decoration: none;
+  border-bottom: 1.5px solid rgba(14, 124, 115, 0.35);
+}
+
+@media (max-width: 1024px) {
+  .cr-apply-layout {
+    grid-template-columns: 1fr;
+  }
+  .cr-apply-side {
+    position: static;
+  }
+}
+
+/* phones: career areas as a compact two-column grid */
+@media (max-width: 560px) {
+  .cr-area-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+  .cr-area {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 14px;
+  }
+  .cr-area-label {
+    font-size: 14px;
+  }
+  .cr-area-go {
+    display: none;
+  }
+}

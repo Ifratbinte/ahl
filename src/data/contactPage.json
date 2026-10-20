@@ -1,0 +1,40 @@
+{
+  "hero": {
+    "eyebrow": "Contact Us",
+    "title": "Let's talk about",
+    "titleAccent": "working together.",
+    "image": "assets/images/photos/ahl-hero.jpg",
+    "primaryCta": { "label": "Send Message", "href": "#message" },
+    "secondaryCta": { "label": "Head Office", "href": "#visit" },
+    "scrollLabel": "Scroll to contact details"
+  },
+  "channels": {
+    "visit": { "title": "Head Office", "action": "Get directions" },
+    "call": { "title": "Phone" },
+    "email": { "title": "Email" },
+    "hours": { "title": "Office hours" }
+  },
+  "form": {
+    "id": "message",
+    "eyebrow": "Contact Us",
+    "title": "Email US",
+    "endpoint": "",
+    "subject": "Website message",
+    "submitLabel": "Send Message",
+    "mailtoNote": "Your email app will open with your message ready to send.",
+    "successTitle": "Thank you",
+    "successText": "Press send in your email app to deliver your message.",
+    "errorText": "Please check the highlighted fields.",
+    "fields": [
+      { "name": "name", "label": "Your Name", "type": "text", "required": true, "autocomplete": "name" },
+      { "name": "email", "label": "Email", "type": "email", "required": true, "autocomplete": "email" },
+      { "name": "message", "label": "Message", "type": "textarea", "required": true, "wide": true }
+    ]
+  },
+  "map": {
+    "eyebrow": "Our Addresses",
+    "title": "Head Office",
+    "frameTitle": "Map showing the Apex Holdings Limited head office in Gulshan, Dhaka",
+    "action": "Open in Google Maps"
+  }
+}

@@ -1,0 +1,114 @@
+<!--@page
+{
+  "id": "csr",
+  "title": "Corporate Social Responsibility | Apex Holdings Limited",
+  "description": "How Apex Holdings Limited invests in its people and communities: tree planting, safe drinking water, medical care, transport, daycare for working mothers, wellbeing training and the ILO Fair Wage Method.",
+  "path": "/csr/",
+  "changefreq": "monthly",
+  "priority": "0.8",
+  "preloadImage": "assets/images/photos/afwl.jpg"
+}
+-->
+<!doctype html>
+<html lang="{{site.lang}}" class="pg-html">
+  <head>
+<!-- @include head/meta.html -->
+<!-- @include head/assets.html -->
+<!-- @include head/structured-data.html -->
+  </head>
+  <body class="pg-body pg-body--csr">
+<!-- @include components/page-head-common.html -->
+    <div class="page-shell">
+      <!-- HERO -->
+      <header class="hero-section pg-hero cs-hero" id="top">
+<!-- @include components/site-nav.html -->
+        {{#each data.csrPage.hero | wrap as hero}}
+<!-- @include components/page-hero.html -->
+        {{/each}}
+      </header>
+
+      <main id="main">
+        <!-- POLICY -->
+        {{#each data.csrPage.policy | wrap as policy}}
+        <section class="pg-section cs-policy" id="policy" aria-labelledby="cs-policy-title">
+          <div class="pg-container pg-split">
+            <div class="pg-split-head">
+              <div class="pg-eyebrow" data-reveal>{{policy.eyebrow}}</div>
+              <h2 class="pg-title" id="cs-policy-title" data-reveal style="--d: 1">{{policy.title}}</h2>
+            </div>
+            <div class="pg-split-body">
+              {{#each policy.paragraphs as paragraph}}
+              <p class="pg-lead" data-reveal style="--d: 2">{{paragraph}}</p>
+              {{/each}}
+            </div>
+          </div>
+        </section>
+        {{/each}}
+
+        <!-- INITIATIVES -->
+        <section class="pg-section cs-initiatives" id="initiatives" aria-labelledby="cs-init-title">
+          {{#each data.csrPage.initiatives | wrap as cards}}
+          <div class="pg-container">
+            <div class="pg-section-head pg-section-head--center">
+              <div class="pg-eyebrow" data-reveal>{{cards.eyebrow}}</div>
+              <h2 class="pg-title" id="cs-init-title" data-reveal style="--d: 1">{{cards.title}}</h2>
+            </div>
+<!-- @include components/icon-cards.html -->
+          </div>
+          {{/each}}
+        </section>
+
+        <!-- FAIR WAGE -->
+        {{#each data.csrPage.fairWage | wrap as wage}}
+        <section class="pg-section cs-wage" aria-labelledby="cs-wage-title">
+          <div class="cs-wage-bg" aria-hidden="true"><span></span><span></span></div>
+          <div class="pg-container cs-wage-layout">
+            <div class="cs-wage-copy">
+              <div class="pg-eyebrow pg-eyebrow--light" data-reveal>{{wage.eyebrow}}</div>
+              <h2 class="pg-title pg-title--light" id="cs-wage-title" data-reveal style="--d: 1">{{wage.title}}</h2>
+              <p class="pg-lead pg-lead--light" data-reveal style="--d: 2">{{wage.text}}</p>
+            </div>
+            <div class="cs-wage-mark" data-reveal style="--d: 2">
+              <span class="cs-wage-mark-icon">{{"scale" | icon}}</span>
+              <b>{{wage.badge}}</b>
+              <span>{{wage.badgeCaption}}</span>
+            </div>
+          </div>
+        </section>
+        {{/each}}
+
+        <!-- FACILITIES (official CSR gallery captions) -->
+        {{#each data.csrPage.facilities | wrap as fac}}
+        <section class="pg-section cs-facilities" aria-labelledby="cs-fac-title">
+          <div class="pg-container">
+            <div class="pg-section-head">
+              <div class="pg-eyebrow" data-reveal>{{fac.eyebrow}}</div>
+              <h2 class="pg-title" id="cs-fac-title" data-reveal style="--d: 1">{{fac.title}}</h2>
+            </div>
+            <ul class="cs-bento">
+              {{#each fac.items as item}}
+              <li class="cs-tile pg-tone--{{item.tone}}{{#if item.image}} cs-tile--photo{{/if}}" data-reveal style="--d: {{@index}}">
+                {{#if item.image}}
+                <img class="cs-tile-img" src="{{page.root}}{{item.image}}" alt="{{item.title}}" loading="lazy" decoding="async" />
+                {{/if}}
+                <span class="cs-tile-icon">{{item.icon | icon}}</span>
+                <h3>{{item.title}}</h3>
+              </li>
+              {{/each}}
+            </ul>
+          </div>
+        </section>
+        {{/each}}
+
+        {{#each data.csrPage.cta | wrap as cta}}
+<!-- @include components/page-cta.html -->
+        {{/each}}
+      </main>
+
+<!-- @include sections/footer.html -->
+    </div>
+
+    <script src="{{page.root}}assets/js/main.js"></script>
+    <script src="{{page.root}}assets/js/pages.js"></script>
+  </body>
+</html>

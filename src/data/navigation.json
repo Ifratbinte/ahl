@@ -21,19 +21,18 @@
     },
     {
       "label": "CSR",
-      "href": "https://apexholdings.com/csr",
-      "external": true
+      "href": "csr/",
+      "page": "csr"
     },
     {
-      "label": "Career",
-      "href": "https://apexholdings.com/career",
-      "external": true
+      "label": "Careers",
+      "href": "careers/",
+      "page": "careers"
     },
     {
       "label": "Contact",
-      "href": "#contact",
-      "hideInFooter": true,
-      "local": true
+      "href": "contact/",
+      "page": "contact"
     }
   ]
 }

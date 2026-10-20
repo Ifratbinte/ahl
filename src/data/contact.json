@@ -27,12 +27,47 @@
     {
       "icon": "clock",
       "lines": [
-        "Sat–Thu · 08:00 am – 04:50 pm"
+        "Sat–Thu · 08:00 am – 04:30 pm"
       ]
     }
   ],
   "quickMenuTitle": "Quick menu",
   "divisionsTitle": "Our divisions",
   "copyright": "© Apex Holdings Limited. All rights reserved.",
-  "backToTop": "Back to top"
+  "backToTop": "Back to top",
+  "phones": [
+    {
+      "label": "+880 9606669988",
+      "href": "tel:+8809606669988"
+    },
+    {
+      "label": "+88-02-9861685",
+      "href": "tel:+88029861685"
+    },
+    {
+      "label": "+88-02-8810850",
+      "href": "tel:+88028810850"
+    }
+  ],
+  "hours": {
+    "days": "Saturday – Thursday",
+    "time": "08:00 am – 04:30 pm",
+    "openDays": [
+      6,
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "open": "08:00",
+    "close": "16:30",
+    "utcOffset": 6,
+    "openLabel": "Open now",
+    "closedLabel": "Closed now"
+  },
+  "map": {
+    "embed": "https://www.google.com/maps?q=Shanta+Skymark,+18+Gulshan+Avenue,+Gulshan,+Dhaka+1212&output=embed",
+    "link": "https://www.google.com/maps/search/?api=1&query=Shanta+Skymark+18+Gulshan+Avenue+Gulshan+Dhaka+1212"
+  }
 }
