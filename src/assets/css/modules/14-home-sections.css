@@ -378,6 +378,19 @@
 .hm-journey-wrap .journey-scroll {
   margin-top: clamp(64px, 8vw, 110px);
 }
+/* full-width background; content keeps the page-container width it had before */
+.hm-journey-wrap {
+  --jr-inset: max(var(--page-gutter), calc((100% - var(--page-max)) / 2 + var(--page-gutter)));
+}
+.hm-journey-wrap .journey {
+  border-radius: 0;
+  padding-left: calc(var(--jr-inset) + 32px);
+  padding-right: calc(var(--jr-inset) + 32px);
+}
+.hm-journey-wrap .journey-scroll.is-horizontal .journey {
+  padding-left: calc(var(--jr-inset) + clamp(20px, 4vw, 56px));
+  padding-right: calc(var(--jr-inset) + clamp(20px, 4vw, 56px));
+}
 
 /* ---------------------------------------------------------------------
    DIVISIONS
