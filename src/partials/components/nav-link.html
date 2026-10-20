@@ -1,5 +1,5 @@
 {{#if link.external}}
 <a href="{{link.href}}" target="_blank" rel="noopener">{{link.label}}</a>
 {{else}}
-<a href="{{link.href}}">{{link.label}}</a>
+<a href="{{#unless link.local}}{{page.root}}{{/unless}}{{link.href}}"{{#if link.page | eq:page.id}} class="hero-navigation-current-link" aria-current="page"{{/if}}>{{link.label}}</a>
 {{/if}}

@@ -53,6 +53,12 @@ export function createFilters({ iconsDir }) {
     reverse: (v) => [...v].reverse(),
     repeat: (v, times = "2") => Array.from({ length: Number(times) }, () => v).flat(),
     join: (v, sep = ", ") => v.join(sep),
+    limit: (v, n = "3") => v.slice(0, Number(n)),
+    // {{#each obj | wrap as x}} works like "with": renders once with x = obj
+    wrap: (v) => [v],
+    // comparisons, for {{#if link.page | eq:page.id}}
+    eq: (v, other) => String(v) === String(other),
+    ne: (v, other) => String(v) !== String(other),
     // join lines with <br />, escaping each line
     lines: (v) => new SafeString([].concat(v).map(escapeHtml).join("<br />")),
     // inline SVG from src/partials/icons/<name>.svg
@@ -90,10 +96,15 @@ function lookup(scopes, pathStr) {
   return undefined;
 }
 
-function parseArg(raw) {
+// filter argument: "quoted" = literal text; a known path (page.id) = its value; else literal
+function parseArg(raw, scopes) {
   if (raw === undefined) return undefined;
   const t = raw.trim();
   if (/^".*"$|^'.*'$/.test(t)) return t.slice(1, -1);
+  if (/^[A-Za-z_@][\w.@-]*$/.test(t)) {
+    const v = lookup(scopes, t);
+    if (v !== undefined) return v;
+  }
   return t;
 }
 
@@ -103,10 +114,10 @@ function evaluate(expr, scopes, filters, where) {
   for (const pipe of pipes) {
     const idx = pipe.indexOf(":");
     const name = (idx === -1 ? pipe : pipe.slice(0, idx)).trim();
-    const arg = idx === -1 ? undefined : parseArg(pipe.slice(idx + 1));
+    const arg = idx === -1 ? undefined : parseArg(pipe.slice(idx + 1), scopes);
     const fn = filters[name];
     if (!fn) throw new Error(`Unknown filter "${name}" at ${where}`);
-    if (value === undefined && !["default", "mod"].includes(name))
+    if (value === undefined && !["default", "mod", "eq", "ne"].includes(name))
       throw new Error(`"${head.trim()}" is undefined at ${where}`);
     value = fn(value, arg);
   }

@@ -1,3 +1,8 @@
+/* page container: width and side spacing shared by every section */
+:root {
+  --page-max: 1320px;
+  --page-gutter: 20px;
+}
 body {
   margin: 0;
   font-family: "Manrope", system-ui, sans-serif;

@@ -4,83 +4,329 @@
     "shortName": "Apex Spinning & Knitting Mills",
     "abbr": "ASKML",
     "url": "http://apexknitting.com",
-    "division": "textile"
+    "division": "textile",
+    "image": "assets/images/photos/askml.jpg",
+    "highlights": [
+      "Fabric-to-garment vertical integration",
+      "In-house design team",
+      "In-house embroidery and placement print"
+    ],
+    "stat": {
+      "value": "2.8–3.0M",
+      "caption": "garment pieces a month",
+      "items": [
+        {
+          "value": "52",
+          "label": "sewing lines"
+        },
+        {
+          "value": "24–46GG",
+          "label": "knit gauge range"
+        }
+      ]
+    }
   },
   "mbl": {
     "name": "Matex Bangladesh Limited",
     "shortName": "Matex Bangladesh",
     "abbr": "MBL",
     "url": "http://matexbd.com",
-    "division": "diversified"
+    "division": "diversified",
+    "image": "assets/images/photos/mbl.jpg",
+    "established": "1994",
+    "highlights": [
+      "Made to GOTS, OEKO-TEX and ZDHC guidelines",
+      "One of few H&M positive-listed suppliers",
+      "Effluent treatment plant, all effluent treated"
+    ],
+    "stat": {
+      "value": "30,000 MT",
+      "caption": "capacity a year",
+      "items": [
+        {
+          "value": "1994",
+          "label": "in production since"
+        },
+        {
+          "value": "4",
+          "label": "core chemical processes"
+        }
+      ]
+    }
   },
   "all": {
     "name": "Apex Lingerie Limited",
     "shortName": "Apex Lingerie",
     "abbr": "ALL",
     "url": "http://apexlingerie.com",
-    "division": "textile"
+    "division": "textile",
+    "image": "assets/images/photos/all.jpg",
+    "established": "1999",
+    "highlights": [
+      "Own fabrics, elastics, foam and labels",
+      "In-house design center",
+      "Clients include H&M, Carrefour and LINDEX"
+    ],
+    "stat": {
+      "value": "1.8–2M",
+      "caption": "sets a month",
+      "items": [
+        {
+          "value": "66",
+          "label": "sewing lines"
+        },
+        {
+          "value": "20+ yrs",
+          "label": "of exporting"
+        }
+      ]
+    }
   },
   "aydl": {
     "name": "Apex Yarn Dyeing Limited",
     "shortName": "Apex Yarn Dyeing",
     "abbr": "AYDL",
     "url": "http://www.apexthreads.com",
-    "division": "textile"
+    "division": "textile",
+    "image": "assets/images/photos/aydl.jpg",
+    "established": "2003",
+    "highlights": [
+      "OEKO-TEX 100 standard production",
+      "ISO 9001:2000 certified",
+      "Rapid high-temperature dyeing machines"
+    ],
+    "stat": {
+      "value": "4,200 MT",
+      "caption": "dyed yarn a year",
+      "items": [
+        {
+          "value": "14M",
+          "label": "thread cones a year"
+        },
+        {
+          "value": "2003",
+          "label": "production began"
+        }
+      ]
+    }
   },
   "atpml": {
     "name": "Apex Textile Printing Mills Limited",
     "shortName": "Apex Textile Printing Mills",
     "abbr": "ATPML",
     "url": "https://www.apextextileprinting.com",
-    "division": "textile"
+    "division": "textile",
+    "image": "assets/images/photos/atpml.jpg",
+    "highlights": [
+      "Consistent, high quality",
+      "Timely delivery",
+      "Competitive pricing"
+    ],
+    "stat": {
+      "value": "100%",
+      "caption": "export oriented",
+      "items": [
+        {
+          "value": "14 yrs",
+          "label": "supplying retail chains"
+        },
+        {
+          "value": "EU + N. America",
+          "label": "core markets"
+        }
+      ]
+    }
   },
   "afwl": {
     "name": "Apex Fashion Wear Limited",
     "shortName": "Apex Fashion Wear",
     "abbr": "AFWL",
     "url": "http://apexfashionwear.com",
-    "division": "textile"
+    "division": "textile",
+    "image": "assets/images/photos/afwl.jpg",
+    "established": "2018",
+    "highlights": [
+      "Clients include HEMA, Lindex and Morrisons",
+      "On-site daycare and free medical care",
+      "In-house fabrics and design team"
+    ],
+    "stat": {
+      "value": "900,000",
+      "caption": "sq ft modern factory",
+      "items": [
+        {
+          "value": "40",
+          "label": "sewing lines at setup"
+        },
+        {
+          "value": "2018",
+          "label": "operations began"
+        }
+      ]
+    }
   },
   "aal": {
     "name": "Apex Agriscience Limited",
     "shortName": "Apex Agriscience",
     "abbr": "AAL",
     "url": "http://apexagriscience.com",
-    "division": "agro"
+    "division": "agro",
+    "image": "assets/images/photos/aal.jpg",
+    "highlights": [
+      "Network of collection agents",
+      "Cost-effective order fulfilment",
+      "Rooftop and greenhouse farming solutions"
+    ],
+    "stat": {
+      "value": "Aeroponic",
+      "caption": "potato seedling R&D",
+      "items": [
+        {
+          "value": "2,000 sq ft",
+          "label": "first-phase greenhouse"
+        },
+        {
+          "value": "3",
+          "label": "farm consulting services"
+        }
+      ]
+    }
   },
   "acfl": {
     "name": "Apex Convenience Foods Limited",
     "shortName": "Apex Convenience Foods",
     "abbr": "ACFL",
     "url": "http://apexconveniencefoods.com",
-    "division": "food"
+    "division": "food",
+    "image": "assets/images/photos/acfl.jpg",
+    "highlights": [
+      "Quality, taste and competitive price",
+      "Fresh and retort-packed range",
+      "Sustainable manufacturing focus"
+    ],
+    "stat": {
+      "value": "3",
+      "caption": "export regions planned",
+      "items": [
+        {
+          "value": "4",
+          "label": "product families"
+        },
+        {
+          "value": "Gazipur",
+          "label": "factory location"
+        }
+      ]
+    }
   },
   "abbl": {
     "name": "Apex Biofertilizers & Biopesticides Limited",
     "shortName": "Apex Biofertilizers & Biopesticides",
     "abbr": "ABBL",
     "url": "http://apexbiofertilizer.com",
-    "division": "agro"
+    "division": "agro",
+    "image": "assets/images/photos/abbl.jpg",
+    "highlights": [
+      "Hi-tech R&D laboratory",
+      "Commercial-scale pilot production",
+      "Farmer network for field trials"
+    ],
+    "stat": {
+      "value": "10+ yrs",
+      "caption": "of research",
+      "items": [
+        {
+          "value": "4,000 L",
+          "label": "fermenter system"
+        },
+        {
+          "value": "10×",
+          "label": "possible capacity growth"
+        }
+      ]
+    }
   },
   "afl": {
     "name": "Apex Foods Limited",
     "shortName": "Apex Foods",
     "abbr": "AFL",
     "url": "https://www.apexfoods.com/",
-    "division": "food"
+    "division": "food",
+    "image": "assets/images/photos/afl.jpg",
+    "established": "1979",
+    "highlights": [
+      "Value-added shrimp processing",
+      "Modern freezing and storage plant",
+      "Food Division flagship"
+    ],
+    "stat": {
+      "value": "100%",
+      "caption": "export oriented",
+      "items": [
+        {
+          "value": "1979",
+          "label": "incorporated"
+        },
+        {
+          "value": "Largest",
+          "label": "frozen seafood exporter in Bangladesh"
+        }
+      ]
+    }
   },
   "aosil": {
     "name": "Apex Organic Soya Industries Limited",
     "shortName": "Apex Organic Soya Industries",
     "abbr": "AOSIL",
     "url": "https://apexorganicsoya.com/",
-    "division": "agro"
+    "division": "agro",
+    "image": "assets/images/photos/aosil.jpg",
+    "established": "2012",
+    "highlights": [
+      "Organic soybean cultivation",
+      "High-protein soybean products",
+      "Soil fertility and lower chemical impact"
+    ],
+    "stat": {
+      "value": "2012",
+      "caption": "soybean production began",
+      "items": [
+        {
+          "value": "600+",
+          "label": "contract farmers"
+        },
+        {
+          "value": "Hi-tech",
+          "label": "agricultural R&D"
+        }
+      ]
+    }
   },
   "arel": {
     "name": "Apex Renewable Energy Limited",
     "shortName": "Apex Renewable Energy",
     "abbr": "AREL",
     "url": "https://www.apexrenewablesltd.com/",
-    "division": "diversified"
+    "division": "diversified",
+    "image": "assets/images/photos/arel.jpg",
+    "highlights": [
+      "Project finance and consultancy",
+      "Solar and biogas systems",
+      "Turnkey project management"
+    ],
+    "stat": {
+      "value": "Solar + biogas",
+      "caption": "renewable energy systems",
+      "items": [
+        {
+          "value": "Public + private",
+          "label": "sectors served"
+        },
+        {
+          "value": "End to end",
+          "label": "finance through delivery"
+        }
+      ]
+    }
   }
 }

@@ -1,0 +1,49 @@
+  <div class="nav hero-navigation" data-site-nav>
+    <div class="hero-navigation-inner">
+      <a
+        href="{{#if page.id | eq:'home'}}#top{{else}}{{page.root}}{{/if}}"
+        aria-label="{{data.navigation.brand.homeLabel}}"
+        class="hero-brand-link"
+      >
+        <img
+          src="{{page.root}}{{data.navigation.brand.logo}}"
+          alt="{{data.navigation.brand.alt}}"
+          class="hero-brand-logo"
+        />
+      </a>
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-label="Open navigation"
+        aria-controls="primary-navigation"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav
+        class="hero-navigation-links"
+        id="primary-navigation"
+        aria-label="Primary navigation"
+        aria-hidden="false"
+      >
+        <a
+          class="nav-drawer-brand"
+          href="{{#if page.id | eq:'home'}}#top{{else}}{{page.root}}{{/if}}"
+          aria-label="{{data.navigation.brand.homeLabel}}"
+        >
+          <img src="{{page.root}}{{data.navigation.brand.logo}}" alt="{{data.navigation.brand.alt}}" />
+        </a>
+        {{#each data.navigation.links as link}}
+        <!-- @include components/nav-link.html -->
+        {{/each}}
+      </nav>
+      <button
+        class="nav-scrim"
+        type="button"
+        aria-label="Close navigation"
+        hidden
+      ></button>
+    </div>
+  </div>

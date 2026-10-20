@@ -120,6 +120,13 @@ export function loadData() {
       }
     }
     businesses.totalCompanies = businesses.divisions.reduce((n, d) => n + d.count, 0);
+    // shares for the portfolio donut chart (percent of total, cumulative offset)
+    let offset = 0;
+    for (const division of businesses.divisions) {
+      division.share = +((division.count / businesses.totalCompanies) * 100).toFixed(3);
+      division.offset = +(-offset).toFixed(3);
+      offset += division.share;
+    }
     if (companies) {
       const listed = new Set(businesses.divisions.flatMap((d) => d.companies.map((c) => c.abbr)));
       for (const c of Object.values(companies)) {
@@ -157,10 +164,10 @@ export function build({ quiet = false } = {}) {
   write(path.join(DIST, "assets", "css", "style.css"), css);
 
   // cache-busting versions for the files that change between releases
-  const versions = {
-    "assets/css/style.css": hash(css),
-    "assets/js/main.js": hash(read(path.join(DIST, "assets", "js", "main.js"))),
-  };
+  const versions = { "assets/css/style.css": hash(css) };
+  for (const file of walk(path.join(DIST, "assets", "js"))) {
+    versions[toPosix(path.relative(DIST, file))] = hash(read(file));
+  }
 
   // 3. pages
   const pages = [];
@@ -174,6 +181,7 @@ export function build({ quiet = false } = {}) {
       robots: "index, follow",
       preloadImage: "",
       ...meta,
+      id: meta.id || (rel === "index.html" ? "home" : rel.split("/")[0].replace(/\.html$/, "")),
       path: pagePath,
       url: site.url + pagePath,
       ogImageUrl: site.url + (meta.ogImage || site.ogImage),

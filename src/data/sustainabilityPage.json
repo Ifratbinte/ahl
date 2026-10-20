@@ -1,0 +1,259 @@
+{
+  "hero": {
+    "eyebrow": "Sustainability",
+    "title": "A pioneer in",
+    "titleAccent": "sustainable manufacturing",
+    "lead": "Our efforts are driven by digitization, ecological cognizance, productivity, innovation and adaptability, through a three-pronged approach to how we make things and how we treat people.",
+    "image": "assets/images/bg/shirts.jpg",
+    "primaryCta": {
+      "label": "See our approach",
+      "href": "#approach"
+    },
+    "secondaryCta": {
+      "label": "Talk to us",
+      "href": "#contact"
+    },
+    "scrollLabel": "Scroll to explore"
+  },
+  "values": [
+    "Digitization",
+    "Ecological cognizance",
+    "Productivity",
+    "Innovation",
+    "Adaptability"
+  ],
+  "approach": {
+    "eyebrow": "Our approach",
+    "title": "Three pillars, one commitment",
+    "intro": "Sustainability is not a side project at Apex. It is built into our plants, our materials and our everyday operations."
+  },
+  "pillars": [
+    {
+      "id": "environment",
+      "icon": "droplet",
+      "accent": "#4CC38A",
+      "title": "Environmental friendliness",
+      "summary": "Cleaner water, safer chemistry and less waste in every process.",
+      "points": [
+        "One of the largest privately owned water treatment plants in the country",
+        "Research into recycling wastewater",
+        "Chemicals that follow ZDHC guidelines",
+        "Singeing and sublimation to reduce dye and chemical waste"
+      ]
+    },
+    {
+      "id": "materials",
+      "icon": "recycle",
+      "accent": "#6C9BFF",
+      "title": "Recyclable materials",
+      "summary": "Turning waste into new fibre and choosing better raw materials.",
+      "points": [
+        "Global Recycle Standard (GRS) certified",
+        "Pre-consumer waste recycled into new fibre",
+        "Recycled polyester, ocean plastic, bamboo and organic cotton",
+        "Online scrap platform with Reverse Resources"
+      ]
+    },
+    {
+      "id": "people",
+      "icon": "users",
+      "accent": "#F08A5D",
+      "title": "CSR in daily operations",
+      "summary": "Investing in our people and the communities around our factories.",
+      "points": [
+        "On-site medical and transport services",
+        "Daycare centres for working mothers",
+        "Financial literacy and nutrition training",
+        "Fair Wage Method developed with the ILO"
+      ]
+    }
+  ],
+  "water": {
+    "eyebrow": "Water stewardship",
+    "title": "Every drop treated, every process cleaner",
+    "text": "We operate one of the largest privately owned water treatment plants in Bangladesh and continue to research ways of recycling wastewater. Across our factories, chemicals follow the Zero Discharge of Hazardous Chemicals (ZDHC) guidelines.",
+    "steps": [
+      {
+        "label": "Production",
+        "text": "Dyeing, printing and processing"
+      },
+      {
+        "label": "Treatment",
+        "text": "Large-scale water treatment plant"
+      },
+      {
+        "label": "Safe chemistry",
+        "text": "ZDHC-compliant chemicals"
+      },
+      {
+        "label": "Recycling",
+        "text": "Wastewater reuse research"
+      }
+    ],
+    "badge": "ZDHC",
+    "badgeCaption": "Zero Discharge of Hazardous Chemicals"
+  },
+  "efficiency": {
+    "eyebrow": "Energy and resources",
+    "title": "Doing more with less",
+    "intro": "Small engineering changes, multiplied across factories and offices, add up to large savings in energy, dye and chemicals.",
+    "items": [
+      {
+        "id": "led",
+        "icon": "bulb",
+        "title": "LED lighting",
+        "text": "CFL lights replaced with LEDs across all our factories and offices."
+      },
+      {
+        "id": "servo",
+        "icon": "gear",
+        "title": "Servo motors",
+        "text": "Clutch motors replaced with efficient servo motors on our production floors."
+      },
+      {
+        "id": "heat",
+        "icon": "flame",
+        "title": "Waste heat recovery",
+        "text": "Waste heat from power generation runs our air-conditioning and cooling units."
+      },
+      {
+        "id": "pact",
+        "icon": "chart",
+        "title": "IFC PaCT programme",
+        "text": "Energy initiatives in our dyeing houses are part of the International Finance Corporation's PaCT programme."
+      },
+      {
+        "id": "dye",
+        "icon": "drop-half",
+        "title": "Singeing and sublimation",
+        "text": "Textile processes that cut dye wastage and reduce chemical use."
+      }
+    ]
+  },
+  "materials": {
+    "eyebrow": "Materials",
+    "title": "Better fibres, by design",
+    "intro": "We work with a growing range of recycled, renewable and certified materials.",
+    "items": [
+      {
+        "name": "Recycled polyester",
+        "tag": "Recycled"
+      },
+      {
+        "name": "Recycled ocean plastic",
+        "tag": "Recycled"
+      },
+      {
+        "name": "Bamboo fibre",
+        "tag": "Renewable"
+      },
+      {
+        "name": "Organic cotton",
+        "tag": "Organic"
+      },
+      {
+        "name": "Nylon",
+        "tag": "Synthetic"
+      },
+      {
+        "name": "FSC-certified wood pulp viscose",
+        "tag": "Certified"
+      },
+      {
+        "name": "Viscose from pre-consumer recycled cotton",
+        "tag": "Recycled"
+      }
+    ],
+    "grs": {
+      "title": "Global Recycle Standard",
+      "text": "Our GRS certification allows voluntary, third-party assessment of our recycling efforts."
+    }
+  },
+  "loop": {
+    "eyebrow": "Circular by design",
+    "title": "From fabric scrap to new fibre",
+    "intro": "Together with Reverse Resources, we run an online platform that lets recycling spinners see the fabric scrap available, closing the loop on pre-consumer waste.",
+    "partner": "Reverse Resources",
+    "steps": [
+      {
+        "label": "Cutting floor",
+        "text": "Pre-consumer fabric scrap is collected and sorted."
+      },
+      {
+        "label": "Online platform",
+        "text": "Scrap availability is listed with Reverse Resources."
+      },
+      {
+        "label": "Recycling spinners",
+        "text": "Spinners source the scrap they need."
+      },
+      {
+        "label": "New fibre",
+        "text": "Waste is spun back into new fibre."
+      },
+      {
+        "label": "New products",
+        "text": "Recycled fibre returns to production."
+      }
+    ]
+  },
+  "people": {
+    "eyebrow": "People and community",
+    "title": "We are determined to invest in our people",
+    "intro": "Corporate social responsibility is mainstreamed into our everyday operations, with a focus on the welfare of employees and the communities around our factories.",
+    "stat": {
+      "value": 1000,
+      "suffix": "+",
+      "label": "trees planted every year"
+    },
+    "items": [
+      {
+        "icon": "droplet",
+        "title": "Safe drinking water",
+        "text": "Clean, safe drinking water for our workforce and communities."
+      },
+      {
+        "icon": "heart",
+        "title": "Medical care",
+        "text": "On-site medical centres for employees and their families."
+      },
+      {
+        "icon": "bus",
+        "title": "Transport service",
+        "text": "Employee transport to and from our factories."
+      },
+      {
+        "icon": "child",
+        "title": "Childcare",
+        "text": "Daycare centres with certified caregivers for working mothers."
+      },
+      {
+        "icon": "book",
+        "title": "Training",
+        "text": "Regular sessions on financial literacy and nutrition."
+      },
+      {
+        "icon": "scale",
+        "title": "Fair Wage Method",
+        "text": "Developed with the International Labour Organization to address wage gaps in garment manufacturing."
+      }
+    ]
+  },
+  "certificationsHeading": {
+    "eyebrow": "Certified",
+    "title": "Audited to global standards"
+  },
+  "cta": {
+    "eyebrow": "Partner with us",
+    "title": "Let's make responsible manufacturing the standard",
+    "text": "Talk to us about certified materials, compliance or partnering with one of our companies.",
+    "primary": {
+      "label": "Email our team"
+    },
+    "secondary": {
+      "label": "Explore our businesses",
+      "href": "businesses/",
+      "internal": true
+    }
+  }
+}

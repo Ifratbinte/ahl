@@ -30,9 +30,9 @@
 }
 
 .hero-navigation-inner {
-  max-width: 1360px;
+  max-width: var(--page-max);
   margin: 0 auto;
-  padding: 10px 24px;
+  padding: 10px var(--page-gutter);
   box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
@@ -227,7 +227,7 @@
 
 .hero-title {
   margin: 22px 0 0;
-  font-size: clamp(26px, 3.4vw, 46px);
+  font-size: clamp(26px, 3.4vw, 56px);
   line-height: 1.1;
   color: #ffffff;
   font-weight: 700;
@@ -937,9 +937,9 @@
 }
 
 .strengths-section {
-  max-width: 1400px;
+  max-width: var(--page-max);
   margin: -32px auto 32px;
-  padding: 0 24px;
+  padding: 0 var(--page-gutter);
   box-sizing: border-box;
   position: relative;
 }
@@ -1032,21 +1032,22 @@
   isolation: isolate;
   width: 100%;
   margin: 0;
-  padding: 120px 24px 40px;
+  padding: 120px var(--page-gutter) 40px;
   box-sizing: border-box;
 }
 
 .about-section > .about-intro-layout,
 .about-section > .journey-scroll {
-  max-width: 1400px;
+  max-width: var(--page-max);
   margin-right: auto;
   margin-left: auto;
 }
 
+/* decorations follow the page content column instead of the screen edges */
 .about-image-decoration {
   position: absolute;
   z-index: -1;
-  left: 0;
+  left: max(0px, calc((100% - var(--page-max)) / 2));
   top: 50px;
   width: 350px;
   height: 350px;
@@ -1055,7 +1056,7 @@
 .about-accent-orb {
   position: absolute;
   z-index: -1;
-  right: -70px;
+  right: calc(max(0px, (100% - var(--page-max)) / 2) - 70px);
   top: 240px;
   width: 200px;
   height: 200px;
@@ -1168,9 +1169,9 @@
 }
 
 .businesses-container {
-  max-width: 1400px;
+  max-width: var(--page-max);
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 var(--page-gutter);
   box-sizing: border-box;
 }
 
@@ -1488,9 +1489,9 @@
 .sustainability-section {
   position: relative;
   isolation: isolate;
-  max-width: 1400px;
+  max-width: var(--page-max);
   margin: 0 auto;
-  padding: 96px 24px 40px;
+  padding: 96px var(--page-gutter) 40px;
   box-sizing: border-box;
 }
 
@@ -1717,9 +1718,9 @@
 }
 
 .certifications-section {
-  max-width: 1400px;
+  max-width: var(--page-max);
   margin: 0 auto;
-  padding: 72px 24px 96px;
+  padding: 72px var(--page-gutter) 96px;
   box-sizing: border-box;
 }
 

@@ -34,28 +34,9 @@
       "badge": "Textile Division",
       "subtitle": "Vertically integrated knitwear for infants, children and women.",
       "description": "Fabric to finished garment under one roof at Gazipur.",
-      "highlights": [
-        "Fabric-to-garment vertical integration",
-        "In-house design team",
-        "In-house embroidery and placement print"
-      ],
       "actionLabel": "Visit ASKML website",
       "style": {
         "icon": "#6C9BFF"
-      },
-      "stat": {
-        "value": "2.8–3.0M",
-        "caption": "garment pieces a month",
-        "items": [
-          {
-            "value": "52",
-            "label": "sewing lines"
-          },
-          {
-            "value": "24–46GG",
-            "label": "knit gauge range"
-          }
-        ]
       }
     },
     {
@@ -63,11 +44,6 @@
       "badge": "Diversified · Chemicals",
       "subtitle": "Specialty chemicals for the textile and leather industries.",
       "description": "Making textile and leather auxiliaries since 1994.",
-      "highlights": [
-        "Made to GOTS, OEKO-TEX and ZDHC guidelines",
-        "One of few H&M positive-listed suppliers",
-        "Effluent treatment plant, all effluent treated"
-      ],
       "actionLabel": "Visit MBL website",
       "style": {
         "background": "matex",
@@ -76,20 +52,6 @@
         "action": "diversified",
         "caption": "diversified",
         "icon": "#A98BFF"
-      },
-      "stat": {
-        "value": "30,000 MT",
-        "caption": "capacity a year",
-        "items": [
-          {
-            "value": "1994",
-            "label": "in production since"
-          },
-          {
-            "value": "4",
-            "label": "core chemical processes"
-          }
-        ]
       }
     },
     {
@@ -97,29 +59,10 @@
       "badge": "Textile Division",
       "subtitle": "Fully vertical intimate apparel: bras, sports bras and swimwear.",
       "description": "Exporting to European and North American brands since 1999.",
-      "highlights": [
-        "Own fabrics, elastics, foam and labels",
-        "In-house design center",
-        "Clients include H&M, Carrefour and LINDEX"
-      ],
       "actionLabel": "Visit ALL website",
       "style": {
         "image": "lingerie",
         "icon": "#6C9BFF"
-      },
-      "stat": {
-        "value": "1.8–2M",
-        "caption": "sets a month",
-        "items": [
-          {
-            "value": "66",
-            "label": "sewing lines"
-          },
-          {
-            "value": "20+ yrs",
-            "label": "of exporting"
-          }
-        ]
       }
     },
     {
@@ -127,29 +70,10 @@
       "badge": "Textile Division",
       "subtitle": "Dyed yarn and sewing thread for garment makers.",
       "description": "In commercial production since 2003, dyeing cotton, nylon, polyester and blends.",
-      "highlights": [
-        "OEKO-TEX 100 standard production",
-        "ISO 9001:2000 certified",
-        "Rapid high-temperature dyeing machines"
-      ],
       "actionLabel": "Visit AYDL website",
       "style": {
         "image": "yarn-dyeing",
         "icon": "#6C9BFF"
-      },
-      "stat": {
-        "value": "4,200 MT",
-        "caption": "dyed yarn a year",
-        "items": [
-          {
-            "value": "14M",
-            "label": "thread cones a year"
-          },
-          {
-            "value": "2003",
-            "label": "production began"
-          }
-        ]
       }
     },
     {
@@ -157,29 +81,10 @@
       "badge": "Textile Division",
       "subtitle": "100% export-oriented textile and garment manufacturing.",
       "description": "Supplies large retail chains in the EU and North America.",
-      "highlights": [
-        "Consistent, high quality",
-        "Timely delivery",
-        "Competitive pricing"
-      ],
       "actionLabel": "Visit ATPML website",
       "style": {
         "image": "textile-printing",
         "icon": "#6C9BFF"
-      },
-      "stat": {
-        "value": "100%",
-        "caption": "export oriented",
-        "items": [
-          {
-            "value": "14 yrs",
-            "label": "supplying retail chains"
-          },
-          {
-            "value": "EU + N. America",
-            "label": "core markets"
-          }
-        ]
       }
     },
     {
@@ -187,29 +92,10 @@
       "badge": "Textile Division",
       "subtitle": "Export-quality knitwear for infants, children and women.",
       "description": "Our newest textile venture, operating since 2018.",
-      "highlights": [
-        "Clients include HEMA, Lindex and Morrisons",
-        "On-site daycare and free medical care",
-        "In-house fabrics and design team"
-      ],
       "actionLabel": "Visit AFWL website",
       "style": {
         "image": "fashion-wear",
         "icon": "#6C9BFF"
-      },
-      "stat": {
-        "value": "900,000",
-        "caption": "sq ft modern factory",
-        "items": [
-          {
-            "value": "40",
-            "label": "sewing lines at setup"
-          },
-          {
-            "value": "2018",
-            "label": "operations began"
-          }
-        ]
       }
     },
     {
@@ -217,11 +103,6 @@
       "badge": "Agro Division",
       "subtitle": "Fruits, vegetables and exotics, sourced, supplied and exported.",
       "description": "Pairs produce trading with greenhouse farming and seedling R&D.",
-      "highlights": [
-        "Network of collection agents",
-        "Cost-effective order fulfilment",
-        "Rooftop and greenhouse farming solutions"
-      ],
       "actionLabel": "Visit AAL website",
       "style": {
         "background": "agro",
@@ -230,20 +111,6 @@
         "action": "agro",
         "caption": "agro",
         "icon": "#4CC38A"
-      },
-      "stat": {
-        "value": "Aeroponic",
-        "caption": "potato seedling R&D",
-        "items": [
-          {
-            "value": "2,000 sq ft",
-            "label": "first-phase greenhouse"
-          },
-          {
-            "value": "3",
-            "label": "farm consulting services"
-          }
-        ]
       }
     },
     {
@@ -251,11 +118,6 @@
       "badge": "Food Division",
       "subtitle": "Ready-to-eat foods, frozen snacks, bakery and drinks.",
       "description": "Local launch first, then export-ready products for the USA, Europe and Middle East.",
-      "highlights": [
-        "Quality, taste and competitive price",
-        "Fresh and retort-packed range",
-        "Sustainable manufacturing focus"
-      ],
       "actionLabel": "Visit ACFL website",
       "style": {
         "background": "food",
@@ -264,20 +126,6 @@
         "action": "food",
         "caption": "food",
         "icon": "#F08A5D"
-      },
-      "stat": {
-        "value": "3",
-        "caption": "export regions planned",
-        "items": [
-          {
-            "value": "4",
-            "label": "product families"
-          },
-          {
-            "value": "Gazipur",
-            "label": "factory location"
-          }
-        ]
       }
     },
     {
@@ -285,11 +133,6 @@
       "badge": "Agro Division",
       "subtitle": "Biofertilizers and biopesticides for healthier soil.",
       "description": "Microbial inoculants that improve soil fertility, made at Gobindaganj, Rangpur.",
-      "highlights": [
-        "Hi-tech R&D laboratory",
-        "Commercial-scale pilot production",
-        "Farmer network for field trials"
-      ],
       "actionLabel": "Visit ABBL website",
       "style": {
         "background": "agro",
@@ -298,20 +141,6 @@
         "action": "agro",
         "caption": "agro",
         "icon": "#4CC38A"
-      },
-      "stat": {
-        "value": "10+ yrs",
-        "caption": "of research",
-        "items": [
-          {
-            "value": "4,000 L",
-            "label": "fermenter system"
-          },
-          {
-            "value": "10×",
-            "label": "possible capacity growth"
-          }
-        ]
       }
     },
     {
@@ -319,11 +148,6 @@
       "badge": "Food Division",
       "subtitle": "Value-added frozen shrimp, 100% export-oriented.",
       "description": "The largest frozen seafood processor and exporter in Bangladesh.",
-      "highlights": [
-        "Value-added shrimp processing",
-        "Modern freezing and storage plant",
-        "Food Division flagship"
-      ],
       "actionLabel": "Visit AFL website",
       "style": {
         "background": "food",
@@ -332,20 +156,6 @@
         "action": "food",
         "caption": "food",
         "icon": "#F08A5D"
-      },
-      "stat": {
-        "value": "100%",
-        "caption": "export oriented",
-        "items": [
-          {
-            "value": "1979",
-            "label": "incorporated"
-          },
-          {
-            "value": "Largest",
-            "label": "frozen seafood exporter in Bangladesh"
-          }
-        ]
       }
     },
     {
@@ -355,30 +165,11 @@
       "badge": "Agro Division",
       "subtitle": "An innovation-driven agricultural producer working to expand soybean and cereal cultivation in Bangladesh.",
       "description": "Soybean production began in 2012. Hi-tech agricultural research and a network of more than 600 contract farmers support future growth.",
-      "highlights": [
-        "Organic soybean cultivation",
-        "High-protein soybean products",
-        "Soil fertility and lower chemical impact"
-      ],
       "actionLabel": "Explore AOSIL",
       "style": {
         "badge": "agro",
         "action": "agro",
         "caption": "agro"
-      },
-      "stat": {
-        "value": "2012",
-        "caption": "soybean production began",
-        "items": [
-          {
-            "value": "600+",
-            "label": "contract farmers"
-          },
-          {
-            "value": "Hi-tech",
-            "label": "agricultural R&D"
-          }
-        ]
       }
     },
     {
@@ -388,28 +179,9 @@
       "badge": "Renewable Energy",
       "subtitle": "We are responsible toward our environment and next generation.",
       "description": "Grid-connected renewable energy systems for commercial, residential and public-sector projects, including solar and biogas.",
-      "highlights": [
-        "Project finance and consultancy",
-        "Solar and biogas systems",
-        "Turnkey project management"
-      ],
       "actionLabel": "Explore sustainability",
       "style": {
         "caption": "agro"
-      },
-      "stat": {
-        "value": "Solar + biogas",
-        "caption": "renewable energy systems",
-        "items": [
-          {
-            "value": "Public + private",
-            "label": "sectors served"
-          },
-          {
-            "value": "End to end",
-            "label": "finance through delivery"
-          }
-        ]
       }
     }
   ],

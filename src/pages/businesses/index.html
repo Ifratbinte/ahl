@@ -1,0 +1,283 @@
+<!--@page
+{
+  "id": "businesses",
+  "title": "Our Businesses | Apex Holdings Limited",
+  "description": "Explore the Food, Textile, Agro and Diversified divisions of Apex Holdings Limited: twelve export-oriented companies in seafood, apparel, agriculture, chemicals and renewable energy.",
+  "path": "/businesses/",
+  "changefreq": "monthly",
+  "priority": "0.9",
+  "preloadImage": "assets/images/photos/ahl-combo.jpg"
+}
+-->
+<!doctype html>
+<html lang="{{site.lang}}" class="pg-html">
+  <head>
+<!-- @include head/meta.html -->
+<!-- @include head/assets.html -->
+<!-- @include head/structured-data.html -->
+  </head>
+  <body class="pg-body pg-body--businesses">
+<!-- @include components/page-head-common.html -->
+    <div class="page-shell">
+      <!-- HERO -->
+      <header class="hero-section pg-hero bz-hero" id="top">
+<!-- @include components/site-nav.html -->
+        {{#each data.businessesPage.hero | wrap as hero}}
+        <div class="pg-hero-media" aria-hidden="true">
+          <div class="pg-hero-image" data-speed="0.25" style="background-image: url('{{page.root}}{{hero.image}}')"></div>
+          <div class="pg-hero-shade"></div>
+          <span class="pg-orb pg-orb--food"></span>
+          <span class="pg-orb pg-orb--textile"></span>
+          <span class="pg-orb pg-orb--agro"></span>
+          <span class="pg-orb pg-orb--diversified"></span>
+        </div>
+        <div class="pg-container pg-hero-inner">
+          <nav class="pg-breadcrumb" aria-label="Breadcrumb">
+            <a href="{{page.root}}">Home</a><span aria-hidden="true">/</span><span aria-current="page">{{hero.eyebrow}}</span>
+          </nav>
+          <div class="pg-eyebrow pg-eyebrow--light" data-reveal>{{hero.eyebrow}}</div>
+          <h1 class="pg-hero-title" data-reveal style="--d: 1">
+            {{hero.title}} <span class="pg-gradient-text">{{hero.titleAccent}}</span>
+          </h1>
+          <p class="pg-hero-lead" data-reveal style="--d: 2">{{hero.lead}}</p>
+          <div class="pg-actions" data-reveal style="--d: 3">
+            <a class="pg-btn pg-btn--light" href="{{hero.primaryCta.href}}">{{hero.primaryCta.label}}{{"arrow-down" | icon}}</a>
+            <a class="pg-btn pg-btn--ghost" href="{{hero.secondaryCta.href}}">{{hero.secondaryCta.label}}</a>
+          </div>
+          <dl class="pg-hero-stats" data-reveal style="--d: 4">
+            {{#each data.strengths.items as stat}}
+            <div class="pg-hero-stat pg-tone--{{stat.theme}}">
+              <dt>{{stat.label}}</dt>
+              <dd><span data-count-to="{{stat.value}}">{{stat.value | number}}</span>{{stat.suffix}}</dd>
+            </div>
+            {{/each}}
+          </dl>
+        </div>
+        <a class="pg-scroll-cue" href="{{hero.primaryCta.href}}" aria-label="{{hero.scrollLabel}}"><span></span></a>
+        {{/each}}
+      </header>
+
+      <main id="main">
+        <!-- GROUP MAP (interactive) -->
+        {{#each data.businessesPage.map | wrap as map}}
+        <section class="pg-section bz-map" aria-labelledby="bz-map-title">
+          <div class="pg-container bz-map-layout">
+            <div class="bz-map-copy">
+              <div class="pg-eyebrow" data-reveal>{{map.eyebrow}}</div>
+              <h2 class="pg-title" id="bz-map-title" data-reveal style="--d: 1">{{map.title}}</h2>
+              <p class="pg-lead" data-reveal style="--d: 2">{{map.intro}}</p>
+
+              <div class="bz-map-panels" data-reveal style="--d: 3">
+                {{#each data.businesses.divisions as division}}
+                <div class="bz-map-panel pg-tone--{{division.key}}" data-map-panel="{{division.key}}"{{#unless @first}} hidden{{/unless}}>
+                  <div class="bz-map-panel-head">
+                    <span class="bz-map-panel-count">{{division.count | pad2}}</span>
+                    <div>
+                      <h3>{{division.label}} Division</h3>
+                      <p>{{division.tagline}}</p>
+                    </div>
+                  </div>
+                  <ul class="bz-map-panel-list">
+                    {{#each division.companies as company}}
+                    <li><a href="#company-{{company.abbr | lower}}"><b>{{company.abbr}}</b>{{company.name}}{{"arrow-right" | icon}}</a></li>
+                    {{/each}}
+                  </ul>
+                </div>
+                {{/each}}
+              </div>
+            </div>
+
+            <div class="bz-orbit" data-map data-reveal style="--d: 2">
+              <div class="bz-orbit-ring bz-orbit-ring--outer" aria-hidden="true"></div>
+              <div class="bz-orbit-ring bz-orbit-ring--inner" aria-hidden="true"></div>
+              <div class="bz-orbit-core">
+                <strong>{{map.centerLabel}}</strong>
+                <span>{{map.centerCaption}}</span>
+              </div>
+              <div class="bz-orbit-nodes" role="group" aria-label="{{map.hint}}">
+                {{#each data.businesses.divisions as division}}
+                <div class="bz-orbit-node pg-tone--{{division.key}}" style="--i: {{@index}}; --n: {{@total}}">
+                  <span class="bz-orbit-spoke" aria-hidden="true"></span>
+                  <button type="button" class="bz-orbit-btn{{#if @first}} is-active{{/if}}" data-map-btn="{{division.key}}" aria-pressed="{{#if @first}}true{{else}}false{{/if}}">
+                    <span class="bz-orbit-btn-count">{{division.count}}</span>
+                    <span class="bz-orbit-btn-label">{{division.label}}</span>
+                  </button>
+                  <div class="bz-orbit-sats" aria-hidden="true">
+                    {{#each division.companies as company}}
+                    <span class="bz-orbit-sat" style="--j: {{@index}}; --m: {{@total}}">{{company.abbr}}</span>
+                    {{/each}}
+                  </div>
+                </div>
+                {{/each}}
+              </div>
+              <!-- <p class="bz-orbit-hint" aria-hidden="true">{{map.hint}}</p> -->
+            </div>
+          </div>
+        </section>
+        {{/each}}
+
+        <!-- STICKY DIVISION NAV -->
+        <nav class="bz-subnav" aria-label="{{data.businessesPage.subnavLabel}}" data-subnav>
+          <div class="pg-container bz-subnav-inner">
+            {{#each data.businesses.divisions as division}}
+            <a class="bz-subnav-link pg-tone--{{division.key}}" href="#division-{{division.key}}" data-spy="division-{{division.key}}">
+              <span class="bz-subnav-dot" aria-hidden="true"></span>{{division.label}}<em>{{division.count}}</em>
+            </a>
+            {{/each}}
+          </div>
+        </nav>
+
+        <!-- DIVISIONS -->
+        <section class="pg-section bz-divisions" id="divisions" aria-labelledby="bz-divisions-title">
+          {{#each data.businessesPage.divisionsHeading | wrap as heading}}
+          <div class="pg-container pg-section-head pg-section-head--center">
+            <div class="pg-eyebrow" data-reveal>{{heading.eyebrow}}</div>
+            <h2 class="pg-title" id="bz-divisions-title" data-reveal style="--d: 1">{{heading.title}}</h2>
+            <p class="pg-lead" data-reveal style="--d: 2">{{heading.intro}}</p>
+          </div>
+          {{/each}}
+
+          {{#each data.businesses.divisions as division}}
+          <article class="bz-division pg-tone--{{division.key}}{{#if @odd}} bz-division--right{{/if}}" id="division-{{division.key}}" aria-labelledby="division-{{division.key}}-title">
+            <div class="pg-container">
+              <header class="bz-division-head">
+                <div class="pg-eyebrow" data-reveal>{{division.label}} Division · {{division.count}} {{data.businessesPage.map.companiesLabel}}</div>
+                <h3 class="bz-division-title" id="division-{{division.key}}-title" data-reveal style="--d: 1">{{division.heading}}</h3>
+                <p class="bz-division-tagline" data-reveal style="--d: 2">{{division.tagline}}</p>
+                <!-- <p class="bz-division-intro" data-reveal style="--d: 3">{{division.intro}}</p> -->
+              </header>
+
+              <!-- company carousel: badges and dots switch slides -->
+              <div class="bz-car" data-carousel data-reveal style="--d: 2">
+                <div class="bz-car-tabs" role="tablist" aria-label="{{division.label}} Division companies">
+                  {{#each division.companies as company}}
+                  <button type="button" role="tab" class="bz-car-tab{{#if @first}} is-active{{/if}}" id="tab-{{company.abbr | lower}}" aria-controls="company-{{company.abbr | lower}}" aria-selected="{{#if @first}}true{{else}}false{{/if}}" tabindex="{{#if @first}}0{{else}}-1{{/if}}" data-carousel-tab>
+                    <b>{{company.abbr}}</b>{{company.shortName}}
+                  </button>
+                  {{/each}}
+                </div>
+
+                <div class="bz-car-grid">
+                  <div class="bz-car-media" aria-hidden="true">
+                    <div class="bz-car-track" data-carousel-track>
+                      {{#each division.companies as company}}
+                      <figure class="bz-car-image">
+                        <img src="{{page.root}}{{company.image}}" alt="" loading="lazy" decoding="async" />
+                        <span class="bz-company-abbr">{{company.abbr}}</span>
+                        {{#if company.established}}
+                        <span class="bz-company-since">{{data.businessesPage.card.establishedLabel}} {{company.established}}</span>
+                        {{/if}}
+                        <span class="bz-car-num">{{@number | pad2}}</span>
+                      </figure>
+                      {{/each}}
+                    </div>
+                  </div>
+
+                  <div class="bz-car-content">
+                    {{#each division.companies as company}}
+                    <section class="bz-car-panel{{#if @first}} is-active{{/if}}" id="company-{{company.abbr | lower}}" role="tabpanel" aria-labelledby="tab-{{company.abbr | lower}}" data-carousel-panel>
+                      <div class="bz-car-index"><b>{{@number | pad2}}</b><span>/ {{@total | pad2}}</span></div>
+                      <h4 class="bz-company-name">{{company.name}}</h4>
+                      <p class="bz-company-text">{{company.description}}</p>
+                      {{#if company.highlights}}
+                      <ul class="bz-company-points">
+                        {{#each company.highlights | limit:3 as point}}
+                        <li>{{point}}</li>
+                        {{/each}}
+                      </ul>
+                      {{/if}}
+                      {{#if company.stat}}
+                      <div class="bz-company-stat" aria-label="{{data.businessesPage.card.atAGlanceLabel}}">
+                        <div class="bz-company-stat-main"><b>{{company.stat.value}}</b><span>{{company.stat.caption}}</span></div>
+                        {{#each company.stat.items as item}}
+                        <div class="bz-company-stat-item"><b>{{item.value}}</b><span>{{item.label}}</span></div>
+                        {{/each}}
+                      </div>
+                      {{/if}}
+                      <a class="bz-company-link" href="{{company.url}}" target="_blank" rel="noopener">{{data.businessesPage.card.websiteLabel}}<span class="sr">: {{company.name}} (opens in a new tab)</span>{{"arrow-up-right" | icon}}</a>
+                    </section>
+                    {{/each}}
+                  </div>
+                </div>
+
+                <div class="bz-car-dots">
+                  {{#each division.companies as company}}
+                  <button type="button" class="bz-car-dot{{#if @first}} is-active{{/if}}" aria-label="Show {{company.name}}" data-carousel-dot></button>
+                  {{/each}}
+                </div>
+              </div>
+            </div>
+          </article>
+          {{/each}}
+        </section>
+
+        <!-- PORTFOLIO DONUT -->
+        {{#each data.businessesPage.mix | wrap as mix}}
+        <section class="pg-section bz-mix" aria-labelledby="bz-mix-title">
+          <div class="pg-container bz-mix-layout">
+            <div class="bz-donut" data-donut data-reveal>
+              <svg viewBox="0 0 42 42" role="img" aria-labelledby="bz-donut-desc">
+                <desc id="bz-donut-desc">{{#each data.businesses.divisions as division}}{{division.label}}: {{division.count}}{{#unless @last}}, {{/unless}}{{/each}}</desc>
+                <circle class="bz-donut-track" cx="21" cy="21" r="15.915" />
+                {{#each data.businesses.divisions as division}}
+                <circle class="bz-donut-seg pg-tone--{{division.key}}" data-donut-seg="{{division.key}}" cx="21" cy="21" r="15.915" pathLength="100" style="--share: {{division.share}}; --offset: {{division.offset}}; --d: {{@index}}" />
+                {{/each}}
+              </svg>
+              <div class="bz-donut-center">
+                <b data-count-to="{{data.businesses.totalCompanies}}">{{data.businesses.totalCompanies}}</b>
+                <span>{{mix.centerLabel}}</span>
+              </div>
+            </div>
+            <div class="bz-mix-copy">
+              <div class="pg-eyebrow" data-reveal>{{mix.eyebrow}}</div>
+              <h2 class="pg-title" id="bz-mix-title" data-reveal style="--d: 1">{{mix.title}}</h2>
+              <p class="pg-lead" data-reveal style="--d: 2">{{mix.intro}}</p>
+              <ul class="bz-legend" data-reveal style="--d: 3">
+                {{#each data.businesses.divisions as division}}
+                <li class="pg-tone--{{division.key}}" data-donut-key="{{division.key}}" tabindex="0">
+                  <span class="bz-legend-dot" aria-hidden="true"></span>
+                  <span class="bz-legend-label">{{division.label}}</span>
+                  <span class="bz-legend-bar" aria-hidden="true"><i style="--share: {{division.share}}"></i></span>
+                  <b>{{division.count}}</b>
+                </li>
+                {{/each}}
+              </ul>
+            </div>
+          </div>
+        </section>
+        {{/each}}
+
+        <!-- MILESTONES (horizontal) -->
+        {{#each data.businessesPage.journey | wrap as journey}}
+        <section class="pg-section bz-journey" aria-labelledby="bz-journey-title">
+          <div class="pg-container pg-section-head">
+            <div class="pg-eyebrow" data-reveal>{{journey.eyebrow}}</div>
+            <h2 class="pg-title" id="bz-journey-title" data-reveal style="--d: 1">{{journey.title}}</h2>
+            <p class="pg-lead" data-reveal style="--d: 2">{{journey.intro}}</p>
+          </div>
+          <div class="bz-journey-track" tabindex="0" aria-label="{{journey.title}}">
+            <ol class="bz-journey-list">
+              {{#each data.about.journey.milestones as milestone}}
+              <li class="bz-journey-item timeline-item{{milestone.theme | mod}}" data-reveal style="--d: {{@index}}">
+                <span class="bz-journey-year">{{milestone.year}}</span>
+                <span class="bz-journey-dot" aria-hidden="true"></span>
+                <p>{{milestone.text}}</p>
+              </li>
+              {{/each}}
+            </ol>
+          </div>
+        </section>
+        {{/each}}
+
+        {{#each data.businessesPage.cta | wrap as cta}}
+<!-- @include components/page-cta.html -->
+        {{/each}}
+      </main>
+
+<!-- @include sections/footer.html -->
+    </div>
+
+    <script src="{{page.root}}assets/js/main.js"></script>
+    <script src="{{page.root}}assets/js/pages.js"></script>
+  </body>
+</html>

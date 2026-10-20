@@ -11,11 +11,13 @@
     },
     {
       "label": "Our Businesses",
-      "href": "#businesses"
+      "href": "businesses/",
+      "page": "businesses"
     },
     {
       "label": "Sustainability",
-      "href": "#sustainability"
+      "href": "sustainability/",
+      "page": "sustainability"
     },
     {
       "label": "CSR",
@@ -30,7 +32,8 @@
     {
       "label": "Contact",
       "href": "#contact",
-      "hideInFooter": true
+      "hideInFooter": true,
+      "local": true
     }
   ]
 }

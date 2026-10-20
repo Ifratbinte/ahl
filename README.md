@@ -49,13 +49,18 @@ apex-holdings-website/
 │   │   └── contact.json          Email, phone, address, footer text
 │   ├── pages/                  One file per page (URL = file path)
 │   │   ├── index.html          Home page: <head> + section includes
+│   │   ├── businesses/index.html     Our Businesses page → /businesses/
+│   │   ├── sustainability/index.html Sustainability page → /sustainability/
 │   │   └── 404.html            Not-found page
 │   ├── partials/
 │   │   ├── head/
 │   │   │   ├── meta.html             Title, description, canonical, Open Graph, Twitter, icons
 │   │   │   ├── assets.html           Preload, fonts, stylesheet
 │   │   │   └── structured-data.html  JSON-LD (Organization + WebSite + group companies)
-│   │   ├── components/nav-link.html  One menu link (shared by header and footer)
+│   │   ├── components/
+│   │   │   ├── site-nav.html     Header navigation (home and inner pages)
+│   │   │   ├── nav-link.html     One menu link, marks the current page
+│   │   │   └── page-cta.html     Call-to-action band used on inner pages
 │   │   ├── icons/              SVG icons used with the `icon` filter
 │   │   └── sections/           Home page section templates, in page order
 │   │       ├── hero.html             Navigation + company slider
@@ -70,8 +75,14 @@ apex-holdings-website/
 │   │   │   ├── 00-base.css           → dist/assets/css/style.css
 │   │   │   ├── 01-hero-slider.css
 │   │   │   ├── ...
-│   │   │   └── 10-error-page.css
+│   │   │   ├── 10-error-page.css
+│   │   │   ├── 11-pages-common.css       Shared inner-page styles ("pg-" classes)
+│   │   │   ├── 12-businesses-page.css    Our Businesses ("bz-" classes)
+│   │   │   ├── 13-sustainability-page.css Sustainability ("su-" classes)
+│   │   │   └── 14-home-sections.css       Home About + Divisions redesign ("hm-" classes)
 │   │   ├── js/main.js          Hero slider, nav drawer, business tabs, count-up
+│   │   ├── js/pages.js         Scroll reveal, counters, parallax, group map, donut, tabs, loop,
+│   │   │                       plus the home division explorer and journey timeline
 │   │   └── images/             bg/, certs/, photos/, logos
 │   └── public/                 Copied as-is to the site root
 │       ├── .htaccess           Apache/cPanel: 404 page, caching, compression, security headers
@@ -91,11 +102,15 @@ the result into plain HTML, so search engines see all content without JavaScript
 | Hero slides (text, stats, highlights, order) | `hero.json` → `slides`                       |
 | Menu links (header + footer)                 | `navigation.json` (`"hideInFooter": true` hides a link in the footer) |
 | KPI strip                                    | `strengths.json`                             |
-| About text, journey milestones               | `about.json`                                 |
-| Division tabs, company cards, portfolio mix  | `businesses.json` → `divisions`              |
+| About text, key facts, visual badges, journey milestones | `about.json` (home About section)  |
+| Home division explorer, portfolio mix        | `businesses.json` (`intro`, `explorer`, `divisions`) |
 | Sustainability pillars and benefits          | `sustainability.json`                        |
 | Certification logos                          | `certifications.json`                        |
 | Contact details, footer text                 | `contact.json` (also used in JSON-LD)        |
+| Company photo, "since" year, highlights, key figures | `companies.json` (used on the home slider and the Our Businesses page) |
+| Division intro, tagline, colour, photo       | `businesses.json` → `divisions`              |
+| Our Businesses page copy                     | `businessesPage.json`                        |
+| Sustainability page content                  | `sustainabilityPage.json`                    |
 
 Order in the JSON = order on the page. Numbers such as "01 / 13", card numbers,
 division counts ("Textile · 5"), the portfolio total and left/right timeline sides are
@@ -110,6 +125,11 @@ fields written in the entry itself take priority (e.g. ABBL's card keeps the sho
 `"theme": "agro"` → `strength-card--agro`, or in hero slides
 `"style": { "badge": "agro", "image": "agriscience", "icon": "#4CC38A" }`. Leave a key
 out to use the default class. Only use values that already exist in the CSS.
+
+**Menu links.** `navigation.json` links with `"page": "businesses"` point to an inner page and
+are highlighted when that page is open. Links such as `#about` point to the home page and are
+prefixed automatically on inner pages (`../#about`); `"local": true` keeps a link on the current
+page (used for Contact, since every page has the contact footer).
 
 **Add a company:** add it to `companies.json`, add an entry under its division in
 `businesses.json`, and (optionally) a slide in `hero.json`. A slide needs a background
@@ -192,12 +212,21 @@ Run `npm run build`, then publish the `dist/` folder.
 
 ## Known follow-ups (not changed yet, by design)
 
+- The home About and Divisions sections were redesigned with new `hm-` styles. The old rules for
+  those sections (`about-*`, `tl-*` / `journey-*`, `division-tabs`, `business-*`, `mix-*` in
+  modules 02, 03, 04, 07 and 09) are no longer used and can be removed in a clean-up pass.
+
+- The inner pages use the company photos already in `src/assets/images/photos/`. The original
+  images on apexholdings.com could not be downloaded from the build environment. To use them, save
+  them into `src/assets/images/` and point the `image` fields in `companies.json`,
+  `businesses.json` (divisions) and the page JSON files at them. Useful originals:
+  `img/companies/*.jpg` (one per company), `img/banner/sustainability_collage.jpg`,
+  `img/csr/*_big.jpg`, `img/slider/*_collage.jpg`.
+- With inner pages, links use clean URLs (`businesses/`), so preview with `npm run dev` or a web
+  server; opening `dist/index.html` directly from disk will not follow those links.
+
 - Several photos are very large and slow the page down: `images/bg/ahl.jpg` (17 MB),
   `photos/aydl.jpg` (16 MB), `photos/abbl.jpg` (8 MB), `photos/aal.jpg` (2.8 MB),
   `photos/acfl.jpg` (2.1 MB). Resize to ≤2400 px wide and export as WebP/AVIF at ~200–400 KB.
-- The hero slides overflow the viewport width on mobile, causing horizontal scroll.
 - The hidden `<h1>` says "ten sister concerns" while the page states 12 group companies
   (`hero.json` → `srTitle`).
-- A leftover `</div>` at the end of `sections/hero.html` (from the disabled marquee) makes
-  browsers close `.page-shell` right after the hero, so the later sections sit outside it.
-  It is kept on purpose because the current layout depends on it; remove it only with a visual check.

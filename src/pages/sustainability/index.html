@@ -1,0 +1,284 @@
+<!--@page
+{
+  "id": "sustainability",
+  "title": "Sustainability | Apex Holdings Limited",
+  "description": "How Apex Holdings Limited makes manufacturing more sustainable: water treatment and ZDHC chemistry, recycled and certified materials, energy efficiency and investment in people.",
+  "path": "/sustainability/",
+  "changefreq": "monthly",
+  "priority": "0.9",
+  "preloadImage": "assets/images/bg/shirts.jpg"
+}
+-->
+<!doctype html>
+<html lang="{{site.lang}}" class="pg-html">
+  <head>
+<!-- @include head/meta.html -->
+<!-- @include head/assets.html -->
+<!-- @include head/structured-data.html -->
+  </head>
+  <body class="pg-body pg-body--sustainability">
+<!-- @include components/page-head-common.html -->
+    <div class="page-shell">
+      <!-- HERO -->
+      <header class="hero-section pg-hero su-hero" id="top">
+<!-- @include components/site-nav.html -->
+        {{#each data.sustainabilityPage.hero | wrap as hero}}
+        <div class="pg-hero-media" aria-hidden="true">
+          <div class="pg-hero-image" data-speed="0.25" style="background-image: url('{{page.root}}{{hero.image}}')"></div>
+          <div class="pg-hero-shade su-hero-shade"></div>
+          <svg class="su-hero-leaves" viewBox="0 0 600 600">
+            <g class="su-leaf su-leaf--1"><path d="M300 520c0-170 90-290 260-320-20 190-120 300-260 320z" /></g>
+            <g class="su-leaf su-leaf--2"><path d="M300 520c0-150-70-250-210-280 15 160 95 255 210 280z" /></g>
+            <circle class="su-hero-ring" cx="300" cy="300" r="250" />
+          </svg>
+        </div>
+        <div class="pg-container pg-hero-inner">
+          <nav class="pg-breadcrumb" aria-label="Breadcrumb">
+            <a href="{{page.root}}">Home</a><span aria-hidden="true">/</span><span aria-current="page">{{hero.eyebrow}}</span>
+          </nav>
+          <div class="pg-eyebrow pg-eyebrow--light" data-reveal>{{hero.eyebrow}}</div>
+          <h1 class="pg-hero-title" data-reveal style="--d: 1">
+            {{hero.title}} <span class="pg-gradient-text pg-gradient-text--green">{{hero.titleAccent}}</span>
+          </h1>
+          <p class="pg-hero-lead" data-reveal style="--d: 2">{{hero.lead}}</p>
+          <div class="pg-actions" data-reveal style="--d: 3">
+            <a class="pg-btn pg-btn--light" href="{{hero.primaryCta.href}}">{{hero.primaryCta.label}}{{"arrow-down" | icon}}</a>
+            <a class="pg-btn pg-btn--ghost" href="{{hero.secondaryCta.href}}">{{hero.secondaryCta.label}}</a>
+          </div>
+          <ul class="su-hero-pillars" data-reveal style="--d: 4">
+            {{#each data.sustainabilityPage.pillars as pillar}}
+            <li><a href="#pillar-{{pillar.id}}" style="--accent: {{pillar.accent}}"><span class="su-hero-pillar-icon">{{pillar.icon | icon}}</span>{{pillar.title}}</a></li>
+            {{/each}}
+          </ul>
+        </div>
+        <a class="pg-scroll-cue" href="{{hero.primaryCta.href}}" aria-label="{{hero.scrollLabel}}"><span></span></a>
+        {{/each}}
+      </header>
+
+      <main id="main">
+        <!-- VALUES MARQUEE -->
+        <!-- <div class="su-values" aria-label="Our drivers">
+          <div class="su-values-track">
+            <div class="su-values-group">
+              {{#each data.sustainabilityPage.values as value}}
+              <span>{{"leaf" | icon}}{{value}}</span>
+              {{/each}}
+            </div>
+            <div class="su-values-group" aria-hidden="true">
+              {{#each data.sustainabilityPage.values as value}}
+              <span>{{"leaf" | icon}}{{value}}</span>
+              {{/each}}
+            </div>
+          </div>
+        </div> -->
+
+        <!-- PILLARS -->
+        <section class="pg-section su-approach" id="approach" aria-labelledby="su-approach-title">
+          {{#each data.sustainabilityPage.approach | wrap as approach}}
+          <div class="pg-container pg-section-head pg-section-head--center">
+            <div class="pg-eyebrow" data-reveal>{{approach.eyebrow}}</div>
+            <h2 class="pg-title" id="su-approach-title" data-reveal style="--d: 1">{{approach.title}}</h2>
+            <p class="pg-lead" data-reveal style="--d: 2">{{approach.intro}}</p>
+          </div>
+          {{/each}}
+          <div class="pg-container su-pillars">
+            {{#each data.sustainabilityPage.pillars as pillar}}
+            <article class="su-pillar" id="pillar-{{pillar.id}}" style="--accent: {{pillar.accent}}; --d: {{@index}}" data-reveal data-tilt>
+              <div class="su-pillar-top">
+                <span class="su-pillar-icon">{{pillar.icon | icon}}</span>
+                <span class="su-pillar-num">{{@number | pad2}}</span>
+              </div>
+              <h3>{{pillar.title}}</h3>
+              <p class="su-pillar-summary">{{pillar.summary}}</p>
+              <ul>
+                {{#each pillar.points as point}}
+                <li>{{point}}</li>
+                {{/each}}
+              </ul>
+            </article>
+            {{/each}}
+          </div>
+        </section>
+
+        <!-- WATER FLOW (animated diagram) -->
+        {{#each data.sustainabilityPage.water | wrap as water}}
+        <section class="pg-section su-water" aria-labelledby="su-water-title">
+          <div class="su-water-bg" aria-hidden="true"><span></span><span></span><span></span></div>
+          <div class="pg-container su-water-layout">
+            <div class="su-water-copy">
+              <div class="pg-eyebrow pg-eyebrow--light" data-reveal>{{water.eyebrow}}</div>
+              <h2 class="pg-title pg-title--light" id="su-water-title" data-reveal style="--d: 1">{{water.title}}</h2>
+              <p class="pg-lead pg-lead--light" data-reveal style="--d: 2">{{water.text}}</p>
+              <div class="su-water-badge" data-reveal style="--d: 3">
+                <b>{{water.badge}}</b><span>{{water.badgeCaption}}</span>
+              </div>
+            </div>
+            <ol class="su-flow" data-reveal style="--d: 2" data-flow>
+              {{#each water.steps as step}}
+              <li class="su-flow-step" style="--d: {{@index}}">
+                <span class="su-flow-node">{{@number | pad2}}</span>
+                <div><b>{{step.label}}</b><span>{{step.text}}</span></div>
+              </li>
+              {{/each}}
+            </ol>
+          </div>
+        </section>
+        {{/each}}
+
+        <!-- EFFICIENCY (interactive tabs) -->
+        {{#each data.sustainabilityPage.efficiency | wrap as eff}}
+        <section class="pg-section su-eff" aria-labelledby="su-eff-title">
+          <div class="pg-container">
+            <div class="pg-section-head">
+              <div class="pg-eyebrow" data-reveal>{{eff.eyebrow}}</div>
+              <h2 class="pg-title" id="su-eff-title" data-reveal style="--d: 1">{{eff.title}}</h2>
+              <p class="pg-lead" data-reveal style="--d: 2">{{eff.intro}}</p>
+            </div>
+            <div class="su-eff-layout" data-ptabs data-reveal style="--d: 2">
+              <div class="su-eff-list" role="tablist" aria-label="{{eff.title}}">
+                {{#each eff.items as item}}
+                <button type="button" role="tab" class="su-eff-tab" id="eff-tab-{{item.id}}" aria-controls="eff-panel-{{item.id}}" aria-selected="{{#if @first}}true{{else}}false{{/if}}" tabindex="{{#if @first}}0{{else}}-1{{/if}}" data-ptab>
+                  <span class="su-eff-tab-icon">{{item.icon | icon}}</span>{{item.title}}
+                  <span class="su-eff-tab-bar" aria-hidden="true"></span>
+                </button>
+                {{/each}}
+              </div>
+              <div class="su-eff-panels">
+                {{#each eff.items as item}}
+                <div class="su-eff-panel" role="tabpanel" id="eff-panel-{{item.id}}" aria-labelledby="eff-tab-{{item.id}}"{{#unless @first}} hidden{{/unless}} data-ppanel>
+                  <span class="su-eff-panel-icon" aria-hidden="true">{{item.icon | icon}}</span>
+                  <span class="su-eff-panel-num" aria-hidden="true">{{@number | pad2}}</span>
+                  <h3>{{item.title}}</h3>
+                  <p>{{item.text}}</p>
+                </div>
+                {{/each}}
+              </div>
+            </div>
+          </div>
+        </section>
+        {{/each}}
+
+        <!-- MATERIALS -->
+        {{#each data.sustainabilityPage.materials | wrap as mat}}
+        <section class="pg-section su-materials" aria-labelledby="su-mat-title">
+          <div class="pg-container su-materials-layout">
+            <div class="su-materials-copy">
+              <div class="pg-eyebrow" data-reveal>{{mat.eyebrow}}</div>
+              <h2 class="pg-title" id="su-mat-title" data-reveal style="--d: 1">{{mat.title}}</h2>
+              <p class="pg-lead" data-reveal style="--d: 2">{{mat.intro}}</p>
+              <div class="su-grs" data-reveal style="--d: 3">
+                <span class="su-grs-icon">{{"shield" | icon}}</span>
+                <div><b>{{mat.grs.title}}</b><p>{{mat.grs.text}}</p></div>
+              </div>
+            </div>
+            <ul class="su-swatches">
+              {{#each mat.items as item}}
+              <li class="su-swatch su-swatch--{{@number}}" data-reveal style="--d: {{@index}}">
+                <span class="su-swatch-tag">{{item.tag}}</span>
+                <b>{{item.name}}</b>
+              </li>
+              {{/each}}
+            </ul>
+          </div>
+        </section>
+        {{/each}}
+
+        <!-- CIRCULAR LOOP (interactive) -->
+        {{#each data.sustainabilityPage.loop | wrap as loop}}
+        <section class="pg-section su-loop" aria-labelledby="su-loop-title">
+          <div class="pg-container su-loop-layout">
+            <div class="su-loop-wheel" data-loop data-reveal>
+              <svg class="su-loop-ring" viewBox="0 0 200 200" aria-hidden="true">
+                <circle cx="100" cy="100" r="84" />
+                <circle class="su-loop-ring-dash" cx="100" cy="100" r="84" />
+              </svg>
+              <div class="su-loop-center" aria-live="polite">
+                {{#each loop.steps as step}}
+                <div class="su-loop-detail" data-loop-detail{{#unless @first}} hidden{{/unless}}>
+                  <b>{{step.label}}</b><span>{{step.text}}</span>
+                </div>
+                {{/each}}
+              </div>
+              {{#each loop.steps as step}}
+              <button type="button" class="su-loop-step{{#if @first}} is-active{{/if}}" style="--i: {{@index}}; --n: {{@total}}" data-loop-step aria-pressed="{{#if @first}}true{{else}}false{{/if}}">
+                <span>{{@number}}</span><em>{{step.label}}</em>
+              </button>
+              {{/each}}
+            </div>
+            <div class="su-loop-copy">
+              <div class="pg-eyebrow" data-reveal>{{loop.eyebrow}}</div>
+              <h2 class="pg-title" id="su-loop-title" data-reveal style="--d: 1">{{loop.title}}</h2>
+              <p class="pg-lead" data-reveal style="--d: 2">{{loop.intro}}</p>
+              <ol class="su-loop-list" data-reveal style="--d: 3">
+                {{#each loop.steps as step}}
+                <li><b>{{step.label}}</b> {{step.text}}</li>
+                {{/each}}
+              </ol>
+            </div>
+          </div>
+        </section>
+        {{/each}}
+
+        <!-- PEOPLE -->
+        {{#each data.sustainabilityPage.people | wrap as people}}
+        <section class="pg-section su-people" aria-labelledby="su-people-title">
+          <div class="pg-container">
+            <div class="su-people-head">
+              <div>
+                <div class="pg-eyebrow" data-reveal>{{people.eyebrow}}</div>
+                <h2 class="pg-title" id="su-people-title" data-reveal style="--d: 1">{{people.title}}</h2>
+                <p class="pg-lead" data-reveal style="--d: 2">{{people.intro}}</p>
+              </div>
+              <div class="su-trees" data-reveal style="--d: 2">
+                <span class="su-trees-icon">{{"tree" | icon}}</span>
+                <b><span data-count-to="{{people.stat.value}}">{{people.stat.value | number}}</span>{{people.stat.suffix}}</b>
+                <span>{{people.stat.label}}</span>
+              </div>
+            </div>
+            <ul class="su-care">
+              {{#each people.items as item}}
+              <li class="su-care-item" data-reveal style="--d: {{@index}}">
+                <span class="su-care-icon">{{item.icon | icon}}</span>
+                <h3>{{item.title}}</h3>
+                <p>{{item.text}}</p>
+              </li>
+              {{/each}}
+            </ul>
+          </div>
+        </section>
+        {{/each}}
+
+        <!-- CERTIFICATIONS -->
+        <section class="pg-section su-certs" aria-labelledby="su-certs-title">
+          <div class="pg-container">
+            {{#each data.sustainabilityPage.certificationsHeading | wrap as heading}}
+            <div class="pg-section-head pg-section-head--center">
+              <div class="pg-eyebrow" data-reveal>{{heading.eyebrow}}</div>
+              <h2 class="pg-title" id="su-certs-title" data-reveal style="--d: 1">{{heading.title}}</h2>
+            </div>
+            {{/each}}
+            <ul class="su-cert-grid">
+              {{#each data.certifications.items as cert}}
+              <li data-reveal style="--d: {{@index}}">
+                <a href="{{cert.url}}" target="_blank" rel="noopener" title="{{cert.name}}">
+                  <img src="{{page.root}}{{cert.logo}}" alt="{{cert.name}}" loading="lazy" decoding="async" />
+                  <span>{{cert.name}}</span>
+                </a>
+              </li>
+              {{/each}}
+            </ul>
+          </div>
+        </section>
+
+        {{#each data.sustainabilityPage.cta | wrap as cta}}
+<!-- @include components/page-cta.html -->
+        {{/each}}
+      </main>
+
+<!-- @include sections/footer.html -->
+    </div>
+
+    <script src="{{page.root}}assets/js/main.js"></script>
+    <script src="{{page.root}}assets/js/pages.js"></script>
+  </body>
+</html>

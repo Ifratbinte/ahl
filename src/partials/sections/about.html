@@ -1,59 +1,94 @@
-<section id="about" class="about-section">
-  <div aria-hidden="true" class="floaty about-image about-image-decoration"></div>
-  <div aria-hidden="true" class="drift-b about-accent-orb"></div>
-  <div class="about-intro-layout">
-    <div class="rv about-heading about-heading">
-      <div class="about-heading-label about-eyebrow">{{data.about.eyebrow}}</div>
-      <h2 class="section-title">{{data.about.title}}</h2>
+<section id="about" class="hm-about" aria-labelledby="hm-about-title">
+  <div class="hm-about-bg" aria-hidden="true">
+    <span class="hm-blob hm-blob--teal"></span>
+    <span class="hm-blob hm-blob--blue"></span>
+    <span class="hm-grid"></span>
+  </div>
+
+  <!-- intro: interactive group visual + copy -->
+  <div class="hm-container hm-about-layout">
+    <div class="hm-about-visual" data-reveal data-pointer-tilt>
+      <div class="hm-wheel">
+        <div class="hm-wheel-glow" aria-hidden="true"></div>
+        <svg class="hm-wheel-orbit" viewBox="0 0 400 400" aria-hidden="true">
+          <circle cx="200" cy="200" r="190" />
+          <circle class="hm-wheel-orbit-dash" cx="200" cy="200" r="190" />
+        </svg>
+        <div class="hm-wheel-dots" aria-hidden="true">
+          {{#each data.businesses.divisions as division}}
+          <span class="hm-wheel-dot pg-tone--{{division.key}}" style="--i: {{@index}}; --n: {{@total}}"></span>
+          {{/each}}
+        </div>
+        <img class="hm-wheel-image" src="{{page.root}}{{data.about.visual.image}}" alt="{{data.about.visual.alt}}" width="400" height="400" loading="lazy" decoding="async" />
+      </div>
+      <div class="hm-badge hm-badge--top">
+        <b>{{data.about.visual.badgeTop.value}}</b><span>{{data.about.visual.badgeTop.label}}</span>
+      </div>
+      <div class="hm-badge hm-badge--bottom">
+        <b>{{data.businesses.divisions | count}} {{data.about.visual.badgeBottom.suffix}}</b><span>{{data.about.visual.badgeBottom.label}}</span>
+      </div>
     </div>
-    <div class="rv2 about-copy">
-      <p class="about-lead">
-        {{data.about.lead}}
-      </p>
-      <p class="about-description">
-        {{data.about.description}}
-      </p>
-      <a
-        class="lnk about-link"
-        href="{{data.about.link.url}}"
-        target="_blank"
-        rel="noopener"
-        >{{data.about.link.label}}</a
-      >
+
+    <div class="hm-about-copy">
+      <div class="hm-eyebrow" data-reveal>{{data.about.eyebrow}}</div>
+      <h2 class="hm-title" id="hm-about-title" data-reveal style="--d: 1">{{data.about.title}}</h2>
+      <p class="hm-about-lead" data-reveal style="--d: 2">{{data.about.lead}}</p>
+      <p class="hm-about-text" data-reveal style="--d: 3">{{data.about.description}}</p>
+
+      <dl class="hm-facts" data-reveal style="--d: 4">
+        {{#each data.about.facts as fact}}
+        <div class="hm-fact">
+          <dt>{{fact.label}}</dt>
+          <dd data-count-to="{{fact.value}}" data-count-plain>{{fact.value}}</dd>
+        </div>
+        {{/each}}
+        <div class="hm-fact hm-fact--accent">
+          <dt>{{data.about.companiesFactLabel}}</dt>
+          <dd data-count-to="{{data.businesses.totalCompanies}}">{{data.businesses.totalCompanies}}</dd>
+        </div>
+      </dl>
+
+      <div class="hm-actions" data-reveal style="--d: 5">
+        <a class="hm-btn hm-btn--dark" href="{{page.root}}{{data.about.secondaryLink.href}}">{{data.about.secondaryLink.label}}{{"arrow-right" | icon}}</a>
+        <a class="hm-btn hm-btn--line" href="{{data.about.link.url}}" target="_blank" rel="noopener">{{data.about.link.label}}</a>
+      </div>
     </div>
   </div>
 
-  <div class="journey-scroll" data-journey>
-    <div class="journey">
-      <div class="journey-bg" aria-hidden="true">
-        <span class="orb o1 floaty"></span>
-        <span class="orb o2 drift-b"></span>
-        <span class="orb o3 floaty"></span>
-      </div>
-      <div class="journey-head rv">
-        <div class="journey-eyebrow">{{data.about.journey.eyebrow}}</div>
-        <h3>{{data.about.journey.title}}</h3>
-      </div>
-      <div class="tl-wrap">
-        <div class="tl-track">
-          <div class="tl-line" aria-hidden="true">
-            <span class="tl-fill"></span>
-          </div>
-          <ol class="tl">
-            {{#each data.about.journey.milestones as milestone}}
-            <li class="tl-item {{#if @even}}left{{else}}right{{/if}} timeline-item{{milestone.theme | mod}}">
-              <span class="tl-node" aria-hidden="true"></span>
-              <div class="tl-card">
-                <span class="tl-ghost" aria-hidden="true">{{milestone.year}}</span>
-                <div class="tl-year">{{milestone.year}}</div>
-                <p>{{milestone.text}}</p>
-              </div>
-            </li>
-            {{#unless @last}}
+  <!-- journey (original milestones timeline; behaviour in main.js) -->
+  <div class="hm-container hm-journey-wrap">
+    <div class="journey-scroll" data-journey>
+      <div class="journey">
+        <div class="journey-bg" aria-hidden="true">
+          <span class="orb o1 floaty"></span>
+          <span class="orb o2 drift-b"></span>
+          <span class="orb o3 floaty"></span>
+        </div>
+        <div class="journey-head rv">
+          <div class="journey-eyebrow hm-eyebrow">{{data.about.journey.eyebrow}}</div>
+          <h3 class="hm-title">{{data.about.journey.title}}</h3>
+        </div>
+        <div class="tl-wrap">
+          <div class="tl-track">
+            <div class="tl-line" aria-hidden="true">
+              <span class="tl-fill"></span>
+            </div>
+            <ol class="tl">
+              {{#each data.about.journey.milestones as milestone}}
+              <li class="tl-item {{#if @even}}left{{else}}right{{/if}} timeline-item{{milestone.theme | mod}}">
+                <span class="tl-node" aria-hidden="true"></span>
+                <div class="tl-card">
+                  <span class="tl-ghost" aria-hidden="true">{{milestone.year}}</span>
+                  <div class="tl-year">{{milestone.year}}</div>
+                  <p>{{milestone.text}}</p>
+                </div>
+              </li>
+              {{#unless @last}}
 
-            {{/unless}}
-            {{/each}}
-          </ol>
+              {{/unless}}
+              {{/each}}
+            </ol>
+          </div>
         </div>
       </div>
     </div>

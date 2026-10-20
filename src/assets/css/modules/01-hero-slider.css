@@ -77,3 +77,14 @@
   display: inline-flex;
 }
 
+.hero-wordmark {
+  margin-top: 6px;
+  font-family: "Sora", sans-serif;
+  font-weight: 700;
+  font-size: clamp(52px, 9vw, 124px);
+  line-height: 1;
+  letter-spacing: 2px;
+  color: transparent;
+  -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.75);
+}
+

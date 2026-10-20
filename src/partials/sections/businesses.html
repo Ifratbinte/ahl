@@ -1,98 +1,73 @@
-<section id="businesses" class="businesses-section">
-  <div class="parallax" data-parallax aria-hidden="true"></div>
+<section id="businesses" class="hm-divisions" aria-labelledby="hm-divisions-title">
+  <div class="hm-divisions-bg" aria-hidden="true">
+    <span class="hm-aurora hm-aurora--1"></span>
+    <span class="hm-aurora hm-aurora--2"></span>
+    <span class="hm-aurora hm-aurora--3"></span>
+  </div>
 
-  <div class="businesses-container">
-    <div class="rv businesses-eyebrow">{{data.businesses.eyebrow}}</div>
-    <h2 class="rv section-title">{{data.businesses.title}}</h2>
+  <div class="hm-container">
+    <header class="hm-divisions-head">
+      <div>
+        <div class="hm-eyebrow hm-eyebrow--light" data-reveal>{{data.businesses.eyebrow}}</div>
+        <h2 class="hm-title hm-title--light" id="hm-divisions-title" data-reveal style="--d: 1">{{data.businesses.title}}</h2>
+      </div>
+      <p class="hm-divisions-intro" data-reveal style="--d: 2">{{data.businesses.intro}}</p>
+    </header>
 
-    <div role="group" aria-label="Business divisions" class="division-tabs">
+    <!-- division explorer: expanding panels (accordion on small screens) -->
+    <div class="hm-explorer" data-explorer data-reveal style="--d: 2">
       {{#each data.businesses.divisions as division}}
-      <button
-        class="tab{{#if @first}} is-active{{/if}} division-color--{{division.key}}"
-        type="button"
-        data-tab="{{division.key}}"
-        aria-pressed="{{#if @first}}true{{else}}false{{/if}}"
-      >
-        {{division.label}} <span class="division-count">· {{division.count}}</span>
-      </button>
-      {{#unless @last}}
-
-      {{/unless}}
+      <article class="hm-panel pg-tone--{{division.key}}{{#if @first}} is-open{{/if}}" data-explorer-panel>
+        <div class="hm-panel-media" aria-hidden="true">
+          <div class="hm-panel-image" style="background-image: url('{{page.root}}{{division.image}}')"></div>
+        </div>
+        <h3 class="hm-panel-heading">
+          <button type="button" class="hm-panel-toggle" id="hm-panel-btn-{{division.key}}" aria-controls="hm-panel-body-{{division.key}}" aria-expanded="{{#if @first}}true{{else}}false{{/if}}" data-explorer-toggle>
+            <span class="hm-panel-num">{{@number | pad2}}</span>
+            <span class="hm-panel-label">{{division.label}}</span>
+            <span class="hm-panel-count">{{division.count}} {{data.businesses.explorer.companiesLabel}}</span>
+          </button>
+        </h3>
+        <div class="hm-panel-body" id="hm-panel-body-{{division.key}}" role="region" aria-labelledby="hm-panel-btn-{{division.key}}">
+          <p class="hm-panel-tagline">{{division.heading}}</p>
+          <p class="hm-panel-text">{{division.intro}}</p>
+          <ul class="hm-panel-companies">
+            {{#each division.companies as company}}
+            <li style="--d: {{@index}}">
+              <a href="{{page.root}}businesses/#company-{{company.abbr | lower}}"><b>{{company.abbr}}</b><span>{{company.shortName}}</span></a>
+            </li>
+            {{/each}}
+          </ul>
+          <a class="hm-panel-link" href="{{page.root}}businesses/#division-{{division.key}}">{{data.businesses.explorer.exploreLabel}}{{"arrow-right" | icon}}</a>
+        </div>
+      </article>
       {{/each}}
     </div>
+    <!-- <p class="hm-explorer-hint" aria-hidden="true">{{data.businesses.explorer.hint}}</p> -->
 
-    <div class="business-panels">
-      {{#each data.businesses.divisions as division}}
-      <div class="panel business-panel" data-panel="{{division.key}}"{{#unless @first}} hidden{{/unless}}>
-        <div class="business-panel-heading--{{division.key}}">{{division.heading}}</div>
-        <div class="business-card-grid">
-          {{#each division.companies as company}}
-          <article class="card rv2 business-card--{{division.key}}">
-            <div aria-hidden="true" class="business-card-number--{{division.key}}">{{@number | pad2}}</div>
-            <div class="business-card-abbreviation--{{division.key}}">{{company.abbr}}</div>
-            <h3 class="business-card-title">{{company.name}}</h3>
-            <p class="business-card-description">
-              {{company.description}}
-            </p>
-            <a
-              class="lnk business-card-link"
-              href="{{company.url}}"
-              target="_blank"
-              rel="noopener"
-              >Visit website</a
-            >
-          </article>
-          {{#unless @last}}
-
-          {{/unless}}
+    <!-- portfolio mix -->
+    <div
+      class="hm-mix"
+      role="group"
+      aria-label="{{data.businesses.mix.title}}: {{data.businesses.totalCompanies}} listed companies. {{#each data.businesses.divisions as division}}{{division.label}} {{division.count}}{{#unless @last}}, {{/unless}}{{/each}}"
+      data-reveal
+    >
+      <div class="hm-mix-total">
+        <b data-count-to="{{data.businesses.totalCompanies}}">{{data.businesses.totalCompanies}}</b>
+        <span>{{data.businesses.mix.totalLabel}}</span>
+      </div>
+      <div class="hm-mix-main">
+        <div class="hm-mix-head">
+          <span class="hm-mix-title">{{data.businesses.mix.title}}</span>
+          <span class="hm-mix-sub">{{data.businesses.mix.subtitle}}</span>
+        </div>
+        <div class="hm-mix-bar" aria-hidden="true">
+          {{#each data.businesses.divisions as division}}
+          <span class="pg-tone--{{division.key}}" style="--share: {{division.share}}; --d: {{@index}}"><em>{{division.label}} · {{division.count}}</em></span>
           {{/each}}
         </div>
       </div>
-      {{/each}}
-    </div>
-
-    <div
-      class="mix rv"
-      role="group"
-      aria-label="{{data.businesses.mix.title}}: {{data.businesses.totalCompanies}} listed companies. {{#each data.businesses.divisions as division}}{{division.label}} {{division.count}}{{#unless @last}}, {{/unless}}{{/each}}"
-    >
-      <div class="mix-head">
-        <div>
-          <div class="mix-title">{{data.businesses.mix.title}}</div>
-          <div class="mix-sub">
-            {{data.businesses.mix.subtitle}}
-          </div>
-        </div>
-        <div class="mix-total">
-          <b class="count" data-count="{{data.businesses.totalCompanies}}">{{data.businesses.totalCompanies}}</b><span>{{data.businesses.mix.totalLabel}}</span>
-        </div>
-      </div>
-      <div class="mix-bar" aria-hidden="true">
-        {{#each data.businesses.divisions as division}}
-        <span class="portfolio-bar--{{division.key}}"></span>
-        {{/each}}
-      </div>
-      <div class="mix-rows">
-        {{#each data.businesses.divisions as division}}
-        <div class="mix-row division-color--{{division.key}}">
-          <div class="mix-div">
-            <span class="mix-dot"></span><b>{{division.label}}</b><em>{{division.count}} of {{data.businesses.totalCompanies}}</em>
-          </div>
-          <div class="mix-chips">
-            {{#each division.companies as company}}
-            <a
-              class="mix-chip"
-              href="{{company.url}}"
-              target="_blank"
-              rel="noopener"
-              ><span class="mix-abbr">{{company.abbr}}</span
-              ><span class="mix-name">{{company.shortName}}</span></a
-            >
-            {{/each}}
-          </div>
-        </div>
-        {{/each}}
-      </div>
+      <a class="hm-btn hm-btn--light" href="{{page.root}}{{data.businesses.pageLink.href}}">{{data.businesses.pageLink.label}}{{"arrow-right" | icon}}</a>
     </div>
   </div>
 </section>

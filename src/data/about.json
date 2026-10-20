@@ -7,6 +7,33 @@
     "label": "Learn more about us",
     "url": "https://apexholdings.com/about"
   },
+  "secondaryLink": {
+    "label": "Explore our businesses",
+    "href": "businesses/"
+  },
+  "facts": [
+    {
+      "value": 1980,
+      "label": "First export-oriented enterprise"
+    },
+    {
+      "value": 1998,
+      "label": "Apex Holdings Limited formed"
+    }
+  ],
+  "companiesFactLabel": "Group companies today",
+  "visual": {
+    "image": "assets/images/apex-group-wheel.svg",
+    "alt": "The Apex group of companies around Apex Holdings Limited",
+    "badgeTop": {
+      "value": "Since 1980",
+      "label": "Export manufacturing"
+    },
+    "badgeBottom": {
+      "suffix": "divisions",
+      "label": "One shared standard"
+    }
+  },
   "journey": {
     "eyebrow": "Milestones",
     "title": "Our Journey",

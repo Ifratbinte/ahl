@@ -82,7 +82,11 @@
         <nav class="f-links" aria-label="Footer">
           {{#each data.navigation.links as link}}
           {{#unless link.hideInFooter}}
-          <!-- @include components/nav-link.html -->
+          {{#if link.external}}
+          <a href="{{link.href}}" target="_blank" rel="noopener">{{link.label}}</a>
+          {{else}}
+          <a href="{{#unless link.local}}{{page.root}}{{/unless}}{{link.href}}"{{#if link.page | eq:page.id}} aria-current="page"{{/if}}>{{link.label}}</a>
+          {{/if}}
           {{/unless}}
           {{/each}}
         </nav>
