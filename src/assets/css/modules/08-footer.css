@@ -233,7 +233,7 @@
 .f-top {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  /* gap: 8px; */
   color: #c9d6e6;
   text-decoration: none;
   font-weight: 600;

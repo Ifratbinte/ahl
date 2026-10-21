@@ -1,0 +1,66 @@
+
+/* =====================================================================
+   Sticky header (all pages). The bar stays fixed at the top; after the
+   first scroll it turns into a light frosted bar (pages.js adds
+   .is-scrolled) so the links stay readable over any section.
+   ===================================================================== */
+:root {
+  --nav-h: 84px;
+}
+.hero-navigation {
+  position: fixed;
+  z-index: 50;
+  transition:
+    background 0.35s ease,
+    box-shadow 0.35s ease,
+    -webkit-backdrop-filter 0.35s ease,
+    backdrop-filter 0.35s ease;
+}
+.hero-brand-logo {
+  transition: height 0.3s ease;
+}
+.hero-navigation.is-scrolled {
+  background: rgba(255, 255, 255, 0.9);
+  -webkit-backdrop-filter: blur(14px) saturate(1.4);
+  backdrop-filter: blur(14px) saturate(1.4);
+  box-shadow: 0 8px 28px rgba(10, 37, 64, 0.1);
+}
+
+/* anchors and other sticky elements start below the bar */
+.hm-html {
+  scroll-padding-top: var(--nav-h);
+}
+.bz-subnav {
+  top: var(--nav-h);
+}
+.hm-journey-wrap .journey-scroll.is-horizontal .journey {
+  padding-top: calc(var(--nav-h) + 16px);
+}
+
+@media (min-width: 761px) {
+  .hero-navigation.is-scrolled .hero-brand-logo {
+    height: 44px;
+  }
+  .hero-navigation.is-scrolled .hero-navigation-links a {
+    color: #33475e;
+  }
+  .hero-navigation.is-scrolled .hero-navigation-links a:hover {
+    color: #0e7c73;
+  }
+  .hero-navigation.is-scrolled .hero-navigation-links a.hero-navigation-current-link,
+  .hero-navigation.is-scrolled .hero-navigation-links a.hero-navigation-current-link:hover {
+    color: #0a2540;
+    border-bottom-color: #19b3a6;
+  }
+}
+@media (max-width: 760px) {
+  :root {
+    --nav-h: 82px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-navigation,
+  .hero-brand-logo {
+    transition: none;
+  }
+}

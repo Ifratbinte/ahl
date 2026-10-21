@@ -858,7 +858,7 @@
   color: #0e7c73;
 }
 .journey-head h3.hm-title {
-  margin: 14px 0;
+  margin: 14px 0 0;
   font-size: clamp(34px, 4.6vw, 44px);
   line-height: 1.06;
 }
@@ -1298,4 +1298,74 @@ body.hm-lightbox-open {
 }
 .flip:hover .sustainability-card-img {
   transform: scale(1.06);
+}
+
+/* ---------------------------------------------------------------------
+   Milestones timeline: premium finish (home + About)
+   - edges fade into the background instead of a hard clip
+   - room above/below so card shadows are never cut off
+   - every card uses the same alignment and hierarchy
+   --------------------------------------------------------------------- */
+.hm-journey-wrap .journey-scroll.is-horizontal .tl-wrap {
+  --tl-fade: clamp(40px, 9vw, 150px);
+  margin-top: 6px;
+  padding: 28px 0;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 var(--tl-fade), #000 calc(100% - var(--tl-fade)), transparent 100%);
+  mask-image: linear-gradient(90deg, transparent 0, #000 var(--tl-fade), #000 calc(100% - var(--tl-fade)), transparent 100%);
+}
+.hm-journey-wrap .journey-scroll.is-horizontal .tl-line {
+  background: linear-gradient(90deg, rgba(220, 229, 239, 0), #dce5ef 6%, #dce5ef 94%, rgba(220, 229, 239, 0));
+}
+
+/* one consistent card: text left, accent bar left, ghost year bottom-right */
+.hm-journey-wrap .journey-scroll.is-horizontal .tl-card,
+.hm-journey-wrap .journey-scroll.is-horizontal .tl-item.right .tl-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 136px;
+  padding: 22px 24px 22px 28px;
+  border-color: rgba(10, 37, 64, 0.08);
+  text-align: left;
+  box-shadow: 0 10px 28px rgba(10, 37, 64, 0.06);
+}
+.hm-journey-wrap .journey-scroll.is-horizontal .tl-card::before,
+.hm-journey-wrap .journey-scroll.is-horizontal .tl-item.right .tl-card::before {
+  left: 0;
+  right: auto;
+  top: 18px;
+  bottom: 18px;
+  width: 4px;
+  border-radius: 0 4px 4px 0;
+}
+.hm-journey-wrap .journey-scroll.is-horizontal .tl-ghost,
+.hm-journey-wrap .journey-scroll.is-horizontal .tl-item.right .tl-ghost {
+  left: auto;
+  right: 14px;
+  bottom: -12px;
+  font-size: 76px;
+}
+.hm-journey-wrap .journey-scroll.is-horizontal .tl-year {
+  font-size: clamp(28px, 2.6vw, 34px);
+  letter-spacing: -0.5px;
+}
+.hm-journey-wrap .journey-scroll.is-horizontal .tl-card p {
+  margin-top: 10px;
+  font-size: 15px;
+  line-height: 1.55;
+  color: #4a5d73;
+}
+.hm-journey-wrap .journey-scroll.is-horizontal .tl-item.active .tl-card {
+  background: linear-gradient(180deg, #ffffff 0%, #fbfcfe 100%);
+  box-shadow: 0 16px 36px rgba(10, 37, 64, 0.12);
+}
+@media (max-width: 760px) {
+  .hm-journey-wrap .journey-scroll.is-horizontal .tl-wrap {
+    --tl-fade: 20px;
+  }
+  .hm-journey-wrap .journey-scroll.is-horizontal .tl-card,
+  .hm-journey-wrap .journey-scroll.is-horizontal .tl-item.right .tl-card {
+    min-height: 120px;
+    padding: 18px 18px 18px 22px;
+  }
 }

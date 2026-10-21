@@ -2,7 +2,7 @@
   "hero": {
     "eyebrow": "Apex Holdings Limited",
     "title": "About Us",
-    "image": "assets/images/photos/ahl-hero.jpg",
+    "image": "assets/images/photos/ahl-admin.jpg",
     "primaryCta": {
       "label": "Who We Are",
       "href": "#who-we-are"

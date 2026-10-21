@@ -2049,7 +2049,7 @@ h3 {
   background-size: cover;
   background-repeat: no-repeat;
   opacity: 0.4;
-  background-image: url(../images/photos/atpml.jpg);
+  background-image: url(../images/photos/atpml2.jpg);
   background-position: 50% 55%;
 }
 
@@ -2065,7 +2065,7 @@ h3 {
   opacity: 0.92;
   -webkit-mask-image: linear-gradient( 90deg, transparent 0%, #000 38% );
   mask-image: linear-gradient( 90deg, transparent 0%, #000 38% );
-  background-image: url(../images/photos/atpml.jpg);
+  background-image: url(../images/photos/atpml2.jpg);
   background-position: 50% 55%;
 }
 

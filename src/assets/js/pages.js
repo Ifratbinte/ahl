@@ -819,4 +819,20 @@
     update();
     setInterval(update, 60000);
   });
+
+  // ---------- sticky header: frosted bar once the page has scrolled ----------
+  $$("[data-site-nav]").forEach(function (nav) {
+    var ticking = false;
+    function update() {
+      ticking = false;
+      nav.classList.toggle("is-scrolled", window.scrollY > 24);
+    }
+    window.addEventListener("scroll", function () {
+      if (!ticking) {
+        ticking = true;
+        window.requestAnimationFrame(update);
+      }
+    }, { passive: true });
+    update();
+  });
 })();

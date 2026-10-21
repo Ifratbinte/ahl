@@ -17,7 +17,7 @@
   "form": {
     "id": "message",
     "eyebrow": "Contact Us",
-    "title": "Email US",
+    "title": "Email Us",
     "endpoint": "",
     "subject": "Website message",
     "submitLabel": "Send Message",
